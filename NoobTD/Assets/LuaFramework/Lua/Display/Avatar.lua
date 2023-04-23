@@ -3,7 +3,7 @@ local Avatar = Class.define("Display.Avatar")
 function Avatar:ctor(fighter, parent)
     self.Model      = fighter
 
-
+    self.Offset     = Vector3.zero --Vector3.New(math.random(-50, 50) / 100.0, math.random(-50, 50) / 100.0, 0)
 end
 
 function Avatar:Decorate()
@@ -14,11 +14,11 @@ function Avatar:Decorate()
 end
 
 function Avatar:SetPosition(pos)
-    self.Entity.transform.localPosition = pos    
+    self.Entity.transform.localPosition = pos + self.Offset
 end
 
 function Avatar:GetPosition()
-    return self.Entity.transform.localPosition
+    return self.Entity.transform.localPosition - self.Offset
 end
 
 

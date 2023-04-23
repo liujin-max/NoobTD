@@ -5,11 +5,12 @@ local Monster = Class.define("Battle.Monster")
 function Monster:ctor(cfg)
     self.ID     = 900001
 
-    self.SPEED  = 2
+    self.SPEED  = math.random(2, 8) / 5
 
     --路线
     self.RouteLine  = nil
     self.RouteIndex = 1
+
 end
 
 function Monster:Decorate()
