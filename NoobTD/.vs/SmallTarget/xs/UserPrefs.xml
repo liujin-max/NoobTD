@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{A4BE9AB5-9701-2930-1253-985D2D05389F}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LuaFramework/Editor/CustomSettings.cs">
+    <Files>
+      <File FileName="Assets/Editor/SoulLand/LuaItemEditor.cs" Line="15" Column="34" />
+      <File FileName="Assets/Editor/SoulLand/LuaWindowEditor.cs" />
+      <File FileName="Assets/Scritps/Net/SocketThread.cs" />
+      <File FileName="Assets/LuaFramework/ToLua/Examples/24_Struct/PassStruct.cs" Line="120" Column="1" />
+      <File FileName="Assets/Scritps/GamePlay/Manager/AdsManager.cs" Line="67" Column="12" />
+      <File FileName="Assets/Scritps/Util/AdsUtil.cs" Line="15" Column="1" />
+      <File FileName="Assets/LuaFramework/Editor/CustomSettings.cs" Line="221" Column="38" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SmallTarget" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="LuaFramework" expanded="True">
+                <Node name="Editor" expanded="True">
+                  <Node name="CustomSettings.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Scritps" expanded="True">
+                <Node name="GamePlay" expanded="True">
+                  <Node name="Manager" expanded="True" />
+                </Node>
+                <Node name="Util" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="43c4ea1c-2e0c-4156-a0f0-d1aa87296687" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
