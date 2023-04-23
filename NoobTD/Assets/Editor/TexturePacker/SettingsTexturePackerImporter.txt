@@ -1,0 +1,441 @@
+version: 2
+importPivots: 1
+tpsheetFileNames:
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
+- Assets/UI_Atlas/Account/Account.tpsheet
+- Assets/UI_Atlas/Activity/Activity.tpsheet
+- Assets/UI_Atlas/Advert/Advert.tpsheet
+- Assets/UI_Atlas/Backpack/Backpack.tpsheet
+- Assets/UI_Atlas/Bank/Bank.tpsheet
+- Assets/UI_Atlas/Battle/Battle.tpsheet
+- Assets/UI_Atlas/BattleSign/BattleSign.tpsheet
+- Assets/UI_Atlas/Break/Break.tpsheet
+- Assets/UI_Atlas/Chat/Chat.tpsheet
+- Assets/UI_Atlas/Equip/Equip.tpsheet
+- Assets/UI_Atlas/Explore/Explore.tpsheet
+- Assets/UI_Atlas/ExploreHeal/ExploreHeal.tpsheet
+- Assets/UI_Atlas/ExploreInfo/ExploreInfo.tpsheet
+- Assets/UI_Atlas/ExploreRank/ExploreRank.tpsheet
+- Assets/UI_Atlas/ExploreResult/ExploreResult.tpsheet
+- Assets/UI_Atlas/ExploreReward/ExploreReward.tpsheet
+- Assets/UI_Atlas/Factory/Factory.tpsheet
+- Assets/UI_Atlas/Forge/Forge.tpsheet
+- Assets/UI_Atlas/ForgeResult/ForgeResult.tpsheet
+- Assets/UI_Atlas/GameMain/GameMain.tpsheet
+- Assets/UI_Atlas/GameScore/GameScore.tpsheet
+- Assets/UI_Atlas/GameSeries/GameSeries.tpsheet
+- Assets/UI_Atlas/Guide/Guide.tpsheet
+- Assets/UI_Atlas/HeroAwake/HeroAwake.tpsheet
+- Assets/UI_Atlas/HeroList/HeroList.tpsheet
+- Assets/UI_Atlas/HeroManual/HeroManual.tpsheet
+- Assets/UI_Atlas/HeroManualSkill/HeroManualSkill.tpsheet
+- Assets/UI_Atlas/HeroStar/HeroStar.tpsheet
+- Assets/UI_Atlas/HeroType/HeroType.tpsheet
+- Assets/UI_Atlas/Home/Home.tpsheet
+- Assets/UI_Atlas/Initial/Initial.tpsheet
+- Assets/UI_Atlas/Item/Item.tpsheet
+- Assets/UI_Atlas/ItemQuality/ItemQuality.tpsheet
+- Assets/UI_Atlas/JobCentre/JobCentre.tpsheet
+- Assets/UI_Atlas/JobRestraint/JobRestraint.tpsheet
+- Assets/UI_Atlas/Loading/Loading.tpsheet
+- Assets/UI_Atlas/Login/Login.tpsheet
+- Assets/UI_Atlas/Lottery/Lottery.tpsheet
+- Assets/UI_Atlas/Mail/Mail.tpsheet
+- Assets/UI_Atlas/Main/Main.tpsheet
+- Assets/UI_Atlas/Manor/Manor.tpsheet
+- Assets/UI_Atlas/Master/Master.tpsheet
+- Assets/UI_Atlas/Menu/Menu.tpsheet
+- Assets/UI_Atlas/MonsterInfo/MonsterInfo.tpsheet
+- Assets/UI_Atlas/MonthCard/MonthCard.tpsheet
+- Assets/UI_Atlas/Orb/Orb.tpsheet
+- Assets/UI_Atlas/Outsource/Outsource.tpsheet
+- Assets/UI_Atlas/Propaganda/Propaganda.tpsheet
+- Assets/UI_Atlas/PVP/PVP.tpsheet
+- Assets/UI_Atlas/PVPBattle/PVPBattle.tpsheet
+- Assets/UI_Atlas/PVPResult/PVPResult.tpsheet
+- Assets/UI_Atlas/QiFu/QiFu.tpsheet
+- Assets/UI_Atlas/QualityFrame/QualityFrame.tpsheet
+- Assets/UI_Atlas/Recharge/Recharge.tpsheet
+- Assets/UI_Atlas/Result/Result.tpsheet
+- Assets/UI_Atlas/Reward/Reward.tpsheet
+- Assets/UI_Atlas/School/School.tpsheet
+- Assets/UI_Atlas/Shop/Shop.tpsheet
+- Assets/UI_Atlas/Simulator/Simulator.tpsheet
+- Assets/UI_Atlas/SkillInfo/SkillInfo.tpsheet
+- Assets/UI_Atlas/Social/Social.tpsheet
+- Assets/UI_Atlas/StaffMain/StaffMain.tpsheet
+- Assets/UI_Atlas/Statistical/Statistical.tpsheet
+- Assets/UI_Atlas/SwitchLoading/SwitchLoading.tpsheet
+- Assets/UI_Atlas/TacticBook/TacticBook.tpsheet
+- Assets/UI_Atlas/TanXun/TanXun.tpsheet
+- Assets/UI_Atlas/Task/Task.tpsheet
+- Assets/UI_Atlas/Tech/Tech.tpsheet
+- Assets/UI_Atlas/Trail/Trail.tpsheet
+- Assets/UI_Atlas/Universal/Universal.tpsheet
+- Assets/UI_Dynamic/Activity_Icon/Activity_Icon.tpsheet
+- Assets/UI_Dynamic/Attribute_Icon/Attribute_Icon.tpsheet
+- Assets/UI_Dynamic/AttributeIcon_Icon/AttributeIcon_Icon.tpsheet
+- Assets/UI_Dynamic/Backpack_Icon/Backpack_Icon.tpsheet
+- Assets/UI_Dynamic/Battle_Icon/Battle_Icon.tpsheet
+- Assets/UI_Dynamic/BattleTip_Icon/BattleTip_Icon.tpsheet
+- Assets/UI_Dynamic/Bubble_Icon/Bubble_Icon.tpsheet
+- Assets/UI_Dynamic/Buff_Icon/Buff_Icon.tpsheet
+- Assets/UI_Dynamic/Equip_Icon/Equip_Icon.tpsheet
+- Assets/UI_Dynamic/EquipBelong_Icon/EquipBelong_Icon.tpsheet
+- Assets/UI_Dynamic/EquipIcon_Icon/EquipIcon_Icon.tpsheet
+- Assets/UI_Dynamic/EquipQuality_Icon/EquipQuality_Icon.tpsheet
+- Assets/UI_Dynamic/Explore_Icon/Explore_Icon.tpsheet
+- Assets/UI_Dynamic/ExploreInfo_Icon/ExploreInfo_Icon.tpsheet
+- Assets/UI_Dynamic/ExploreMonster_Icon/ExploreMonster_Icon.tpsheet
+- Assets/UI_Dynamic/ExploreResult_Icon/ExploreResult_Icon.tpsheet
+- Assets/UI_Dynamic/ExploreType_Icon/ExploreType_Icon.tpsheet
+- Assets/UI_Dynamic/Factory_Icon/Factory_Icon.tpsheet
+- Assets/UI_Dynamic/Forge_Icon/Forge_Icon.tpsheet
+- Assets/UI_Dynamic/ForgeResult_Icon/ForgeResult_Icon.tpsheet
+- Assets/UI_Dynamic/Head_Icon/Head_Icon.tpsheet
+- Assets/UI_Dynamic/Head_Icon/Section_1_Icon.tpsheet
+- Assets/UI_Dynamic/Head_Icon/Section_2_Icon.tpsheet
+- Assets/UI_Dynamic/Head_Icon/Section_3_Icon.tpsheet
+- Assets/UI_Dynamic/Head_Icon/Section_4_Icon.tpsheet
+- Assets/UI_Dynamic/HeadList_Icon/HeadList_Icon.tpsheet
+- Assets/UI_Dynamic/HeadLottery_Icon/HeadLottery_Icon.tpsheet
+- Assets/UI_Dynamic/HeadLottery_Icon/Section_1_Icon.tpsheet
+- Assets/UI_Dynamic/HeroAttri_Icon/HeroAttri_Icon.tpsheet
+- Assets/UI_Dynamic/HeroBreak_Icon/HeroBreak_Icon.tpsheet
+- Assets/UI_Dynamic/HeroList_Icon/HeroList_Icon.tpsheet
+- Assets/UI_Dynamic/HeroManual_Icon/HeroManual_Icon.tpsheet
+- Assets/UI_Dynamic/HeroPortraitQuality_Icon/HeroPortraitQuality_Icon.tpsheet
+- Assets/UI_Dynamic/HeroQuality_Icon/HeroQuality_Icon.tpsheet
+- Assets/UI_Dynamic/HeroRace_Icon/HeroRace_Icon.tpsheet
+- Assets/UI_Dynamic/HeroType_Icon/HeroType_Icon.tpsheet
+- Assets/UI_Dynamic/Home_Icon/Home_Icon.tpsheet
+- Assets/UI_Dynamic/Icon_Icon/Icon_Icon.tpsheet
+- Assets/UI_Dynamic/Item_Icon/Item_Icon.tpsheet
+- Assets/UI_Dynamic/ItemQuality_Icon/ItemQuality_Icon.tpsheet
+- Assets/UI_Dynamic/Login_Icon/Login_Icon.tpsheet
+- Assets/UI_Dynamic/Lottery_Icon/Lottery_Icon.tpsheet
+- Assets/UI_Dynamic/Mail_Icon/Mail_Icon.tpsheet
+- Assets/UI_Dynamic/Manor_Icon/Manor_Icon.tpsheet
+- Assets/UI_Dynamic/Master_Icon/Master_Icon.tpsheet
+- Assets/UI_Dynamic/Menu_Icon/Menu_Icon.tpsheet
+- Assets/UI_Dynamic/MonthCard_Icon/MonthCard_Icon.tpsheet
+- Assets/UI_Dynamic/News_Icon/News_Icon.tpsheet
+- Assets/UI_Dynamic/Orb_Icon/Orb_Icon.tpsheet
+- Assets/UI_Dynamic/Outsource_Icon/Outsource_Icon.tpsheet
+- Assets/UI_Dynamic/PVP_Icon/PVP_Icon.tpsheet
+- Assets/UI_Dynamic/PVPItem_Icon/PVPItem_Icon.tpsheet
+- Assets/UI_Dynamic/PVPResult_Icon/PVPResult_Icon.tpsheet
+- Assets/UI_Dynamic/Recharge_Icon/Recharge_Icon.tpsheet
+- Assets/UI_Dynamic/Simulator_Icon/Simulator_Icon.tpsheet
+- Assets/UI_Dynamic/Skill_Icon/Skill_Icon.tpsheet
+- Assets/UI_Dynamic/SkillFrame_Icon/SkillFrame_Icon.tpsheet
+- Assets/UI_Dynamic/SkillInfo_Icon/SkillInfo_Icon.tpsheet
+- Assets/UI_Dynamic/SkillSquare_Icon/Section_1_Icon.tpsheet
+- Assets/UI_Dynamic/SkillSquare_Icon/Section_2_Icon.tpsheet
+- Assets/UI_Dynamic/SkillSquare_Icon/Section_3_Icon.tpsheet
+- Assets/UI_Dynamic/SkillSquare_Icon/Section_4_Icon.tpsheet
+- Assets/UI_Dynamic/SkillSquare_Icon/Section_5_Icon.tpsheet
+- Assets/UI_Dynamic/SkillSquare_Icon/SkillSquare_Icon.tpsheet
+- Assets/UI_Dynamic/SkillTip_Icon/SkillTip_Icon.tpsheet
+- Assets/UI_Dynamic/Social_Icon/Social_Icon.tpsheet
+- Assets/UI_Dynamic/Tactic_Icon/Tactic_Icon.tpsheet
+- Assets/UI_Dynamic/Task_Icon/Task_Icon.tpsheet
+- Assets/UI_Dynamic/Tech_Icon/Tech_Icon.tpsheet
+- Assets/UI_Dynamic/TechIcon_Icon/TechIcon_Icon.tpsheet
+- Assets/UI_Dynamic/Trail_Icon/Trail_Icon.tpsheet
+- Assets/UI_Dynamic/Universal_Icon/Universal_Icon.tpsheet
+- Assets/UI_Dynamic/VIP_Icon/VIP_Icon.tpsheet
+- Assets/UIAtlas/AFK/AFK.tpsheet
+textureFileNames:
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.png
+- Assets/UI_Atlas/Account/Account.png
+- Assets/UI_Atlas/Activity/Activity.png
+- Assets/UI_Atlas/Advert/Advert.png
+- Assets/UI_Atlas/Backpack/Backpack.png
+- Assets/UI_Atlas/Bank/Bank.png
+- Assets/UI_Atlas/Battle/Battle.png
+- Assets/UI_Atlas/BattleSign/BattleSign.png
+- Assets/UI_Atlas/Break/Break.png
+- Assets/UI_Atlas/Chat/Chat.png
+- Assets/UI_Atlas/Equip/Equip.png
+- Assets/UI_Atlas/Explore/Explore.png
+- Assets/UI_Atlas/ExploreHeal/ExploreHeal.png
+- Assets/UI_Atlas/ExploreInfo/ExploreInfo.png
+- Assets/UI_Atlas/ExploreRank/ExploreRank.png
+- Assets/UI_Atlas/ExploreResult/ExploreResult.png
+- Assets/UI_Atlas/ExploreReward/ExploreReward.png
+- Assets/UI_Atlas/Factory/Factory.png
+- Assets/UI_Atlas/Forge/Forge.png
+- Assets/UI_Atlas/ForgeResult/ForgeResult.png
+- Assets/UI_Atlas/GameMain/GameMain.png
+- Assets/UI_Atlas/GameScore/GameScore.png
+- Assets/UI_Atlas/GameSeries/GameSeries.png
+- Assets/UI_Atlas/Guide/Guide.png
+- Assets/UI_Atlas/HeroAwake/HeroAwake.png
+- Assets/UI_Atlas/HeroList/HeroList.png
+- Assets/UI_Atlas/HeroManual/HeroManual.png
+- Assets/UI_Atlas/HeroManualSkill/HeroManualSkill.png
+- Assets/UI_Atlas/HeroStar/HeroStar.png
+- Assets/UI_Atlas/HeroType/HeroType.png
+- Assets/UI_Atlas/Home/Home.png
+- Assets/UI_Atlas/Initial/Initial.png
+- Assets/UI_Atlas/Item/Item.png
+- Assets/UI_Atlas/ItemQuality/ItemQuality.png
+- Assets/UI_Atlas/JobCentre/JobCentre.png
+- Assets/UI_Atlas/JobRestraint/JobRestraint.png
+- Assets/UI_Atlas/Loading/Loading.png
+- Assets/UI_Atlas/Login/Login.png
+- Assets/UI_Atlas/Lottery/Lottery.png
+- Assets/UI_Atlas/Mail/Mail.png
+- Assets/UI_Atlas/Main/Main.png
+- Assets/UI_Atlas/Manor/Manor.png
+- Assets/UI_Atlas/Master/Master.png
+- Assets/UI_Atlas/Menu/Menu.png
+- Assets/UI_Atlas/MonsterInfo/MonsterInfo.png
+- Assets/UI_Atlas/MonthCard/MonthCard.png
+- Assets/UI_Atlas/Orb/Orb.png
+- Assets/UI_Atlas/Outsource/Outsource.png
+- Assets/UI_Atlas/Propaganda/Propaganda.png
+- Assets/UI_Atlas/PVP/PVP.png
+- Assets/UI_Atlas/PVPBattle/PVPBattle.png
+- Assets/UI_Atlas/PVPResult/PVPResult.png
+- Assets/UI_Atlas/QiFu/QiFu.png
+- Assets/UI_Atlas/QualityFrame/QualityFrame.png
+- Assets/UI_Atlas/Recharge/Recharge.png
+- Assets/UI_Atlas/Result/Result.png
+- Assets/UI_Atlas/Reward/Reward.png
+- Assets/UI_Atlas/School/School.png
+- Assets/UI_Atlas/Shop/Shop.png
+- Assets/UI_Atlas/Simulator/Simulator.png
+- Assets/UI_Atlas/SkillInfo/SkillInfo.png
+- Assets/UI_Atlas/Social/Social.png
+- Assets/UI_Atlas/StaffMain/StaffMain.png
+- Assets/UI_Atlas/Statistical/Statistical.png
+- Assets/UI_Atlas/SwitchLoading/SwitchLoading.png
+- Assets/UI_Atlas/TacticBook/TacticBook.png
+- Assets/UI_Atlas/TanXun/TanXun.png
+- Assets/UI_Atlas/Task/Task.png
+- Assets/UI_Atlas/Tech/Tech.png
+- Assets/UI_Atlas/Trail/Trail.png
+- Assets/UI_Atlas/Universal/Universal.png
+- Assets/UI_Dynamic/Activity_Icon/Activity_Icon.png
+- Assets/UI_Dynamic/Attribute_Icon/Attribute_Icon.png
+- Assets/UI_Dynamic/AttributeIcon_Icon/AttributeIcon_Icon.png
+- Assets/UI_Dynamic/Backpack_Icon/Backpack_Icon.png
+- Assets/UI_Dynamic/Battle_Icon/Battle_Icon.png
+- Assets/UI_Dynamic/BattleTip_Icon/BattleTip_Icon.png
+- Assets/UI_Dynamic/Bubble_Icon/Bubble_Icon.png
+- Assets/UI_Dynamic/Buff_Icon/Buff_Icon.png
+- Assets/UI_Dynamic/Equip_Icon/Equip_Icon.png
+- Assets/UI_Dynamic/EquipBelong_Icon/EquipBelong_Icon.png
+- Assets/UI_Dynamic/EquipIcon_Icon/EquipIcon_Icon.png
+- Assets/UI_Dynamic/EquipQuality_Icon/EquipQuality_Icon.png
+- Assets/UI_Dynamic/Explore_Icon/Explore_Icon.png
+- Assets/UI_Dynamic/ExploreInfo_Icon/ExploreInfo_Icon.png
+- Assets/UI_Dynamic/ExploreMonster_Icon/ExploreMonster_Icon.png
+- Assets/UI_Dynamic/ExploreResult_Icon/ExploreResult_Icon.png
+- Assets/UI_Dynamic/ExploreType_Icon/ExploreType_Icon.png
+- Assets/UI_Dynamic/Factory_Icon/Factory_Icon.png
+- Assets/UI_Dynamic/Forge_Icon/Forge_Icon.png
+- Assets/UI_Dynamic/ForgeResult_Icon/ForgeResult_Icon.png
+- Assets/UI_Dynamic/Head_Icon/Head_Icon.png
+- Assets/UI_Dynamic/Head_Icon/Section_1_Icon.png
+- Assets/UI_Dynamic/Head_Icon/Section_2_Icon.png
+- Assets/UI_Dynamic/Head_Icon/Section_3_Icon.png
+- Assets/UI_Dynamic/Head_Icon/Section_4_Icon.png
+- Assets/UI_Dynamic/HeadList_Icon/HeadList_Icon.png
+- Assets/UI_Dynamic/HeadLottery_Icon/HeadLottery_Icon.png
+- Assets/UI_Dynamic/HeadLottery_Icon/Section_1_Icon.png
+- Assets/UI_Dynamic/HeroAttri_Icon/HeroAttri_Icon.png
+- Assets/UI_Dynamic/HeroBreak_Icon/HeroBreak_Icon.png
+- Assets/UI_Dynamic/HeroList_Icon/HeroList_Icon.png
+- Assets/UI_Dynamic/HeroManual_Icon/HeroManual_Icon.png
+- Assets/UI_Dynamic/HeroPortraitQuality_Icon/HeroPortraitQuality_Icon.png
+- Assets/UI_Dynamic/HeroQuality_Icon/HeroQuality_Icon.png
+- Assets/UI_Dynamic/HeroRace_Icon/HeroRace_Icon.png
+- Assets/UI_Dynamic/HeroType_Icon/HeroType_Icon.png
+- Assets/UI_Dynamic/Home_Icon/Home_Icon.png
+- Assets/UI_Dynamic/Icon_Icon/Icon_Icon.png
+- Assets/UI_Dynamic/Item_Icon/Item_Icon.png
+- Assets/UI_Dynamic/ItemQuality_Icon/ItemQuality_Icon.png
+- Assets/UI_Dynamic/Login_Icon/Login_Icon.png
+- Assets/UI_Dynamic/Lottery_Icon/Lottery_Icon.png
+- Assets/UI_Dynamic/Mail_Icon/Mail_Icon.png
+- Assets/UI_Dynamic/Manor_Icon/Manor_Icon.png
+- Assets/UI_Dynamic/Master_Icon/Master_Icon.png
+- Assets/UI_Dynamic/Menu_Icon/Menu_Icon.png
+- Assets/UI_Dynamic/MonthCard_Icon/MonthCard_Icon.png
+- Assets/UI_Dynamic/News_Icon/News_Icon.png
+- Assets/UI_Dynamic/Orb_Icon/Orb_Icon.png
+- Assets/UI_Dynamic/Outsource_Icon/Outsource_Icon.png
+- Assets/UI_Dynamic/PVP_Icon/PVP_Icon.png
+- Assets/UI_Dynamic/PVPItem_Icon/PVPItem_Icon.png
+- Assets/UI_Dynamic/PVPResult_Icon/PVPResult_Icon.png
+- Assets/UI_Dynamic/Recharge_Icon/Recharge_Icon.png
+- Assets/UI_Dynamic/Simulator_Icon/Simulator_Icon.png
+- Assets/UI_Dynamic/Skill_Icon/Skill_Icon.png
+- Assets/UI_Dynamic/SkillFrame_Icon/SkillFrame_Icon.png
+- Assets/UI_Dynamic/SkillInfo_Icon/SkillInfo_Icon.png
+- Assets/UI_Dynamic/SkillSquare_Icon/Section_1_Icon.png
+- Assets/UI_Dynamic/SkillSquare_Icon/Section_2_Icon.png
+- Assets/UI_Dynamic/SkillSquare_Icon/Section_3_Icon.png
+- Assets/UI_Dynamic/SkillSquare_Icon/Section_4_Icon.png
+- Assets/UI_Dynamic/SkillSquare_Icon/Section_5_Icon.png
+- Assets/UI_Dynamic/SkillSquare_Icon/SkillSquare_Icon.png
+- Assets/UI_Dynamic/SkillTip_Icon/SkillTip_Icon.png
+- Assets/UI_Dynamic/Social_Icon/Social_Icon.png
+- Assets/UI_Dynamic/Tactic_Icon/Tactic_Icon.png
+- Assets/UI_Dynamic/Task_Icon/Task_Icon.png
+- Assets/UI_Dynamic/Tech_Icon/Tech_Icon.png
+- Assets/UI_Dynamic/TechIcon_Icon/TechIcon_Icon.png
+- Assets/UI_Dynamic/Trail_Icon/Trail_Icon.png
+- Assets/UI_Dynamic/Universal_Icon/Universal_Icon.png
+- Assets/UI_Dynamic/VIP_Icon/VIP_Icon.png
+- Assets/UIAtlas/AFK/AFK.png
+normalmapFileNames:
+- Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+enableDebugOutput: 0
