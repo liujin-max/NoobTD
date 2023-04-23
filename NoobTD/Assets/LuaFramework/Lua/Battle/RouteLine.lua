@@ -9,15 +9,15 @@ function RouteLine:ctor(land, line_cfg)
     --路线节点
     self.Routes = Class.new(Array)
     for i, v in ipairs(line_cfg.Route) do
-        local grid = Class.new(Battle.Route, self, v[1], v[2])
+        local grid = Class.new(Battle.Route, self, v)
         self.Routes:Add(grid)
     end
 
     --起点
-    self.Spawn  = Class.new(Battle.Spawn, self, line_cfg.Spawn[1], line_cfg.Spawn[2])
+    self.Spawn  = Class.new(Battle.Spawn, self, line_cfg.Spawn)
 
     --终点
-    self.Exit   = Class.new(Battle.Exit, self, line_cfg.Exit[1], line_cfg.Exit[2])
+    self.Exit   = Class.new(Battle.Exit, self, line_cfg.Exit)
 end
 
 function RouteLine:Display()

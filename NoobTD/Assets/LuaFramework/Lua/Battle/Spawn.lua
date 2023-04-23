@@ -10,7 +10,7 @@ function Spawn:Display(parent)
     self.Entity = AssetManager:LoadSync("Prefab/Battle/Spawn")
     self.Entity.transform:SetParent(Battle.FIELD.Land.Avatar.Root.transform)
     self.Entity.transform.localScale      = Vector3.New(_C.CONST.LAND.GRID / 100.0, _C.CONST.LAND.GRID / 100.0, 0)
-    self.Entity.transform.localPosition   = Battle.Grid.GetPos(self.PosX, self.PosY)
+    self.Entity.transform.localPosition   = self.Pos
 end
 
 

@@ -17,15 +17,14 @@ function Grid.GetPos(x, y)
     return Vector3.New(pos_x, pos_y, 0)
 end
 
-function Grid:ctor(land, pos_x, pos_y)
+function Grid:ctor(land, pos_cfg)
     self.Land   = land
 
-    self.PosX   = pos_x
-    self.PosY   = pos_y
+    self.Pos    = Vector3.New(pos_cfg[1], pos_cfg[2], pos_cfg[3])
 end
 
 function Grid:CenterPos()
-    return Battle.Grid.GetPos(self.PosX, self.PosY)
+    return self.Pos
 end
 
 function Grid:Display(parent)

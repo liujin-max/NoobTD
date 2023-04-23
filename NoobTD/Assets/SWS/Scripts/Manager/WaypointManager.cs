@@ -71,6 +71,7 @@ namespace SWS
 
             //rename path and add it to dictionary
             path.name = pathName;
+            Debug.Log("Ìí¼Ó£º" + pathName);
             Paths.Add(pathName, pathMan);
         }
 

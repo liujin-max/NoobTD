@@ -301,6 +301,36 @@ namespace SWS
                 ReplaceWaypoints();
             }
 
+            //invert direction of whole path
+            if (GUILayout.Button("导出坐标点"))
+            {
+                var path = GetWaypointAtIndex(0).parent;
+                Vector3 offset = path.transform.localPosition;
+
+                string log = "";
+                var transforms = GetWaypointArray();
+                Vector3[] points = new Vector3[transforms.Length];
+                for (int i = 0; i < transforms.Length; i++)
+                {
+                    points[i] = transforms[i].localPosition;
+                    //Debug.Log(points[i]);
+                }
+
+                Vector3[] pathPoints = WaypointManager.GetCurved(points);
+                for (int i = 0; i < pathPoints.Length; i++)
+                {
+                    Vector3 pos = pathPoints[i] + offset;
+                    string str = "{" + pos.x + "," + pos.y + "," + pos.z + "}";
+                    if (i == 0) 
+                    {
+                        log = str;
+                    }
+                    else
+                        log = log + "," + str;
+                }
+                Debug.Log(log);
+            }
+
             //we push our modified variables back to our serialized object
             m_Object.ApplyModifiedProperties();
         }

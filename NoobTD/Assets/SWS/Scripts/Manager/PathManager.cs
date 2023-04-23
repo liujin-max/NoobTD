@@ -83,7 +83,10 @@ namespace SWS
             //assign line and waypoints color
             Gizmos.color = color2;
             for (int i = 1; i < wpPositions.Length - 1; i++)
+            {
                 Gizmos.DrawWireSphere(wpPositions[i], radius * GetHandleSize(wpPositions[i]));
+            }
+
 
             //draw linear or curved lines with the same color
             if (drawCurved && wpPositions.Length >= 2)

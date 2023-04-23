@@ -52,7 +52,7 @@ function Monster:Update(deltatime)
     local to_pos    = o_pos + dir
     self.Avatar:SetPosition(to_pos)
 
-    if Vector3.Distance(next_pos - to_pos) <= 0.1 then
+    if Vector3.Distance(next_pos , to_pos) <= 0.1 then
         self.RouteIndex = self.RouteIndex + 1
     end
 end
