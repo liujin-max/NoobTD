@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:28076a2ff2167b83b21eade701c95d10:94794316fd8abce135000b71f15f7ef7:8d0e3e38094419f41e031ff556da8360$
+#
+:format=40300
+:texture=Propaganda.png
+:size=256x256
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+Propaganda_slider_point;1;137;43;118; 0.5;0.5; 0;0;0;0; 5;43;5;32;0;0;0;0;118;43;118; 3;0;3;4;2;3;0;2;0;1
+圆角矩形 171;1;60;253;75; 0.5;0.5; 0;0;0;0; 4;253;0;0;0;0;75;253;75; 2;1;2;3;0;1;3

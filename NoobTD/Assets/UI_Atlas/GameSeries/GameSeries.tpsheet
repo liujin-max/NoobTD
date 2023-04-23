@@ -1,0 +1,19 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:038bc517ef40e03266a09210390a78fe:3858683ceda027babeea7a81047f3b7f:dc0988f9444b828988096e18a7eb3e34$
+#
+:format=40300
+:texture=GameSeries.png
+:size=1024x512
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+GameSeries_item_bottom;1;321;553;190; 0.5;0.5; 0;0;0;0; 10;320;184;553;184;553;21;487;0;446;0;350;23;218;25;0;25;0;190;80;190; 8;7;8;9;6;7;9;0;5;6;1;2;3;1;3;4;0;4;5;0;1;4;0;6;9
+GameSeries_item_name_bottom;556;455;381;56; 0.5;0.5; 0;0;0;0; 4;381;0;0;0;0;56;381;56; 2;1;2;3;0;1;3
+GameSeries_tab_item_light;1;167;331;152; 0.5;0.5; 0;0;0;0; 9;302;146;305;92;331;38;331;19;274;0;6;0;0;132;0;152;43;152; 7;6;7;8;5;6;8;4;5;8;4;1;2;4;2;3;1;4;8;0;1;8
+GameSeries_tab_item_normal;334;194;262;125; 0.5;0.5; 0;0;0;0; 6;262;118;262;0;5;0;0;78;0;125;46;125; 4;3;4;5;2;3;5;1;2;5;0;1;5

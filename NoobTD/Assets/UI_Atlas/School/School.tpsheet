@@ -1,0 +1,20 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:7354db238559676fcb1781235a61c36d:43ac8bd438393f286c27b91a05840d84:d0717dc1e18e67b2993cdfecf131cd88$
+#
+:format=40300
+:texture=School.png
+:size=1024x1024
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+School_item_bottom;1;739;646;152; 0.5;0.5; 0;0;0;0; 10;430;138;646;138;646;0;540;0;289;5;14;8;0;139;0;150;398;152;434;152; 8;0;8;9;7;4;6;6;4;5;7;8;4;3;0;1;3;1;2;0;3;4;0;4;8
+School_item_button;1;969;183;54; 0.5;0.5; 0;0;0;0; 4;183;0;0;0;0;54;183;54; 2;1;2;3;0;1;3
+School_list_bottom;1;115;688;622; 0.5;0.5; 0;0;0;0; 4;688;0;0;0;0;622;688;622; 2;1;2;3;0;1;3
+School_tab_item_light;186;893;326;130; 0.5;0.5; 0;0;0;0; 10;235;107;252;28;326;11;326;0;223;0;200;14;11;11;0;106;0;130;32;130; 8;7;8;9;6;7;9;5;6;9;1;4;5;1;2;3;1;3;4;0;1;5;0;5;9
+School_tab_item_normal;514;893;326;130; 0.5;0.5; 0;0;0;0; 10;235;107;252;28;326;11;326;0;223;0;200;14;11;11;0;106;0;130;32;130; 8;7;8;9;6;7;9;5;6;9;1;4;5;1;2;3;1;3;4;0;1;5;0;5;9

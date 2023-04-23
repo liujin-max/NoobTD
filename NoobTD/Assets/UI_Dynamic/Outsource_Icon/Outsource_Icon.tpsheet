@@ -1,0 +1,19 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:0f8e6fe16dcbd668cef65916412c1071:b77dd4f608583fbb365b8dfada7befdf:fd6e32a86578ef569ffa27fa14b0e28e$
+#
+:format=40300
+:texture=Outsource_Icon.png
+:size=256x256
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+Outsource_item_bar_1;1;210;223;45; 0.5;0.5; 0;0;0;0
+Outsource_item_bar_2;1;163;223;45; 0.5;0.5; 0;0;0;0
+Outsource_item_bar_3;1;116;223;45; 0.5;0.5; 0;0;0;0
+Outsource_item_bar_4;1;69;223;45; 0.5;0.5; 0;0;0;0

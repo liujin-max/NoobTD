@@ -1,0 +1,27 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:c37fcc89d8400207611f0ed9cf25a072:30ee4bb31298aa2dc28b805140f2b21e:3281dd14d8009097d5c19361c090d547$
+#
+:format=40300
+:texture=Icon_Icon.png
+:size=1024x2048
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+100000;1;1489;300;300; 0.5;0.5; 0;0;0;0
+180000;1;1791;256;256; 0.5;0.5; 0;0;0;0
+210000;303;1489;300;300; 0.5;0.5; 0;0;0;0
+220000;605;1489;300;300; 0.5;0.5; 0;0;0;0
+230000;1;1187;300;300; 0.5;0.5; 0;0;0;0
+270000;303;1187;300;300; 0.5;0.5; 0;0;0;0
+游戏机图标_console_002_爱给网_aigei_com;259;1791;256;256; 0.5;0.5; 0;0;0;0
+游戏机图标_console_005_爱给网_aigei_com;517;1791;256;256; 0.5;0.5; 0;0;0;0
+经典游戏机系列图标_game_009_爱给网_aigei_com;605;1187;300;300; 0.5;0.5; 0;0;0;0
+经典游戏机系列图标_game_014_爱给网_aigei_com;1;885;300;300; 0.5;0.5; 0;0;0;0
+经典游戏机系列图标_game_015_爱给网_aigei_com;303;885;300;300; 0.5;0.5; 0;0;0;0
+经典游戏机系列图标_game_018_爱给网_aigei_com;605;885;300;300; 0.5;0.5; 0;0;0;0

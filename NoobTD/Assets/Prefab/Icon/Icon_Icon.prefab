@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1607549925235744077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5438695741302028211}
+  - component: {fileID: 8812868362247125156}
+  m_Layer: 0
+  m_Name: Icon_Icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5438695741302028211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607549925235744077}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8812868362247125156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607549925235744077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e93ab341711224c1a80c2e3b6f76c63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tag: Icon_Icon
+  Atlas:
+  - {fileID: 2800000, guid: ae6941384eb307a4cb245546893d157b, type: 3}
+  Sprites:
+  - {fileID: -2236101106135036628, guid: ae6941384eb307a4cb245546893d157b, type: 3}
+  - {fileID: -4189153439780333530, guid: ae6941384eb307a4cb245546893d157b, type: 3}
+  - {fileID: -6467011317769865030, guid: ae6941384eb307a4cb245546893d157b, type: 3}
+  - {fileID: 3131429504024552016, guid: ae6941384eb307a4cb245546893d157b, type: 3}
+  - {fileID: -1818092642046169713, guid: ae6941384eb307a4cb245546893d157b, type: 3}
+  - {fileID: -3520132108297369938, guid: ae6941384eb307a4cb245546893d157b, type: 3}
+  - {fileID: 5776340200423838621, guid: ae6941384eb307a4cb245546893d157b, type: 3}
+  - {fileID: 1108738740722745066, guid: ae6941384eb307a4cb245546893d157b, type: 3}
+  - {fileID: -5574309894394940890, guid: ae6941384eb307a4cb245546893d157b, type: 3}
+  - {fileID: -180284155023724361, guid: ae6941384eb307a4cb245546893d157b, type: 3}
+  - {fileID: -4422092606970301068, guid: ae6941384eb307a4cb245546893d157b, type: 3}
+  - {fileID: -7435969229866938003, guid: ae6941384eb307a4cb245546893d157b, type: 3}

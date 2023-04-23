@@ -1,0 +1,21 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:2ca407fa792a786db756ffc4e0967627:e0f10a53cb437974bd326abf1151a535:b1c6d6894e7bf5b6f6764eaee1a89db7$
+#
+:format=40300
+:texture=Bubble_Icon.png
+:size=256x256
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+Bubble_1;1;174;80;81; 0.5;0.5; 0;0;0;0
+Bubble_2;83;174;80;81; 0.5;0.5; 0;0;0;0
+Bubble_3;165;174;80;81; 0.5;0.5; 0;0;0;0
+Bubble_4;1;91;80;81; 0.5;0.5; 0;0;0;0
+Bubble_6;83;91;80;81; 0.5;0.5; 0;0;0;0
+Bubble_11;165;91;80;81; 0.5;0.5; 0;0;0;0

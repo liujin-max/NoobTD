@@ -1,0 +1,24 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:7b5545932e2769145d9ab2059fffee59:539cc66de0ef42394eee8ec52d145077:621629c533b50637d4ffd51642602e47$
+#
+:format=40300
+:texture=Menu_Icon.png
+:size=512x1024
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+Menu_button_bottom_light_1;1;267;486;183; 0.5;0.5; 0;0;0;0
+Menu_button_bottom_light_2;1;452;482;158; 0.5;0.5; 0;0;0;0
+Menu_button_bottom_normal_1;1;612;413;146; 0.5;0.5; 0;0;0;0
+Menu_button_bottom_normal_2;1;760;406;148; 0.5;0.5; 0;0;0;0
+Menu_icon_action;256;921;101;102; 0.5;0.5; 0;0;0;0
+Menu_icon_build;70;922;90;101; 0.5;0.5; 0;0;0;0
+Menu_icon_info;359;941;134;82; 0.5;0.5; 0;0;0;0
+Menu_icon_setting;162;910;92;113; 0.5;0.5; 0;0;0;0
+Menu_icon_staff;1;918;67;105; 0.5;0.5; 0;0;0;0

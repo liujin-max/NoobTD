@@ -1,0 +1,816 @@
+fileFormatVersion: 2
+guid: 33ca73e18f256724dbb7b9e9a704c206
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7075393008101212665
+    second: Universal_achievement_bottom
+  - first:
+      213: -2926149306958278854
+    second: Universal_arrow_green
+  - first:
+      213: 1908490427016497873
+    second: Universal_arrow_up
+  - first:
+      213: -3570662706490181076
+    second: Universal_arrow_yellow
+  - first:
+      213: -2238717739935430633
+    second: Universal_btn_blue
+  - first:
+      213: -6696219420079872120
+    second: Universal_btn_dice
+  - first:
+      213: -3470481827820351107
+    second: Universal_btn_editor
+  - first:
+      213: 4922234245052105979
+    second: Universal_btn_yellow
+  - first:
+      213: -1165877534116332851
+    second: Universal_btn_yellow2
+  - first:
+      213: 7727892786810276452
+    second: Universal_button_close
+  - first:
+      213: 2975132590856466774
+    second: Universal_coin
+  - first:
+      213: 4861297455924249972
+    second: Universal_combo_tag
+  - first:
+      213: 6270604796895395586
+    second: Universal_game_item_bottom
+  - first:
+      213: 4036202758955742197
+    second: Universal_game_score_bar
+  - first:
+      213: -5155004910526317685
+    second: Universal_game_score_bar_bg
+  - first:
+      213: 7837386895133214732
+    second: Universal_main_cost_bottom
+  - first:
+      213: 832281784447879178
+    second: Universal_main_select_bottom
+  - first:
+      213: -8336776842365032319
+    second: Universal_message_item
+  - first:
+      213: 619871268650306451
+    second: Universal_name_bg
+  - first:
+      213: -7227177692035068328
+    second: Universal_net_tag
+  - first:
+      213: -902954307258857395
+    second: Universal_point_light
+  - first:
+      213: 7603279065951050496
+    second: Universal_point_nromal
+  - first:
+      213: -4873453083675622704
+    second: Universal_property_bg
+  - first:
+      213: -4443998316140910268
+    second: Universal_ring_bottom
+  - first:
+      213: 3404611010710234887
+    second: Universal_slider_bar
+  - first:
+      213: 5394797320804628214
+    second: Universal_slider_bg
+  - first:
+      213: -56471193591824503
+    second: Universal_split_line
+  - first:
+      213: -1494642172950540198
+    second: Universal_tag_lock
+  - first:
+      213: 3227260301287131450
+    second: Universal_tag_unlock
+  - first:
+      213: 1756886184478116354
+    second: Universal_title_bg
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Universal_achievement_bottom
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1179
+        width: 709
+        height: 276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e38d1db872fcd90800000000000000
+      internalID: -7075393008101212665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_arrow_green
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 1873
+        width: 46
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3f0ffe65ba3467d0800000000000000
+      internalID: -2926149306958278854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_arrow_up
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 2001
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1da4d878ee15c7a10800000000000000
+      internalID: 1908490427016497873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_arrow_yellow
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1289
+        width: 56
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2afae6cf25727ec0800000000000000
+      internalID: -3570662706490181076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_btn_blue
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1479
+        width: 301
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71888c6a31a7ee0e0800000000000000
+      internalID: -2238717739935430633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_btn_dice
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 719
+        width: 432
+        height: 458
+      alignment: 9
+      pivot: {x: 0.44212964, y: 0.5021834}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88721106aef3213a0800000000000000
+      internalID: -6696219420079872120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_btn_editor
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 2001
+        width: 50
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d71d15d3a2f56dfc0800000000000000
+      internalID: -3470481827820351107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_btn_yellow
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1479
+        width: 301
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf4089d77f94f4440800000000000000
+      internalID: 4922234245052105979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_btn_yellow2
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 1613
+        width: 263
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dca336f4f88f1dfe0800000000000000
+      internalID: -1165877534116332851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_button_close
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 1599
+        width: 98
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46a4124ab8dfe3b60800000000000000
+      internalID: 7727892786810276452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_coin
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 1880
+        width: 60
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 651ffa5145bc94920800000000000000
+      internalID: 2975132590856466774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_combo_tag
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 2018
+        width: 115
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47500e7a74cc67340800000000000000
+      internalID: 4861297455924249972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_game_item_bottom
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 881
+        width: 203
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20f7fc5f6d9a50750800000000000000
+      internalID: 6270604796895395586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_game_score_bar
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1307
+        width: 148
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f332094609730830800000000000000
+      internalID: 4036202758955742197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_game_score_bar_bg
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1457
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b3fa4a85eb578b0800000000000000
+      internalID: -5155004910526317685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_main_cost_bottom
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1618
+        width: 413
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0887bb5bddf3cc60800000000000000
+      internalID: 7837386895133214732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_main_select_bottom
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1800
+        width: 524
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a084b039fdbdc8b00800000000000000
+      internalID: 832281784447879178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_message_item
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 1615
+        width: 198
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 188212bc1a1dd4c80800000000000000
+      internalID: -8336776842365032319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_name_bg
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 2001
+        width: 344
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39b4f5672a93a9800800000000000000
+      internalID: 619871268650306451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_net_tag
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1473
+        width: 127
+        height: 124
+      alignment: 9
+      pivot: {x: 0.496063, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e4f992e28e3bb90800000000000000
+      internalID: -7227177692035068328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_point_light
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 1943
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d484d6377df0873f0800000000000000
+      internalID: -902954307258857395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_point_nromal
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 2015
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00b1d2ec606448960800000000000000
+      internalID: 7603279065951050496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_property_bg
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1953
+        width: 707
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d28bf5bd340e5cb0800000000000000
+      internalID: -4873453083675622704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_ring_bottom
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 811
+        width: 366
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 449acf7a31fb352c0800000000000000
+      internalID: -4443998316140910268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_slider_bar
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1883
+        width: 548
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70764c30dab9f3f20800000000000000
+      internalID: 3404611010710234887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_slider_bg
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1726
+        width: 561
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f6f9c5949b2eda40800000000000000
+      internalID: 5394797320804628214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_split_line
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2044
+        width: 316
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98fbae5afbf573ff0800000000000000
+      internalID: -56471193591824503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_tag_lock
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 2012
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5017f6dcd6f14be0800000000000000
+      internalID: -1494642172950540198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_tag_unlock
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 2012
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3980ff252889cc20800000000000000
+      internalID: 3227260301287131450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Universal_title_bg
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1710
+        width: 404
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20a0c982da6b16810800000000000000
+      internalID: 1756886184478116354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

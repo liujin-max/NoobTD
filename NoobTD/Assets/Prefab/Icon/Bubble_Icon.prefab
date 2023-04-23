@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2907017585379819936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8785340121604086361}
+  - component: {fileID: 3286386779580804751}
+  m_Layer: 0
+  m_Name: Bubble_Icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8785340121604086361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2907017585379819936}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3286386779580804751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2907017585379819936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e93ab341711224c1a80c2e3b6f76c63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tag: Bubble_Icon
+  Atlas:
+  - {fileID: 2800000, guid: 281e06efff45d1244aff11427ed98b4c, type: 3}
+  Sprites:
+  - {fileID: 5435921867156881161, guid: 281e06efff45d1244aff11427ed98b4c, type: 3}
+  - {fileID: -4870265009442684133, guid: 281e06efff45d1244aff11427ed98b4c, type: 3}
+  - {fileID: -5572994966305385033, guid: 281e06efff45d1244aff11427ed98b4c, type: 3}
+  - {fileID: 3403141494019581715, guid: 281e06efff45d1244aff11427ed98b4c, type: 3}
+  - {fileID: 202192575422197428, guid: 281e06efff45d1244aff11427ed98b4c, type: 3}
+  - {fileID: -8875763432559473096, guid: 281e06efff45d1244aff11427ed98b4c, type: 3}
