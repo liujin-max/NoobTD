@@ -8,10 +8,9 @@ function Route:ctor(land, pos_cfg)
 
 end
 
-function Route:Update(deltatime)
+function Route:IsEnd()
     
 end
-
 
 
 return Route

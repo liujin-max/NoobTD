@@ -15,3 +15,11 @@ Logic.UIPool        = require("Logic/UIPool")
 
 Logic.Navigation    = require("Logic/Navigation")
 Logic.MusicPlayer   = require("Logic/MusicPlayer")
+
+
+
+
+
+
+--
+Logic.Battle        = require("Logic/BattleLogic")

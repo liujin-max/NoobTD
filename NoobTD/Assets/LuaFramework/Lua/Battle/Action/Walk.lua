@@ -11,6 +11,7 @@ end
 function Walk:Begin()
     super(Battle.Walk, self, "Begin")
 
+    --行走动画？
 end
 
 function Walk:Update(deltaTime)
@@ -31,6 +32,11 @@ function Walk:Update(deltaTime)
 
     if Vector3.Distance(next_pos , to_pos) <= 0.1 then
         self.Owner.RouteIndex = self.Owner.RouteIndex + 1
+
+        local line  = self.Owner:GetRouteLine()
+        if line:IsRouteEnd(self.Owner:GetCurrentRoute()) == true then   --到达终点
+            self.Owner.StateFlag._IsReach = true
+        end
     end
 end
 

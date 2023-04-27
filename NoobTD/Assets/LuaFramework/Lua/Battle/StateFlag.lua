@@ -1,14 +1,18 @@
---orb状态
+--状态
 local StateFlag = Class.define("Battle.StateFlag")
 
 
-function StateFlag:ctor()
-    self.SubFlag        = false --分裂球
-    self.SplitCount     = 0     --可分裂个数
+function StateFlag:ctor(owner)
+    self.Owner  = owner
 
-    self.HitBubbles     = Class.new(Array)  --击中的bubble, 结构{AttrbuteType, Value}
+    
+    self._IsBorn    = false     --诞生
+    self._IsReach   = false     --到达终点
 
-    self.PointCount     = 2
+    --从开始死亡到真正从内存中清除 有一个过程
+    --播放死亡动画、执行死亡附带的逻辑等等
+    self._IsDead    = false     --死亡
+    self._IsGC      = false     --需要从内存中清除
 end
 
 

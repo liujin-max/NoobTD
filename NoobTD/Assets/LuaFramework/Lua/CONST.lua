@@ -28,7 +28,14 @@ _C.ACTION               = {}
 _C.ACTION.WALK          = "ACTION.WALK"     --行走
 _C.ACTION.IDLE          = "ACTION.IDLE"     --待机
 _C.ACTION.CAST          = "ACTION.CAST"     --施法
+_C.ACTION.DEAD          = "ACTION.DEAD"     --死亡
+_C.ACTION.BORN          = "ACTION.BORN"     --诞生、绘制
+_C.ACTION.REACH         = "ACTION.REACH"    --到达终点
 
+
+--死亡原因
+_C.DEAD                 = {}
+_C.DEAD.NORMAL          = "DEAD.NORMAL"     --正常击杀死亡
 
 
 ------------------------- UI的相关变量 -------------------

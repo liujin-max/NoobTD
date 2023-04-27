@@ -24,6 +24,10 @@ function RouteLine:GetRoute(index)
     return self.Routes:Get(index)    
 end
 
+function RouteLine:IsRouteEnd(route)
+    return self.Routes:IndexOf(route) == self.Routes:Count()    
+end
+
 function RouteLine:Dispose()
     
 end
