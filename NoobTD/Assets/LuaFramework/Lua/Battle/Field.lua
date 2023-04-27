@@ -5,6 +5,9 @@ local Field = Class.define("Battle.Field")
 function Field:ctor()
     self.Land       = Class.new(Battle.Land, self)
     self.Positioner = Class.new(Battle.Positioner, self)
+
+
+
 end
 
 function Field:Display()
@@ -17,6 +20,9 @@ function Field:Update(deltatime)
 end
 
 function Field:Dispose()
+    self.Land:Dispose()
+
+    
     Battle.FIELD    = nil
 end
 

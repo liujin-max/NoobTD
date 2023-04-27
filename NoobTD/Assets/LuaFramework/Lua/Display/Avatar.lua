@@ -7,7 +7,7 @@ function Avatar:ctor(fighter, parent)
 end
 
 function Avatar:Decorate()
-    self.Entity = AssetManager:LoadSync("Prefab/Battle/Monster")
+    self.Entity = AssetManager:LoadSync("Prefab/Character/" .. self.Model.ID)
     self.Entity.transform:SetParent(Battle.FIELD.Land.Avatar.Root.transform)
     self.Entity.transform.localScale      = Vector3.New(0.5, 0.5, 0.5)
     self.Entity.transform.localPosition   = Vector3.zero

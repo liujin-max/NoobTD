@@ -9,8 +9,10 @@ Battle.RouteLine        = require("Battle/RouteLine")
 Battle.Route            = require("Battle/Route") 
 Battle.Spawn            = require("Battle/Spawn") 
 Battle.Exit             = require("Battle/Exit") 
+Battle.Defender         = require("Battle/Defender") 
 
 Battle.Positioner       = require("Battle/Positioner") 
+Battle.Tower            = require("Battle/Tower") 
 Battle.Monster          = require("Battle/Monster") 
 
 

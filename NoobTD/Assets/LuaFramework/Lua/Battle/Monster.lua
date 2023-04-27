@@ -3,7 +3,7 @@
 local Monster = Class.define("Battle.Monster")
 
 function Monster:ctor(cfg)
-    self.ID     = 900001
+    self.ID     = 900000
 
     self.SPEED  = math.random(2, 8) / 5
 

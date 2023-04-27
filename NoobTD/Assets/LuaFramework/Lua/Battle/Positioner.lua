@@ -5,7 +5,10 @@ local Positioner = Class.define("Battle.Positioner")
 function Positioner:ctor(field)
     self.Field      = field
 
+    self.Towers     = Class.new(Array)
     self.Monsters   = Class.new(Array)
+
+    
     self.Timer      = Class.new(Logic.CDTimer, 1.0)
 end
 

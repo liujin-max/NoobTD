@@ -20,15 +20,6 @@ function RouteLine:ctor(land, line_cfg)
     self.Exit   = Class.new(Battle.Exit, self, line_cfg.Exit)
 end
 
-function RouteLine:Display()
-    self.Routes:Each(function(g)
-        g:Display()
-    end)
-
-    self.Spawn:Display()
-    self.Exit:Display()
-end
-
 function RouteLine:GetRoute(index)
     return self.Routes:Get(index)    
 end
