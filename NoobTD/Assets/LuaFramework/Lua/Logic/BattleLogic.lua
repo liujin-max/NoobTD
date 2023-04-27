@@ -17,9 +17,12 @@ function BattleLogic.IsAvailable(unit)
     return true
 end
 
+--单位死亡
 function BattleLogic.Dead(unit)
     unit:Dead()
 end
+
+
 
 
 

@@ -6,7 +6,7 @@ function Grid:ctor(Grid, grid_cfg)
 
 end
 
-function Grid:Display(parent, pos_x, pos_y)
+function Grid:Decorate(parent, pos_x, pos_y)
     self.Entity = AssetManager:LoadSync("Prefab/Battle/BattleGrid")
     self.Entity.transform:SetParent(parent.transform)
     self.Entity.transform.localScale      = Vector3.one

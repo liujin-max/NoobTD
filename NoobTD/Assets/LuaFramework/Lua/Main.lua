@@ -30,7 +30,7 @@ function GameStart()
     
     NoobTD.GameFacade.Instance.LevelManager:LoadLevelAsync("Battle", function()
         Battle.FIELD = Class.new(Battle.Field)
-        Battle.FIELD:Display()
+        Battle.FIELD:Start()
     end)
 
 

@@ -21,7 +21,7 @@ function Grid:CenterPos()
     return self.Pos
 end
 
-function Grid:Display()
+function Grid:Decorate()
 
 end
 

@@ -14,7 +14,7 @@ end
 
 function Positioner:Born()
     local monster   = Class.new(Battle.Monster)
-    local line      = self.Field.Land:GetLine()
+    local line      = self.Field.Land:GetLines():First()
     monster:SetRouteLine(line)
     monster:SetRouteIndex(1)
 

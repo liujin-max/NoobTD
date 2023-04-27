@@ -16,6 +16,9 @@ Battle.Unit             = require("Battle/Unit")
 Battle.Tower            = require("Battle/Tower") 
 Battle.Monster          = require("Battle/Monster") 
 Battle.StateFlag        = require("Battle/StateFlag") 
+Battle.Skill            = require("Battle/Skill") 
+
+
 
 
 ------------------------------------行为--------------------------------------
@@ -37,4 +40,6 @@ Battle.Trace            = require("Battle/Trace")
 Battle.StraightTrace    = require("Battle/StraightTrace")
 Battle.RoundTrace       = require("Battle/RoundTrace")
 
+
+Battle.Hit              = require("Battle/Hit") 
 

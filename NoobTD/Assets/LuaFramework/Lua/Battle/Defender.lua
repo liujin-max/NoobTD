@@ -8,7 +8,7 @@ function Defender:ctor(land, pos_cfg)
     self.Tower  = nil
 end
 
-function Defender:Display()
+function Defender:Decorate()
     self.Entity = AssetManager:LoadSync("Prefab/Battle/Defender")
     self.Entity.transform:SetParent(Battle.FIELD.Land.Avatar.Root.transform)
     self.Entity.transform.localScale      = Vector3.one

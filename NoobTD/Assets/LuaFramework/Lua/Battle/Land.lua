@@ -67,12 +67,12 @@ function Land:ctor(field)
     end
 end
 
-function Land:Display()
+function Land:Decorate()
     self.Avatar = Class.new(Display.Land, self)
-    self.Avatar:Display()
+    self.Avatar:Decorate()
 
     self.Defenders:Each(function(g)
-        g:Display()        
+        g:Decorate()        
     end)
 end
 
@@ -80,8 +80,8 @@ function Land:Dispose()
     self.Avatar:Dispose()
 end
 
-function Land:GetLine()
-    return self.Lines:First()
+function Land:GetLines()
+    return self.Lines
 end
 
 function Land:Update(deltatime)

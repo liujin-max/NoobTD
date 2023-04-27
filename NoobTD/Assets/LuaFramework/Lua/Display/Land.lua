@@ -6,7 +6,7 @@ function Land:ctor(land)
     self.Root       = GameObject.Find("ROOT")
 end
 
-function Land:Display()
+function Land:Decorate()
     self.Entity     = AssetManager:LoadSync("Prefab/Battle/Battle_Field_1")
     self.Entity.transform:SetParent(self.Root.transform)
     self.Entity.transform.localScale      = Vector3.one

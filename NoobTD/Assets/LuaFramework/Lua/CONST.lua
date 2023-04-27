@@ -22,6 +22,17 @@ _C.SCENE_LAYER.MAIN     = "main"
 _C.SCENE_LAYER.BATTLE   = "Battle"
 
 
+--@region 战斗
+_C.BATTLE               = {}
+--战斗结果
+_C.BATTLE.RESULT        = {}
+_C.BATTLE.RESULT.WIN    = "RESULT.WIN"      
+_C.BATTLE.RESULT.LOSE   = "RESULT.LOSE"
+--@endregion
+
+
+
+
 
 --行为动作
 _C.ACTION               = {}
@@ -36,6 +47,17 @@ _C.ACTION.REACH         = "ACTION.REACH"    --到达终点
 --死亡原因
 _C.DEAD                 = {}
 _C.DEAD.NORMAL          = "DEAD.NORMAL"     --正常击杀死亡
+
+
+
+
+
+_C.HIT                  = {}
+--打击类型
+_C.HIT.TYPE             = {}
+_C.HIT.TYPE.ATK         = "HIT.TYPE.ATK"
+_C.HIT.TYPE.HEAL        = "HIT.TYPE.HEAL"
+_C.HIT.TYPE.ARMOR       = "HIT.TYPE.ARMOR"
 
 
 ------------------------- UI的相关变量 -------------------

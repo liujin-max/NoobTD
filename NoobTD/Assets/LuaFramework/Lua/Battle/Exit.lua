@@ -4,15 +4,18 @@ local Exit = Class.define("Battle.Exit", Battle.Grid)
 
 function Exit:ctor(land, pos_cfg)
     super(Battle.Exit, self, "ctor", land, pos_cfg)
+
+    self.HP = Class.new(Data.Pair, 10, 10)
 end
 
-function Exit:Display(parent)
-    self.Entity = AssetManager:LoadSync("Prefab/Battle/Exit")
-    self.Entity.transform:SetParent(Battle.FIELD.Land.Avatar.Entity.transform)
-    self.Entity.transform.localScale      = Vector3.New(_C.CONST.LAND.GRID / 100.0, _C.CONST.LAND.GRID / 100.0, 0)
-    self.Entity.transform.localPosition   = self.Pos
+function Exit:Hurt(value)
+    self.HP._Current = math.max(0, self.HP._Current - value)
 end
 
+--沦陷了
+function Exit:IsOccupied()
+    return self.HP._Current <= 0
+end
 
 function Exit:Update(deltatime)
     
