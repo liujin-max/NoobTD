@@ -14,9 +14,19 @@ Battle.Defender         = require("Battle/Defender")
 Battle.Positioner       = require("Battle/Positioner") 
 Battle.Tower            = require("Battle/Tower") 
 Battle.Monster          = require("Battle/Monster") 
-
-
 Battle.StateFlag        = require("Battle/StateFlag") 
+
+
+------------------------------------行为--------------------------------------
+Battle.Behaviour        = require("Battle/Behaviour") 
+Battle.TowerBehaviour   = require("Battle/TowerBehaviour") 
+Battle.MonsterBehaviour = require("Battle/MonsterBehaviour") 
+
+
+Battle.Action           = require("Battle/Action/Action") 
+Battle.Idle             = require("Battle/Action/Idle") 
+Battle.Walk             = require("Battle/Action/Walk") 
+Battle.Cast             = require("Battle/Action/Cast") 
 
 
 Battle.Trace            = require("Battle/Trace")

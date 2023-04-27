@@ -23,6 +23,14 @@ _C.SCENE_LAYER.BATTLE   = "Battle"
 
 
 
+--行为动作
+_C.ACTION               = {}
+_C.ACTION.WALK          = "ACTION.WALK"     --行走
+_C.ACTION.IDLE          = "ACTION.IDLE"     --待机
+_C.ACTION.CAST          = "ACTION.CAST"     --施法
+
+
+
 ------------------------- UI的相关变量 -------------------
 _C.UI                       = {}
 _C.UI.ITEM                  = {}
