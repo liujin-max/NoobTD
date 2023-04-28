@@ -146,7 +146,7 @@ end
 
 --@region 结算阶段
 function Field:RESULT_Start()
-    
+    print("RESULT_Start ： " .. self.FSM:GetCurrent().Params.Result)
 end
 
 function Field:RESULT_Update()
