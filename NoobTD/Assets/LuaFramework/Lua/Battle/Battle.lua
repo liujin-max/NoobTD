@@ -17,6 +17,7 @@ Battle.Tower            = require("Battle/Tower")
 Battle.Monster          = require("Battle/Monster") 
 Battle.StateFlag        = require("Battle/StateFlag") 
 Battle.Skill            = require("Battle/Skill") 
+Battle.Wave             = require("Battle/Wave") 
 
 
 

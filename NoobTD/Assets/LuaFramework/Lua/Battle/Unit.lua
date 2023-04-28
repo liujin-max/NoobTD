@@ -13,7 +13,7 @@ function Unit:ctor(cfg)
     self.HP         = Class.new(Data.Pair, cfg.HP, cfg.HP)
     self.ARMOR      = Class.new(Data.Pair, 0, 0)
     self.ATK        = Class.new(Data.AttributeValue, cfg.Atk)
-    self.SPEED      = Class.new(Data.AttributeValue, cfg.Speed)
+    self.SPEED      = Class.new(Data.AttributeValue, cfg.Speed / 100.0)
     --@endregion
 
     self.StateFlag  = Class.new(Battle.StateFlag, self)

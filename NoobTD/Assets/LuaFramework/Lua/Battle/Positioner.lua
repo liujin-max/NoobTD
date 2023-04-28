@@ -8,32 +8,14 @@ function Positioner:ctor(field)
     self.Towers     = Class.new(Array)
     self.Monsters   = Class.new(Array)
 
-    
-    self.Timer      = Class.new(Logic.CDTimer, 1.0)
+
 end
 
 function Positioner:Born()
-    local monster   = Class.new(Battle.Monster)
-    local line      = self.Field.Land:GetLines():First()
-    monster:SetRouteLine(line)
-    monster:SetRouteIndex(1)
 
-    local route     = monster:GetCurrentRoute()
-
-    monster:Decorate()
-    monster.Avatar:SetPosition(route:CenterPos())
-
-    self.Monsters:Add(monster)
 end
 
 function Positioner:Update(deltatime)
-    self.Timer:Update(deltatime)
-    if self.Timer:IsFinished() == true then
-        self.Timer:Reset()
-
-        self:Born()
-    end
-
     local unit_gc   = Class.new(Array)
 
     self.Towers:Each(function(u)
