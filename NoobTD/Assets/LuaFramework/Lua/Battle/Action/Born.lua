@@ -13,6 +13,22 @@ function Born:Begin()
 
     self.Owner.Avatar:Decorate()
 
+    if self.Owner.Side == _C.SIDE.ATTACK then
+        local route = self.Owner:GetCurrentRoute()
+        if route ~= nil then
+            self.Owner.Avatar:SetPosition(route:CenterPos())
+        end
+
+    elseif self.Owner.Side == _C.SIDE.DEFEND then
+        local defender = self.Owner:GetDefender()
+        if defender ~= nil then
+            self.Owner.Avatar:SetPosition(defender:CenterPos())
+        end
+    end
+
+
+
+
     self.Owner.StateFlag._IsBorn = true
 end
 

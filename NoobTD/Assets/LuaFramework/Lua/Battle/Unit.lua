@@ -3,11 +3,12 @@
 local Unit = Class.define("Battle.Unit")
 
 
-function Unit:ctor(cfg)
+function Unit:ctor(cfg, side)
     self.Table      = cfg
     self.ID         = cfg.ID
     self.Name       = cfg.Name
-
+    
+    self.Side       = side
 
     --@region 属性
     self.HP         = Class.new(Data.Pair, cfg.HP, cfg.HP)

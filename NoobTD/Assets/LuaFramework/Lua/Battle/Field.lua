@@ -50,9 +50,10 @@ function Field:RegisterHit(h)
 end
 
 function Field:ctor()
-    self.Land       = Class.new(Battle.Land, self)
+    self.Land       = Class.new(Battle.Land, self, Table.Field[1001])
     self.Positioner = Class.new(Battle.Positioner, self)
 
+    self.Waves      = Class.new(Array)
 
     --
     self.Hits       = Class.new(Array)

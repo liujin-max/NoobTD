@@ -13,6 +13,10 @@ function Tower:SetDefender(defender)
     self.Defender   = defender
 end
 
+function Tower:GetDefender()
+    return self.Defender
+end
+
 function Tower:InitBehaviour()
     self.Behaviour  = Class.new(Battle.TowerBehaviour, self)
 end

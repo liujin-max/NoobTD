@@ -11,9 +11,10 @@ function Positioner:ctor(field)
 
 end
 
-function Positioner:Born()
-
+function Positioner:PushMonster(m)
+    self.Monsters:Add(m)
 end
+
 
 function Positioner:Update(deltatime)
     local unit_gc   = Class.new(Array)

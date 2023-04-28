@@ -30,6 +30,9 @@ _C.BATTLE.RESULT.WIN    = "RESULT.WIN"
 _C.BATTLE.RESULT.LOSE   = "RESULT.LOSE"
 --@endregion
 
+_C.SIDE                 = {}
+_C.SIDE.ATTACK          = 1     --进攻方
+_C.SIDE.DEFEND          = 2     --防守方
 
 
 

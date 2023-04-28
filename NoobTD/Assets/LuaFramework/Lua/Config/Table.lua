@@ -7,11 +7,14 @@ Table.EventEffectListTable      = require("Config/EventEffectListTable")
 Table.EffectListTable           = require("Config/EffectListTable")
 
 
-
+Table.MonsterTable              = require("Config/MonsterTable")
+Table.TowerTable                = require("Config/TowerTable")
 Table.SkillTable                = require("Config/SkillTable")
 
 
 
+Table.Field = {}
+Table.Field[1001]               = require("Config/Battle/battle_field_1001")
 
 
 
