@@ -24,3 +24,4 @@ Logic.MusicPlayer   = require("Logic/MusicPlayer")
 --
 Logic.Battle        = require("Logic/BattleLogic")
 Logic.HitSettle     = require("Logic/HitSettle")
+Logic.TargetFilter  = require("Logic/TargetFilter")

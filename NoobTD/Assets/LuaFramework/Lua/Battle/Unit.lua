@@ -26,11 +26,11 @@ function Unit:ctor(cfg, side)
     self.Skills     = Class.new(Array)
     self.SkillDic   = {}
 
-    -- for i, id in ipairs(cfg.Skills) do
-    --     local skill = Class.new(Battle.Skill, Table.Get(Table.SkillTable, id), self)
-    --     self.Skills:Add(skill)
-    --     self.SkillDic[id] = skill
-    -- end
+    for i, id in ipairs(cfg.Skills) do
+        local skill = Class.new(Battle.Skill, Table.Get(Table.SkillTable, id), self)
+        self.Skills:Add(skill)
+        self.SkillDic[id] = skill
+    end
 end
 
 function Unit:InitBehaviour()
@@ -82,6 +82,31 @@ end
 function Unit:IsGC()
     return self.StateFlag._IsGC == true
 end
+
+--正在释放技能
+function Unit:IsCasting()
+    for i = 1, self.Skills:Count() do
+        local sk = self.Skills:Get(i)
+        if sk:IsCasting() == true then
+            return true
+        end
+    end
+    return false
+end
+
+--可以释放的技能
+function Unit:GetPlayableSkills()
+    local temp = Class.new(Array)
+
+    self.Skills:Each(function(sk)
+        if sk:IsReady() == true then
+            temp:Add(sk)
+        end      
+    end)
+
+    return temp
+end
+
 
 function Unit:Update(deltatime)
     if self.Behaviour ~= nil then

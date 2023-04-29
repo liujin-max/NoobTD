@@ -6,6 +6,8 @@ local Route = Class.define("Battle.Route", Battle.Grid)
 function Route:ctor(land, pos_cfg)
     super(Battle.Route, self, "ctor", land, pos_cfg)
 
+
+    self.Distance   = 0
 end
 
 function Route:IsEnd()

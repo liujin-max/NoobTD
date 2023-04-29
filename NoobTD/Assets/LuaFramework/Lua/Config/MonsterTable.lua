@@ -5,6 +5,6 @@ return {
 		Atk = 3,
 		HP = 25,
 		Speed = 200,
-		condition = Table.Empty,
+		Skills = Table.Empty,
 	},
 }

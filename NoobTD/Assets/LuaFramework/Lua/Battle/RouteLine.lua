@@ -7,10 +7,17 @@ function RouteLine:ctor(land, line_cfg)
     self.Land   = land
 
     --路线节点
+    local last_grid  = nil
     self.Routes = Class.new(Array)
     for i, v in ipairs(line_cfg.Route) do
         local grid = Class.new(Battle.Route, self, v)
         self.Routes:Add(grid)
+
+        if last_grid ~= nil then
+            grid.Distance   = last_grid.Distance + Logic.Battle.Distance(last_grid:CenterPos(), grid:CenterPos())
+        end
+
+        last_grid = grid
     end
 
     --起点

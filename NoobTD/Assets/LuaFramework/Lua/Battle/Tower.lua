@@ -22,4 +22,6 @@ function Tower:InitBehaviour()
 end
 
 
+
+
 return Tower

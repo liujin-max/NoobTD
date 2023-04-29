@@ -53,6 +53,18 @@ _C.DEAD                 = {}
 _C.DEAD.NORMAL          = "DEAD.NORMAL"     --正常击杀死亡
 
 
+--@region 技能
+_C.SKILL                = {}
+
+--作用目标
+_C.SKILL.PICK           = {}
+_C.SKILL.PICK.ALLY      = 1         --我方
+_C.SKILL.PICK.ENEMY     = 2         --敌方
+
+--目标筛选器
+_C.SKILL.DETECT         = {}
+_C.SKILL.DETECT.NORMAL  = 101       --距离终点最近的人
+--@endregion    
 
 
 

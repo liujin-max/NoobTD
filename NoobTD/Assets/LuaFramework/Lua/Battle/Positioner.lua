@@ -19,6 +19,24 @@ function Positioner:PushMonster(m)
     self.Monsters:Add(m)
 end
 
+function Positioner:GetUnits(side, pick_id)
+    if side == _C.SIDE.ATTACK then
+        if pick_id == _C.SKILL.PICK.ALLY then
+            return self.Monsters
+        else
+            return self.Towers
+        end
+
+    elseif side == _C.SIDE.DEFEND then
+        if pick_id == _C.SKILL.PICK.ALLY then
+            return self.Towers
+        else
+            return self.Monsters
+        end
+    end    
+
+    return nil
+end
 
 function Positioner:Update(deltatime)
     local unit_gc   = Class.new(Array)

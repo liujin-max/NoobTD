@@ -13,6 +13,13 @@ function BattleLogic.IsAvailable(unit)
         return false
     end
 
+    if unit.StateFlag._IsGC == true then
+        return false
+    end
+
+    if unit.StateFlag._IsBorn == false then
+        return false
+    end
 
     return true
 end
@@ -20,6 +27,16 @@ end
 --单位死亡
 function BattleLogic.Dead(unit)
     unit:Dead()
+end
+
+function BattleLogic.Distance(pos1, pos2)
+    return Vector3.Distance(pos1, pos2)
+end
+
+--范围检测
+function BattleLogic.RadiusCheck(pos1, pos2, radius)
+    local dis = BattleLogic.Distance(pos1, pos2)
+    return dis <= radius
 end
 
 --建造塔

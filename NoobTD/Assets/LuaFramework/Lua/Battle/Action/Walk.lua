@@ -30,7 +30,7 @@ function Walk:Update(deltaTime)
     local to_pos    = o_pos + dir
     self.Owner.Avatar:SetPosition(to_pos)
 
-    if Vector3.Distance(next_pos , to_pos) <= 0.1 then
+    if Logic.Battle.Distance(next_pos , to_pos) <= 0.1 then
         self.Owner.RouteIndex = self.Owner.RouteIndex + 1
 
         local line  = self.Owner:GetRouteLine()
