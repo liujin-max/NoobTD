@@ -2,10 +2,11 @@
 
 local Monster = Class.define("Battle.Monster", Battle.Unit)
 
-function Monster:ctor(cfg)
-    super(Battle.Monster, self, "ctor", cfg)
+function Monster:ctor(cfg, side)
+    super(Battle.Monster, self, "ctor", cfg, side)
 
-
+    self.ReachDemage    = 1
+    
     --路线
     self.RouteLine  = nil
     self.RouteIndex = 1

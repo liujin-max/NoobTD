@@ -14,7 +14,7 @@ local Grid = Class.define("Battle.Grid")
 function Grid:ctor(land, pos_cfg)
     self.Land   = land
 
-    self.Pos    = Vector3.New(pos_cfg[1], pos_cfg[2], pos_cfg[3])
+    self.Pos    = Vector3.New(pos_cfg[1] or 0, pos_cfg[2] or 0, pos_cfg[3] or 0)
 end
 
 function Grid:CenterPos()

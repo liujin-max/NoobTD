@@ -29,6 +29,7 @@ Battle.MonsterBehaviour = require("Battle/MonsterBehaviour")
 
 
 Battle.Action           = require("Battle/Action/Action") 
+Battle.Void             = require("Battle/Action/Void") 
 Battle.Idle             = require("Battle/Action/Idle") 
 Battle.Walk             = require("Battle/Action/Walk") 
 Battle.Cast             = require("Battle/Action/Cast") 

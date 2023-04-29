@@ -26,15 +26,19 @@ function Unit:ctor(cfg, side)
     self.Skills     = Class.new(Array)
     self.SkillDic   = {}
 
-    for i, id in ipairs(cfg.Skills) do
-        local skill = Class.new(Battle.Skill, Table.Get(Table.SkillTable, id), self)
-        self.Skills:Add(skill)
-        self.SkillDic[id] = skill
-    end
+    -- for i, id in ipairs(cfg.Skills) do
+    --     local skill = Class.new(Battle.Skill, Table.Get(Table.SkillTable, id), self)
+    --     self.Skills:Add(skill)
+    --     self.SkillDic[id] = skill
+    -- end
 end
 
 function Unit:InitBehaviour()
 
+end
+
+function Unit:GetSPEED()
+    return self.SPEED:ToNumber()
 end
 
 function Unit:GetATK()

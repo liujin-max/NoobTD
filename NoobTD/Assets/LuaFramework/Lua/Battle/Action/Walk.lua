@@ -26,7 +26,7 @@ function Walk:Update(deltaTime)
 
     local next_pos  = next_node:CenterPos()
     local o_pos     = self.Owner.Avatar:GetPosition()
-    local dir       = Vector3.Normalize(next_pos - o_pos) * self.Owner.SPEED * deltaTime
+    local dir       = Vector3.Normalize(next_pos - o_pos) * self.Owner:GetSPEED() * deltaTime
     local to_pos    = o_pos + dir
     self.Owner.Avatar:SetPosition(to_pos)
 

@@ -6,6 +6,7 @@ function MonsterBehaviour:ctor(owner)
     super(Battle.MonsterBehaviour, self, "ctor", owner)    
 
 
+    self:LoadAction(Battle.Void,        _C.ACTION.VOID)
     self:LoadAction(Battle.Idle,        _C.ACTION.IDLE)
     self:LoadAction(Battle.Walk,        _C.ACTION.WALK)
     self:LoadAction(Battle.Cast,        _C.ACTION.CAST)
@@ -13,12 +14,14 @@ function MonsterBehaviour:ctor(owner)
     self:LoadAction(Battle.Reach,       _C.ACTION.REACH)
     self:LoadAction(Battle.Dead,        _C.ACTION.DEAD)
 
-    -- self:SetInitalAction(self.ACTIONS[_C.ACTION.BORN])
+    self:SetInitalAction(self.ACTIONS[_C.ACTION.VOID])
 end
 
 function MonsterBehaviour:Check()
     super(Battle.MonsterBehaviour, self, "Check")
     
+    
+
     --诞生
     if self.Owner.StateFlag._IsBorn == false then
         if self:CurrentTag() ~= _C.ACTION.BORN then

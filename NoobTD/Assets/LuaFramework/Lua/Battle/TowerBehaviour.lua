@@ -5,12 +5,13 @@ local TowerBehaviour = Class.define("Battle.TowerBehaviour", Battle.Behaviour)
 function TowerBehaviour:ctor(owner)
     super(Battle.TowerBehaviour, self, "ctor", owner)    
 
+    self:LoadAction(Battle.Void,        _C.ACTION.VOID)
     self:LoadAction(Battle.Idle,        _C.ACTION.IDLE)
     self:LoadAction(Battle.Cast,        _C.ACTION.CAST)
     self:LoadAction(Battle.Born,        _C.ACTION.BORN)
     self:LoadAction(Battle.Dead,        _C.ACTION.DEAD)
 
-    -- self:SetInitalAction(self.ACTIONS[_C.ACTION.BORN])
+    self:SetInitalAction(self.ACTIONS[_C.ACTION.VOID])
 end
 
 function TowerBehaviour:Check()

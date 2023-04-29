@@ -2,8 +2,8 @@
 
 local Tower = Class.define("Battle.Tower", Battle.Unit)
 
-function Tower:ctor(cfg)
-    super(Battle.Tower, self, "ctor", cfg)
+function Tower:ctor(cfg, side)
+    super(Battle.Tower, self, "ctor", cfg, side)
 
     --防守位
     self.Defender   = nil

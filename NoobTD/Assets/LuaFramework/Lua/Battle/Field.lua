@@ -56,7 +56,8 @@ function Field:ctor()
 
     self.Waves      = Class.new(Array)
     for i,v in ipairs(self.Config.Waves) do
-        local wave  = Class.new(Battle)
+        local wave  = Class.new(Battle.Wave, v, i)
+        self.Waves:Add(wave)
     end
 
     --
@@ -73,10 +74,6 @@ function Field:Update(deltatime)
     if self.FSM ~= nil then
         self.FSM:Update(deltatime)
     end
-    
-    if self.Positioner ~= nil then
-        self.Positioner:Update(deltatime)
-    end
 
     if self.Land ~= nil then
         self.Land:Update(deltatime)
@@ -84,9 +81,10 @@ function Field:Update(deltatime)
 end
 
 function Field:CheckResult()
-    local lines = Battle.Field.Land:GetLines()
+    local lines = self.Land:GetLines()
     for i = 1, lines:Count() do
         local line = lines:Get(i)
+
         if line:IsOccupied() == true then
             return true, _C.BATTLE.RESULT.LOSE
         end
@@ -97,7 +95,7 @@ end
 
 --@region 预加载
 function Field:PRELOAD_Start()
-    
+    self.FSM:Transist(STATE.PREPARE)
 end
 
 function Field:PRELOAD_Update()
@@ -112,11 +110,15 @@ end
 
 --@region 准备
 function Field:PREPARE_Start()
-    
+    self.FSM:Transist(STATE.PLAY)
 end
 
 function Field:PREPARE_Update()
-    
+    local deltatime = Time.deltaTime
+
+    if self.Positioner ~= nil then
+        self.Positioner:Update(deltatime)
+    end
 end
 
 function Field:PREPARE_Terminate()
@@ -131,6 +133,17 @@ function Field:PLAY_Start()
 end
 
 function Field:PLAY_Update()
+    local deltatime = Time.deltaTime
+
+    if self.Positioner ~= nil then
+        self.Positioner:Update(deltatime)
+    end
+
+    --波数
+    self.Waves:Each(function(w)
+        w:Update(deltatime)
+    end)
+
     --结算Hit
     self.Hits:Each(function(h)
         h:Trigger()        

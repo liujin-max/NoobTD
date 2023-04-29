@@ -39,6 +39,7 @@ _C.SIDE.DEFEND          = 2     --防守方
 
 --行为动作
 _C.ACTION               = {}
+_C.ACTION.VOID          = "ACTION.VOID"
 _C.ACTION.WALK          = "ACTION.WALK"     --行走
 _C.ACTION.IDLE          = "ACTION.IDLE"     --待机
 _C.ACTION.CAST          = "ACTION.CAST"     --施法

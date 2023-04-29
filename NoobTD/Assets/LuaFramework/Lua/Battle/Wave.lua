@@ -31,10 +31,11 @@ end
 --怪物诞生
 function Wave:Spawn(cfg)
     local monster   = Class.new(Battle.Monster, Table.Get(Table.MonsterTable, cfg.ID), _C.SIDE.ATTACK)
-    local line      = self.Field.Land:GetLines():First()
+    local line      = Battle.FIELD.Land:GetLines():First()
     monster:SetRouteLine(line)
     monster:SetRouteIndex(1)
-    
+    monster:InitBehaviour()
+
     Battle.FIELD.Positioner:PushMonster(monster)
 end
 
