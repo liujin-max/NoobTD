@@ -1,6 +1,8 @@
 Battle  = {}
 
 
+Battle.Field            = require("Battle/Field") 
+Battle.Field            = require("Battle/Field") 
 
 Battle.Field            = require("Battle/Field") 
 Battle.Land             = require("Battle/Land") 

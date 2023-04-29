@@ -39,6 +39,10 @@ function BattleLogic.RadiusCheck(pos1, pos2, radius)
     return dis <= radius
 end
 
+function BattleLogic.Normalize(vector)
+    return Vector3.Normalize(vector)
+end
+
 --建造塔
 function BattleLogic.BuildTower(id, defender)
     local tower   = Class.new(Battle.Tower, Table.Get(Table.TowerTable, id), _C.SIDE.DEFEND)

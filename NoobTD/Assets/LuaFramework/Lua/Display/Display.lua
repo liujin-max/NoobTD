@@ -18,3 +18,17 @@ Display.Grid            = require("Display/Grid")
 
 
 
+
+Display.Trace           = require("Display/Trace")
+
+
+
+Display.ShowComp        = require("Display/Comp/ShowComp")
+Display.BulletComp      = require("Display/Comp/BulletComp")
+
+
+
+
+Display.SkillShow       = require("Display/SkillShow")
+
+Display.Bullet          = require("Display/Bullet")

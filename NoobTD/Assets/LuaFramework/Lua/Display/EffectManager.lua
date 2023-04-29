@@ -9,15 +9,10 @@ local _list = Class.new(Array)
 
 function EffectManager.Awake()
     _list = Class.new(Array)
-    
 end
 
-function EffectManager.Add(resPath, parent,  pos)
-    if pos == nil then
-        pos = Vector3.zero
-    end
-    
-    local effect = Class.new(Display.Effect, resPath, parent, pos)
+function EffectManager.Add(resPath,  pos)
+    local effect = Class.new(Display.Effect, resPath, Battle.FIELD.Land.Avatar.Root, pos or Vector3.zero)
     _list:Add(effect)
 
     return effect

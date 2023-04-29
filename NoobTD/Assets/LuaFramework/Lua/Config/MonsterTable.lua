@@ -4,7 +4,7 @@ return {
 		ID = 910000,
 		Atk = 3,
 		HP = 25,
-		Speed = 200,
+		Speed = 100,
 		Skills = Table.Empty,
 	},
 }

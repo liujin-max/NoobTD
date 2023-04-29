@@ -12,7 +12,7 @@ function Dead:Begin()
     super(Battle.Dead, self, "Begin")
 
     --死亡动画
-    
+    print("dead")
     --播完动画后
     self.Owner.StateFlag._IsGC  = true
 end

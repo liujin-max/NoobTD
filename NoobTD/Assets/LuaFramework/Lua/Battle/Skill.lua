@@ -8,7 +8,7 @@ function Skill:ctor(config, caster)
     self.Table      = config
     self.ID         = config.ID
     self.Name       = config.Name
-
+    self.DisplayID  = config.DisplayName
 
     self.Timer      = Class.new(Logic.CDTimer, config.CD / 1000.0)   --冷却时间
     self.ATKINC     = Class.new(Data.AttributeValue, config.AtkInc)   --伤害倍率
@@ -18,9 +18,10 @@ function Skill:ctor(config, caster)
     self.DetectID   = _C.SKILL.DETECT.NORMAL
     self.PickID     = _C.SKILL.PICK.ENEMY
 
-    --释放中
-    self.CastFlag   = false
     self.Targets    = Class.new(Array)
+
+    --表现类
+    self.Show       = Class.new(Display.SkillShow, self)
 end
 
 function Skill:GetRadius()
@@ -32,7 +33,7 @@ function Skill:IsReady()
 end
 
 function Skill:IsCasting()
-    return self.CastFlag
+    return self.Show:IsCasting()
 end
 
 function Skill:Check()
@@ -40,23 +41,25 @@ function Skill:Check()
 end
 
 function Skill:Cast(targets)
-    self.CastFlag   = true
     self.Targets    = targets
-
     self.Timer:Reset()
 
-    --
-    self:Over()
+    self.Show:Cast()
 end
 
 function Skill:Over()
-    self.CastFlag = false
-
+    self.Show:Over()
 end
 
 function Skill:Update(deltatime)
     if self:IsCasting() == false then
         self.Timer:Update(deltatime)
+    else
+        self.Show:Update(deltatime)
+
+        if self.Show:IsOver() == true then 
+            self:Over()
+        end
     end
 end
 

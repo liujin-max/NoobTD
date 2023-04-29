@@ -49,6 +49,14 @@ function Field:RegisterHit(h)
     self.Hits:Add(h)
 end
 
+function Field:RegisterBullet(b)
+    self.Bullets:Add(b)
+end
+
+function Field:UnRegisterBullet(b)
+    self.Bullets:Remove(b)
+end
+
 function Field:ctor()
     self.Config     = Table.Field[1001]
     self.Land       = Class.new(Battle.Land, self, self.Config)
@@ -62,6 +70,7 @@ function Field:ctor()
 
     --
     self.Hits       = Class.new(Array)
+    self.Bullets    = Class.new(Array)
 end
 
 function Field:Start()
@@ -152,6 +161,10 @@ function Field:PLAY_Update()
         h:Trigger()        
     end)
     self.Hits:Clear()
+
+    self.Bullets:Each(function(b)
+        b:Update(deltatime)        
+    end)
 
 
     local flag, result  = self:CheckResult()

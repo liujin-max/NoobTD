@@ -64,6 +64,12 @@ _C.SKILL.PICK.ENEMY     = 2         --敌方
 --目标筛选器
 _C.SKILL.DETECT         = {}
 _C.SKILL.DETECT.NORMAL  = 101       --距离终点最近的人
+
+--表现
+_C.SKILL.SHOW           = {}
+_C.SKILL.SHOW.BULLET    = "SHOW.BULLET"
+
+
 --@endregion    
 
 
