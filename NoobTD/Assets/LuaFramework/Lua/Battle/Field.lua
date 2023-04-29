@@ -50,17 +50,21 @@ function Field:RegisterHit(h)
 end
 
 function Field:ctor()
-    self.Land       = Class.new(Battle.Land, self, Table.Field[1001])
+    self.Config     = Table.Field[1001]
+    self.Land       = Class.new(Battle.Land, self, self.Config)
     self.Positioner = Class.new(Battle.Positioner, self)
 
     self.Waves      = Class.new(Array)
+    for i,v in ipairs(self.Config.Waves) do
+        local wave  = Class.new(Battle)
+    end
 
     --
     self.Hits       = Class.new(Array)
 end
 
 function Field:Start()
-    InitFSM()
+    InitFSM(self)
 
     self.Land:Decorate()
 end
