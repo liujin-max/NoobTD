@@ -11,6 +11,10 @@ function Positioner:ctor(field)
 
 end
 
+function Positioner:PushTower(t)
+    self.Towers:Add(t)
+end
+
 function Positioner:PushMonster(m)
     self.Monsters:Add(m)
 end

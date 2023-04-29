@@ -33,16 +33,20 @@ function Land:Decorate()
     end)
 end
 
-function Land:Dispose()
-    self.Avatar:Dispose()
-end
-
 function Land:GetLines()
     return self.Lines
 end
 
+function Land:GetDefenders()
+    return self.Defenders
+end
+
 function Land:Update(deltatime)
     
+end
+
+function Land:Dispose()
+    self.Avatar:Dispose()
 end
 
 

@@ -22,6 +22,16 @@ function BattleLogic.Dead(unit)
     unit:Dead()
 end
 
+--建造塔
+function BattleLogic.BuildTower(id, defender)
+    local tower   = Class.new(Battle.Tower, Table.Get(Table.TowerTable, id), _C.SIDE.DEFEND)
+    tower:SetDefender(defender)
+    defender:SetTower(tower)
+    
+    tower:InitBehaviour()
+
+    Battle.FIELD.Positioner:PushTower(tower)
+end
 
 
 

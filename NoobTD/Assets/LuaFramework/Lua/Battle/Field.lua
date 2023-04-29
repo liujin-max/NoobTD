@@ -110,6 +110,9 @@ end
 
 --@region 准备
 function Field:PREPARE_Start()
+    --加载一个塔
+    Logic.Battle.BuildTower(10000, self.Land:GetDefenders():First())
+    --
     self.FSM:Transist(STATE.PLAY)
 end
 

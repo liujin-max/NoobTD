@@ -7,15 +7,6 @@
 
 local Wave = Class.define("Battle.Wave")
 
---结构
--- {
---     wait    = 0,
---     list    =
---     {
---         {time = 0.0, id = 910000}, {time = 1.0, id = 910000},{time = 2.0, id = 910000},{time = 3.0, id = 910000},
---         {time = 5.0, id = 910000}, {time = 6.0, id = 910000},{time = 7.0, id = 910000},{time = 8.0, id = 910000},
---     }
--- }
 
 function Wave:ctor(cfg, order)
     self.Order  = order
