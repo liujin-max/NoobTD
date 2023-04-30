@@ -2,6 +2,11 @@ local Effect = Class.define("Logic.Effect")
 
 local EFFECT_LIST = {}
 
+--
+EFFECT_LIST[1000]   = function()
+    
+end
+
 
 function Effect:ctor(id, value)
     self.ID         = id

@@ -7,6 +7,7 @@ local PrefabList = {}
 -- PrefabList[_C.UI.ITEM.GAME]             = { Path = "Prefab/UI/Item/GameItem"}
 PrefabList[_C.UI.ITEM.SYSTEMTIP]        = { Path = "Prefab/UI/Item/SystemTipItem"}
 PrefabList[_C.UI.ITEM.SYSTEMPOPUP]      = { Path = "Prefab/UI/Item/SystemPopupItem"}
+PrefabList[_C.UI.ITEM.BUILD]            = { Path = "Prefab/UI/Item/BuildItem"}
 -- PrefabList[_C.UI.ITEM.GAMETYPE]         = { Path = "Prefab/UI/Item/GameTypeItem"}
 -- PrefabList[_C.UI.ITEM.GAMETHEME]        = { Path = "Prefab/UI/Item/GameThemeItem"}
 -- PrefabList[_C.UI.ITEM.GAMECONSOLE]      = { Path = "Prefab/UI/Item/GameConsoleItem"}
@@ -52,7 +53,9 @@ PrefabList[_C.UI.ITEM.SYSTEMPOPUP]      = { Path = "Prefab/UI/Item/SystemPopupIt
 -- PrefabList[_C.UI.WINDOW.MAIN]           = { Class = UI.MainWindow,              Path = "Prefab/UI/Window/MainWindow",           Pause   = false}
 -- PrefabList[_C.UI.WINDOW.GAMEREADY]      = { Class = UI.GameReadyWindow,         Path = "Prefab/UI/Window/GameReadyWindow",      Pause   = true }
 -- PrefabList[_C.UI.WINDOW.GAMESCORE]      = { Class = UI.GameScoreWindow,         Path = "Prefab/UI/Window/GameScoreWindow",      Pause   = true }
-PrefabList[_C.UI.WINDOW.SYSTEMPOPUP]    = { Class = UI.SystemPopupWindow,       Path = "Prefab/UI/Window/SystemPopupWindow",    Pause   = false}
+PrefabList[_C.UI.WINDOW.SYSTEMPOPUP]    = { Class = UI.SystemPopupWindow,       Path = "Prefab/UI/Window/SystemPopupWindow"}
+PrefabList[_C.UI.WINDOW.BATTLE]         = { Class = UI.BattleWindow,            Path = "Prefab/UI/Window/BattleWindow"}
+
 -- PrefabList[_C.UI.WINDOW.GAMEREADY]      = { Class = UI.GameReadyWindow,         Path = "Prefab/UI/Window/GameReadyWindow",      Pause   = true }
 -- PrefabList[_C.UI.WINDOW.GAMESCORE]      = { Class = UI.GameScoreWindow,         Path = "Prefab/UI/Window/GameScoreWindow",      Pause   = true }
 -- PrefabList[_C.UI.WINDOW.GAMETYPE]       = { Class = UI.GameTypeWindow,          Path = "Prefab/UI/Window/GameTypeWindow",       Pause   = true }

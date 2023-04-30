@@ -190,6 +190,7 @@ public static class CustomSettings
         _GT(typeof(PointerEventData)),
         _GT(typeof(LineRenderer)),
         _GT(typeof(WindowAnim)),
+        _GT(typeof(MouseListener)),
         // _GT(typeof(LuaBehaviour)),
 
          _GT(typeof(NoobTD.GameFacade)),

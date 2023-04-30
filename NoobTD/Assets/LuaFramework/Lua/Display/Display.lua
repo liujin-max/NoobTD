@@ -12,8 +12,7 @@ Display.Avatar          = require("Display/Avatar")
 
 Display.Land            = require("Display/Land")
 Display.Grid            = require("Display/Grid")
-
-
+Display.Defender        = require("Display/Defender")
 
 
 

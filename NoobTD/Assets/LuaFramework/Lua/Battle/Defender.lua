@@ -6,13 +6,12 @@ function Defender:ctor(land, pos_cfg)
     super(Battle.Defender, self, "ctor", land, pos_cfg)
 
     self.Tower  = nil
+    self.Comp   = nil
 end
 
 function Defender:Decorate()
-    self.Entity = AssetManager:LoadSync("Prefab/Battle/Defender")
-    self.Entity.transform:SetParent(Battle.FIELD.Land.Avatar.Root.transform)
-    self.Entity.transform.localScale      = Vector3.one
-    self.Entity.transform.localPosition   = self.Pos
+    self.Avatar = Class.new(Display.Defender, self)
+    self.Avatar:Decorate()
 end
 
 function Defender:SetTower(tower)

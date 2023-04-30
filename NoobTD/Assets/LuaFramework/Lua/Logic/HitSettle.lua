@@ -29,8 +29,6 @@ ENUM[_C.HIT.TYPE.ATK]   = function(hit)
     if target:GetHP() <= 0 then
         Logic.Battle.Dead(target)
     end
-
-    print(target:GetHP())
 end
 
 --治疗类型Hit 处理

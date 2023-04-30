@@ -119,6 +119,9 @@ end
 
 --@region 准备
 function Field:PREPARE_Start()
+    UI.Manager:LoadUIWindow(_C.UI.WINDOW.BATTLE, UI.Manager.BOTTOM)
+    UI.BattleWindow.Init()
+
     --加载一个塔
     Logic.Battle.BuildTower(10000, self.Land:GetDefenders():First())
     --
@@ -184,7 +187,7 @@ function Field:RESULT_Start()
 end
 
 function Field:RESULT_Update()
-    
+
 end
 
 function Field:RESULT_Terminate()
@@ -198,6 +201,7 @@ end
 function Field:Dispose()
     self.Land:Dispose()
 
+    UI.Manager:UnLoadWindow(_C.UI.WINDOW.BATTLE)
     
     Battle.FIELD    = nil
 end
