@@ -85,56 +85,18 @@ _C.HIT.TYPE.ARMOR       = "HIT.TYPE.ARMOR"
 ------------------------- UI的相关变量 -------------------
 _C.UI                       = {}
 _C.UI.ITEM                  = {}
--- _C.UI.ITEM.TEST             = "TestItem"
--- _C.UI.ITEM.HP               = "HPBar"
--- _C.UI.ITEM.STAFF            = "StaffItem"
--- _C.UI.ITEM.GAME             = "GameItem"
 _C.UI.ITEM.SYSTEMTIP        = "SystemTipItem"
 _C.UI.ITEM.SYSTEMPOPUP      = "SystemPopupItem"
 _C.UI.ITEM.BUILD            = "BuildItem"
+_C.UI.ITEM.HPBAR            = "HPBar"
 
--- _C.UI.ITEM.GAMETYPE         = "GameTypeItem"
--- _C.UI.ITEM.GAMETHEME        = "GameThemeItem"
--- _C.UI.ITEM.GAMECONSOLE      = "GameConsoleItem"
--- _C.UI.ITEM.TRAIN            = "TrainItem"
--- _C.UI.ITEM.JOB              = "JobItem"
--- _C.UI.ITEM.GAMEATTRIBUTE    = "GameAttributeItem"
--- _C.UI.ITEM.CE               = "CEItem"
--- _C.UI.ITEM.SALEREPORT       = "SaleReportItem"
--- _C.UI.ITEM.NETWORKREPORT    = "NetworkReportItem"
--- _C.UI.ITEM.SELLCOUNT        = "SellCountItem"
--- _C.UI.ITEM.MENU             = "MenuItem"
--- _C.UI.ITEM.MENUOPTION       = "MenuOptionItem"
--- _C.UI.ITEM.MONUMENT         = "MonumentItem"
--- _C.UI.ITEM.ACHIVEMENT       = "AchivementItem"
--- _C.UI.ITEM.GAMESCORELEFT    = "GameScoreLeftItem"
--- _C.UI.ITEM.GAMESCORERIGHT   = "GameScoreRightItem"
--- _C.UI.ITEM.ATTRIBUTE        = "AttributeItem"
--- _C.UI.ITEM.NOTICE           = "NoticeItem"
--- _C.UI.ITEM.POINT            = "PointItem"
--- _C.UI.ITEM.GAMESCORE        = "GameScoreItem"
--- _C.UI.ITEM.GAMESERIESTAB    = "GameSeriesTabItem"
--- _C.UI.ITEM.GAMESERIES       = "GameSeriesItem"
--- _C.UI.ITEM.JOBCENTRE        = "JobCentreItem"
--- _C.UI.ITEM.CHARTCIRCLE      = "ChartCircleItem"
--- _C.UI.ITEM.CHARTNAME        = "ChartNameItem"
--- _C.UI.ITEM.STAFFLIGHT       = "StaffLightItem"
--- _C.UI.ITEM.HARDWARE         = "HardwareItem"
--- _C.UI.ITEM.CONSOLEELEMENT   = "ConsoleElementItem"
--- _C.UI.ITEM.LOAN             = "LoanItem"
--- _C.UI.ITEM.MESSAGE          = "MessageItem"
--- _C.UI.ITEM.GAMEAGENT        = "GameAgentItem"
--- _C.UI.ITEM.OUTSOURCE        = "OutsourceItem"
--- _C.UI.ITEM.OUTSOURCEATTRIBUTE   = "OutsourceAttributeItem"
--- _C.UI.ITEM.EXPBAR           = "ExpBarItem"
--- _C.UI.ITEM.AGENTORBAR       = "AgentorBarItem"
+
 
 
 
 
 
 _C.UI.WINDOW                = {}
--- _C.UI.WINDOW.MAIN           = "MainWindow"
 _C.UI.WINDOW.SYSTEMPOPUP    = "SystemPopupWindow"
 _C.UI.WINDOW.BATTLE         = "BattleWindow"
 

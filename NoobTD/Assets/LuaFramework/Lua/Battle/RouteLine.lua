@@ -39,10 +39,6 @@ function RouteLine:GetExit()
     return self.Exit
 end
 
-function RouteLine:IsOccupied()
-    return self.Exit:IsOccupied()
-end
-
 function RouteLine:Dispose()
     
 end

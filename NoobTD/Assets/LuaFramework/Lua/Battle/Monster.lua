@@ -5,7 +5,10 @@ local Monster = Class.define("Battle.Monster", Battle.Unit)
 function Monster:ctor(cfg, side)
     super(Battle.Monster, self, "ctor", cfg, side)
 
-    self.ReachDemage    = 1
+    --到达终点的伤害量
+    self.Demage     = 1
+
+    self.SummonFlag = false
     
     --路线
     self.RouteLine  = nil
@@ -34,6 +37,10 @@ end
 
 function Monster:InitBehaviour()
     self.Behaviour  = Class.new(Battle.MonsterBehaviour, self)
+end
+
+function Monster:IsSummon()
+    return self.SummonFlag
 end
 
 

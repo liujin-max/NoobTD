@@ -3,32 +3,7 @@
 
 local BattleLogic    = {}
 
---单位是否有效
-function BattleLogic.IsAvailable(unit)
-    if unit == nil then
-        return false
-    end    
-
-    if unit:IsDead() then
-        return false
-    end
-
-    if unit.StateFlag._IsGC == true then
-        return false
-    end
-
-    if unit.StateFlag._IsBorn == false then
-        return false
-    end
-
-    return true
-end
-
---单位死亡
-function BattleLogic.Dead(unit)
-    unit:Dead()
-end
-
+--@region 功能性接口
 function BattleLogic.Distance(pos1, pos2)
     return Vector3.Distance(pos1, pos2)
 end
@@ -83,8 +58,37 @@ function BattleLogic.angle_radius_point(center, angle, radius)
 end
 
 
+--@endregion
+
 
 -----------------------------------
+--@region 游戏逻辑
+--单位是否有效
+function BattleLogic.IsAvailable(unit)
+    if unit == nil then
+        return false
+    end    
+
+    if unit:IsDead() == true or unit.StateFlag._IsGC == true then
+        return false
+    end
+
+    if unit.StateFlag._IsBorn == false then
+        return false
+    end
+
+    return true
+end
+
+--单位死亡
+function BattleLogic.Dead(unit)
+    unit:Dead()
+
+    if unit.Side == _C.SIDE.ATTACK and unit:IsSummon() == false then
+        Battle.FIELD:UpdateMonsterNum(-1)
+    end
+end
+
 --建造塔
 function BattleLogic.BuildTower(id, defender)
     local tower   = Class.new(Battle.Tower, Table.Get(Table.TowerTable, id), _C.SIDE.DEFEND)
@@ -95,6 +99,9 @@ function BattleLogic.BuildTower(id, defender)
 
     Battle.FIELD.Positioner:PushTower(tower)
 end
+
+--@endregion
+
 
 
 

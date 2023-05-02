@@ -59,13 +59,21 @@ end
 
 function Field:ctor()
     self.Config     = Table.Field[1001]
+
+    self.Coin       = 0 --金币
+    self.HP         = Class.new(Data.Pair, 5, 5)
+    self.MonsterNum = 0
+
     self.Land       = Class.new(Battle.Land, self, self.Config)
     self.Positioner = Class.new(Battle.Positioner, self)
 
+    --怪物波数
     self.Waves      = Class.new(Array)
     for i,v in ipairs(self.Config.Waves) do
         local wave  = Class.new(Battle.Wave, v, i)
         self.Waves:Add(wave)
+
+        self.MonsterNum = self.MonsterNum + wave:MonsterCount()
     end
 
     --
@@ -79,6 +87,27 @@ function Field:Start()
     self.Land:Decorate()
 end
 
+--沦陷了
+function Field:IsOccupied()
+    return self.HP:GetCurrent() <= 0
+end
+
+function Field:Hurt(value)
+    self.HP._Current = math.max(0, self.HP._Current - value)
+end
+
+function Field:UpdateMonsterNum(value)
+    self.MonsterNum = self.MonsterNum + value
+end
+
+function Field:CheckResult()
+    if self:IsOccupied() == true then
+        return true, _C.BATTLE.RESULT.LOSE
+    end
+
+    return false
+end
+
 function Field:Update(deltatime)
     if self.FSM ~= nil then
         self.FSM:Update(deltatime)
@@ -87,19 +116,6 @@ function Field:Update(deltatime)
     if self.Land ~= nil then
         self.Land:Update(deltatime)
     end
-end
-
-function Field:CheckResult()
-    local lines = self.Land:GetLines()
-    for i = 1, lines:Count() do
-        local line = lines:Get(i)
-
-        if line:IsOccupied() == true then
-            return true, _C.BATTLE.RESULT.LOSE
-        end
-    end
-
-    return false
 end
 
 --@region 预加载

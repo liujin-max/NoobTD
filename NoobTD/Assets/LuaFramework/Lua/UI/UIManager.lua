@@ -93,18 +93,13 @@ function UIManager:ChildTo(item, parent)
     item.GO.transform:SetParent(parent, true)
 end
 
-function UIManager:LoadSceneItem(tag, pivot_name)
+function UIManager:LoadSceneItem(tag)
     local itemGO = NoobTD.GameFacade.Instance.AssetManager:LoadSync(UI.PrefabList[tag].Path)
+    itemGO.transform:SetParent(self.SceneCanvas)
+    itemGO.transform.localScale     = Vector3.one
+    itemGO.transform.localPosition  = Vector3.zero
 
-    if pivot_name ~= nil then
-        itemGO.transform:SetParent(self.SceneCanvas:Find(pivot_name).transform)
-    else
-        itemGO.transform:SetParent(self.SceneCanvas)
-    end
     itemGO.transform:SetAsLastSibling()
-
-    itemGO.transform.localScale = Vector3.one
-    itemGO.transform.localPosition = Vector3.zero
 
     local item = itemGO:GetComponent("NoobTD.LuaItems").LuaTable
     assert(item ~= nil, " ITEM NOT FOUND " .. tag)

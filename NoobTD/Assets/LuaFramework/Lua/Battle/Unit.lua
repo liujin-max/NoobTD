@@ -116,6 +116,9 @@ function Unit:Update(deltatime)
     self.Skills:Each(function(sk)
         sk:Update(deltatime)        
     end)
+
+    --
+    self.Avatar:Update(deltatime)
 end
 
 function Unit:Dispose()

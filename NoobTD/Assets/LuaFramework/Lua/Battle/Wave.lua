@@ -19,6 +19,11 @@ function Wave:ctor(cfg, order)
     end
 end
 
+--怪物数量
+function Wave:MonsterCount()
+    return self.Exorcists:Count()
+end
+
 --怪物诞生
 function Wave:Spawn(cfg)
     local monster   = Class.new(Battle.Monster, Table.Get(Table.MonsterTable, cfg.ID), _C.SIDE.ATTACK)

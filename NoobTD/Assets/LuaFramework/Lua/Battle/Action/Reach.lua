@@ -11,11 +11,8 @@ end
 function Reach:Begin()
     super(Battle.Reach, self, "Begin")
 
-    local line = self.Owner:GetRouteLine()
-    if line ~= nil then
-        local exit = line:GetExit()
-        exit:Hurt(self.Owner.ReachDemage or 0)
-    end
+
+    Battle.FIELD:Hurt(self.Owner.Demage or 0)
 
     self.Owner.StateFlag._IsGC  = true
 end
