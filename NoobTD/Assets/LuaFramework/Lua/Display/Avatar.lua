@@ -18,7 +18,7 @@ function Avatar:Decorate()
     --初始化血条
     self.HPBar  = Class.new(Display.HPBar, self)
     self.HPBar:Decorate()
-    self.HPBar:FlushHP(self.Model:GetHP(), self.Model:GetHPMax())
+    self.HPBar:Init(self.Model:GetHP(), self.Model:GetHPMax())
 
     self.DecorateFlag   = true
 end

@@ -24,6 +24,10 @@ function HPBar:Update(deltatime)
     end
 end
 
+function HPBar:Init(value, max)
+    self.Item:Init(value, max)
+end
+
 function HPBar:FlushHP(value, max)
     self.Item:FlushHP(value, max)
 end

@@ -10,65 +10,45 @@ function HPBar:Awake(items)
     --动画相关参数
     self.MValue     = nil
     self.TValue     = nil
-    self.OValue     = nil
+    self.WValue     = nil   --white
     self.Speed      = nil
+end
+
+function HPBar:Init(value, max)
+    self.MValue     = max
+    self.TValue     = value
+    self.WValue     = value
+
+    self.Speed      = max / 0.5 --0.5秒跑完
+
+    self.Bar.fillAmount     = value / max
+    self.White.fillAmount   = value / max
 end
 
 function HPBar:FlushHP(value, max)
     self.MValue     = max
     self.TValue     = value
 
-    if self.Speed == nil then
-        self.Speed  = max / 0.5 --0.5秒跑完
-    end
-
-    if self.OValue == nil then
-        self.OValue = value
-
-        --初始化UI
-        self.Bar.fillAmount     = value / max
-        self.White.fillAmount   = value / max
-    end
+    self.Bar.fillAmount     = value / max
 end
 
 function HPBar:Update(deltatime)
-    if self.OValue ~= self.TValue then
-        if self.TValue > self.OValue then
-            self.OValue = self.OValue + self.Speed * deltatime
+    if self.WValue ~= self.TValue then
+        if self.TValue > self.WValue then
+            self.WValue = self.WValue + self.Speed * 0.5 * deltatime
 
-            if self.OValue >= self.TValue then
-                self.OValue = self.TValue
+            if self.WValue >= self.TValue then
+                self.WValue = self.TValue
             end
         else
-            self.OValue = self.OValue - self.Speed * deltatime
+            self.WValue = self.WValue - self.Speed * 0.5 * deltatime
 
-            if self.OValue <= self.TValue then
-                self.OValue = self.TValue
+            if self.WValue <= self.TValue then
+                self.WValue = self.TValue
             end
         end
 
-        self.Bar.fillAmount = self.OValue / self.MValue
-    end
-
-    if self.White.fillAmount ~= self.Bar.fillAmount then
-        local w_value   = self.White.fillAmount
-        local b_value   = self.Bar.fillAmount
-
-        if b_value > w_value then
-            w_value = w_value + self.Speed * 1.0 * deltatime / 100.0
-
-            if w_value >= b_value then
-                w_value = b_value
-            end
-        else
-            w_value = w_value - self.Speed * 1.0 * deltatime / 100.0
-
-            if w_value <= b_value then
-                w_value = b_value
-            end
-        end
-
-        self.White.fillAmount = w_value
+        self.White.fillAmount = self.WValue / self.MValue
     end
 end
 
