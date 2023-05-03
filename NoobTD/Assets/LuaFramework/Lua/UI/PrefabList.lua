@@ -16,6 +16,8 @@ PrefabList[_C.UI.ITEM.HPBAR]            = { Path = "Prefab/UI/Item/HPBar"}
 PrefabList[_C.UI.WINDOW.SYSTEMPOPUP]    = { Class = UI.SystemPopupWindow,       Path = "Prefab/UI/Window/SystemPopupWindow"}
 PrefabList[_C.UI.WINDOW.BATTLE]         = { Class = UI.BattleWindow,            Path = "Prefab/UI/Window/BattleWindow"}
 PrefabList[_C.UI.WINDOW.PAUSE]          = { Class = UI.PauseWindow,             Path = "Prefab/UI/Window/PauseWindow"}
+PrefabList[_C.UI.WINDOW.VICTORY]        = { Class = UI.VictoryWindow,           Path = "Prefab/UI/Window/VictoryWindow"}
+PrefabList[_C.UI.WINDOW.LOSE]           = { Class = UI.LoseWindow,              Path = "Prefab/UI/Window/LoseWindow"}
 
 
 

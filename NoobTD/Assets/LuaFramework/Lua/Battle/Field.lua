@@ -230,6 +230,12 @@ end
 --@region 结算阶段
 function Field:RESULT_Start()
     print("RESULT_Start ： " .. self.FSM:GetCurrent().Params.Result)
+    
+    if self.FSM:GetCurrent().Params.Result == _C.BATTLE.RESULT.WIN then
+        UI.Manager:LoadUIWindow(_C.UI.WINDOW.VICTORY, UI.Manager.BORAD)
+    else
+        UI.Manager:LoadUIWindow(_C.UI.WINDOW.LOSE, UI.Manager.BORAD)
+    end
 end
 
 function Field:RESULT_Update()

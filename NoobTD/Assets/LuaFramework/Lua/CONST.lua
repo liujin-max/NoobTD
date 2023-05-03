@@ -110,6 +110,8 @@ _C.UI.WINDOW                = {}
 _C.UI.WINDOW.SYSTEMPOPUP    = "SystemPopupWindow"
 _C.UI.WINDOW.BATTLE         = "BattleWindow"
 _C.UI.WINDOW.PAUSE          = "PauseWindow"
+_C.UI.WINDOW.VICTORY        = "VictoryWindow"
+_C.UI.WINDOW.LOSE           = "LoseWindow"
 
 
 

@@ -24,6 +24,8 @@ UI.HPBar                        = require("UI/Item/HPBar")
 UI.SystemPopupWindow            = require("UI/Window/SystemPopupWindow")
 UI.BattleWindow                 = require("UI/Window/BattleWindow")
 UI.PauseWindow                  = require("UI/Window/PauseWindow")
+UI.VictoryWindow                = require("UI/Window/VictoryWindow")
+UI.LoseWindow                   = require("UI/Window/LoseWindow")
 
 
 
