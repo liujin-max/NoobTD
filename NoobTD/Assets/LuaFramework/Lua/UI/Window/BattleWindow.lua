@@ -63,18 +63,40 @@ function BattleWindow.ShowBuildPivot(pos, defender)
     
     local tower = defender:GetTower()
     if tower == nil then
+        if P.ScaleCoroutin ~= nil then
+            StopCoroutine(P.ScaleCoroutin)
+        end
+
         if P.BuildItem == nil then
             P.BuildItem = UI.Manager:LoadItem(_C.UI.ITEM.BUILDRING, BattleWindow.PARAMS.BuildPivot)
             P.BuildItem:Init()
         end
-        P.BuildItem:ShowRing(defender)
+        P.BuildItem:ShowBuilding(defender)
+        P.BuildItem:Show()
     else
         BattleWindow.PARAMS.BuildPivot:SetActive(false)
     end
 end
 
 function BattleWindow.HideBuildPivot()
-    BattleWindow.PARAMS.BuildPivot:SetActive(false)
+    if P.BuildItem ~= nil then
+        P.BuildItem:Hide()
+
+        if P.ScaleCoroutin ~= nil then
+            StopCoroutine(P.ScaleCoroutin)
+        end
+
+        P.ScaleCoroutin = StartCoroutine(function()
+            WaitForSeconds(0.1)
+
+            BattleWindow.PARAMS.BuildPivot:SetActive(false)
+
+            P.ScaleCoroutin = nil
+        end)
+    else
+        BattleWindow.PARAMS.BuildPivot:SetActive(false)
+    end
+
 end
 
 function BattleWindow.OnDefendClick(pself, event, defender)

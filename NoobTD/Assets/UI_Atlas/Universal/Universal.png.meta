@@ -199,7 +199,7 @@ TextureImporter:
       name: Universal_achievement_bottom
       rect:
         serializedVersion: 2
-        x: 1
+        x: 258
         y: 1153
         width: 709
         height: 276
@@ -389,11 +389,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 228
-        width: 465
-        height: 463
+        y: 1174
+        width: 255
+        height: 255
       alignment: 9
-      pivot: {x: 0.50537634, y: 0.49676025}
+      pivot: {x: 0.49803922, y: 0.5019608}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

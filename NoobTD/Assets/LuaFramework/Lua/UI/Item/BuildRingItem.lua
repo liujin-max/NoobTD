@@ -10,8 +10,13 @@ local BuildEffects  =
     Class.new(Logic.EventEffect, 1000, 40000)
 }
 
+function BuildRingItem:Show()
+    self.GO:GetComponent("Animation"):Play("ScaleShow")
+end
 
-
+function BuildRingItem:Hide()
+    self.GO:GetComponent("Animation"):Play("ScaleHide")
+end
 
 function BuildRingItem:Awake(items)
     self.GO         = items["This"]
@@ -31,7 +36,7 @@ function BuildRingItem:Init()
     end
 end
 
-function BuildRingItem:ShowRing(defender)
+function BuildRingItem:ShowBuilding(defender)
     for i = 1, self.Items:Count() do
         local item = self.Items:Get(i)
 
