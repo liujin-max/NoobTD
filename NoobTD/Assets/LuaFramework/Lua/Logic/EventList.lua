@@ -27,3 +27,6 @@ _E.BATTLE_DOWN              = "BATTLE_DOWN"                 --点击场景
 
 _E.BATTLE_DEFENDER_CLICK    = "BATTLE_DEFENDER_CLICK"       --点击防守位
 _E.U2U_DEFENDER_CLICK       = "U2U_DEFENDER_CLICK"          --
+
+
+_E.BATTLE_HIDERING          = "BATTLE_HIDERING"             --隐藏建造单元

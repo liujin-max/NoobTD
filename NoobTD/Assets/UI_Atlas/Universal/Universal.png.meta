@@ -92,6 +92,9 @@ TextureImporter:
   - first:
       213: 1756886184478116354
     second: Universal_title_bg
+  - first:
+      213: 6878231308100353766
+    second: Universal_building_ring
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -165,6 +168,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 49
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -172,8 +199,8 @@ TextureImporter:
       name: Universal_achievement_bottom
       rect:
         serializedVersion: 2
-        x: 209
-        y: 1179
+        x: 1
+        y: 1153
         width: 709
         height: 276
       alignment: 0
@@ -235,8 +262,8 @@ TextureImporter:
       name: Universal_arrow_yellow
       rect:
         serializedVersion: 2
-        x: 151
-        y: 1289
+        x: 899
+        y: 1431
         width: 56
         height: 166
       alignment: 0
@@ -277,8 +304,8 @@ TextureImporter:
       name: Universal_btn_dice
       rect:
         serializedVersion: 2
-        x: 574
-        y: 719
+        x: 369
+        y: 693
         width: 432
         height: 458
       alignment: 9
@@ -358,6 +385,27 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: Universal_building_ring
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 228
+        width: 465
+        height: 463
+      alignment: 9
+      pivot: {x: 0.50537634, y: 0.49676025}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eeba4aaee2647f50800000000000000
+      internalID: 6878231308100353766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: Universal_button_close
       rect:
         serializedVersion: 2
@@ -421,32 +469,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Universal_game_item_bottom
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 881
-        width: 203
-        height: 296
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 20f7fc5f6d9a50750800000000000000
-      internalID: 6270604796895395586
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Universal_game_score_bar
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1307
+        x: 749
+        y: 1449
         width: 148
         height: 148
       alignment: 0
@@ -466,7 +493,7 @@ TextureImporter:
       name: Universal_game_score_bar_bg
       rect:
         serializedVersion: 2
-        x: 736
+        x: 607
         y: 1457
         width: 140
         height: 140
@@ -568,27 +595,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Universal_net_tag
-      rect:
-        serializedVersion: 2
-        x: 607
-        y: 1473
-        width: 127
-        height: 124
-      alignment: 9
-      pivot: {x: 0.496063, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85e4f992e28e3bb90800000000000000
-      internalID: -7227177692035068328
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Universal_point_light
       rect:
         serializedVersion: 2
@@ -655,8 +661,8 @@ TextureImporter:
       name: Universal_ring_bottom
       rect:
         serializedVersion: 2
-        x: 206
-        y: 811
+        x: 1
+        y: 785
         width: 366
         height: 366
       alignment: 0

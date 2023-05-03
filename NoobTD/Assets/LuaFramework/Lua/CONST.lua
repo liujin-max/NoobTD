@@ -92,6 +92,15 @@ _C.HIT.TYPE.HEAL        = "HIT.TYPE.HEAL"
 _C.HIT.TYPE.ARMOR       = "HIT.TYPE.ARMOR"
 
 
+
+
+--@region 颜色
+_C.COLOR                = {}
+_C.COLOR.RED            = "<#F10000>"
+
+--@endregion    
+
+
 ------------------------- UI的相关变量 -------------------
 _C.UI                       = {}
 _C.UI.ITEM                  = {}
@@ -99,6 +108,7 @@ _C.UI.ITEM.SYSTEMTIP        = "SystemTipItem"
 _C.UI.ITEM.SYSTEMPOPUP      = "SystemPopupItem"
 _C.UI.ITEM.BUILD            = "BuildItem"
 _C.UI.ITEM.HPBAR            = "HPBar"
+_C.UI.ITEM.BUILDRING        = "BuildRingItem"
 
 
 
@@ -127,6 +137,7 @@ _C.EVENT.TRIGGER            = {}
 _C.EVENT.TRIGGER.CHECK      = "EVENT.TRIGGER.CHECK"
 _C.EVENT.TRIGGER.EXECUTE    = "EVENT.TRIGGER.EXECUTE"
 _C.EVENT.TRIGGER.EXECUTABLE = "EVENT.TRIGGER.EXECUTABLE"
+_C.EVENT.TRIGGER.COST       = "EVENT.TRIGGER.COST"
 _C.EVENT.TRIGGER.DESCRIPTION= "EVENT.TRIGGER.DESCRIPTION"
 
 -----

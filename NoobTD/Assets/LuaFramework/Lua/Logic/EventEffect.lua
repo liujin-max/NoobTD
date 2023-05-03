@@ -17,9 +17,13 @@ EFFECT_LIST[1000] =
         Logic.Battle.BuildTower(self.Value, denfender)
     end,
 
+    [_C.EVENT.TRIGGER.COST] = function(self)
+        local config = Table.Get(Table.TowerTable, self.Value)
+        return config.Cost
+    end,
+
     [_C.EVENT.TRIGGER.DESCRIPTION] = function(self)
         local config = Table.Get(Table.TowerTable, self.Value)
-
         return config.Name
     end
 }
@@ -65,6 +69,13 @@ function EventEffect:Execute(params)
         self.Entity[_C.EVENT.TRIGGER.EXECUTE](self, params)
     end
     self.Executed   = true
+end
+
+function EventEffect:GetCost()
+    if self.Entity[_C.EVENT.TRIGGER.COST] ~= nil then
+        return self.Entity[_C.EVENT.TRIGGER.COST](self)
+    end
+    return 0
 end
 
 function EventEffect:Description()
