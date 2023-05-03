@@ -14,7 +14,8 @@ end
 
 function Avatar:Decorate()
     --初始化骨骼
-    self.Entity = AssetManager:LoadSync("Prefab/Character/" .. self.Model.ID)
+    local cfg   = Table.Get(Table.CharacterTable, self.Model.Character)
+    self.Entity = AssetManager:LoadSync(cfg.Res)
     self.Entity.transform:SetParent(Battle.FIELD.Land.Avatar.Root.transform)
     self.Entity.transform.localScale      = Vector3.New(0.5, 0.5, 0.5)
     self.Entity.transform.localPosition   = Vector3.zero

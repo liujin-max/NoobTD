@@ -7,6 +7,7 @@ function Unit:ctor(cfg, side)
     self.Table      = cfg
     self.ID         = cfg.ID
     self.Name       = cfg.Name
+    self.Character  = cfg.Character
     
     self.Side       = side
 
