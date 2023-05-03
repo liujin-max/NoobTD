@@ -105,6 +105,10 @@ function Field:CheckResult()
         return true, _C.BATTLE.RESULT.LOSE
     end
 
+    if self.MonsterNum <= 0 then
+        return true, _C.BATTLE.RESULT.WIN
+    end
+
     return false
 end
 

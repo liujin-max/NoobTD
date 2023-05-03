@@ -17,6 +17,8 @@ end
 
 function BattleWindow.Awake(items)
     BattleWindow.PARAMS.BuildPivot  = items["BuildPivot"]
+    BattleWindow.PARAMS.HP          = items["HP"]
+    BattleWindow.PARAMS.MonsterCount= items["MonsterCount"]
 
 
     P.BuildItems    = Class.new(Array)
