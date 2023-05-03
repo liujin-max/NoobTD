@@ -34,6 +34,11 @@ function Unit:ctor(cfg, side)
     end
 end
 
+--转换、升级
+function Unit:Transform()
+    
+end
+
 function Unit:InitBehaviour()
 
 end

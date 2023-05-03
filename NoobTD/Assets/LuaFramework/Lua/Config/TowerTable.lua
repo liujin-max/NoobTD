@@ -10,6 +10,9 @@ return {
 		Skills = {
 			1000001,
 		},
+		BuildEffect = {
+			{id =1001, value =Crypt.TE(10010)},
+		},
 	},
 	[10010] = {
 		Name = "射手塔",
@@ -21,6 +24,9 @@ return {
 		Speed = 0,
 		Skills = {
 			1000001,
+		},
+		BuildEffect = {
+			{id =1001, value =Crypt.TE(10020)},
 		},
 	},
 	[10020] = {
@@ -34,6 +40,7 @@ return {
 		Skills = {
 			1000001,
 		},
+		BuildEffect = Table.Empty,
 	},
 	[20000] = {
 		Name = "法师塔",
@@ -45,6 +52,9 @@ return {
 		Speed = 0,
 		Skills = {
 			1000001,
+		},
+		BuildEffect = {
+			{id =1001, value =Crypt.TE(20010)},
 		},
 	},
 	[20010] = {
@@ -58,6 +68,9 @@ return {
 		Skills = {
 			1000001,
 		},
+		BuildEffect = {
+			{id =1001, value =Crypt.TE(20020)},
+		},
 	},
 	[20020] = {
 		Name = "异能塔",
@@ -70,6 +83,7 @@ return {
 		Skills = {
 			1000001,
 		},
+		BuildEffect = Table.Empty,
 	},
 	[30000] = {
 		Name = "投石机",
@@ -81,6 +95,9 @@ return {
 		Speed = 0,
 		Skills = {
 			1000001,
+		},
+		BuildEffect = {
+			{id =1001, value =Crypt.TE(30010)},
 		},
 	},
 	[30010] = {
@@ -94,6 +111,9 @@ return {
 		Skills = {
 			1000001,
 		},
+		BuildEffect = {
+			{id =1001, value =Crypt.TE(30020)},
+		},
 	},
 	[30020] = {
 		Name = "投石矩阵",
@@ -106,6 +126,7 @@ return {
 		Skills = {
 			1000001,
 		},
+		BuildEffect = Table.Empty,
 	},
 	[40000] = {
 		Name = "看守",
@@ -117,6 +138,9 @@ return {
 		Speed = 100,
 		Skills = {
 			1000001,
+		},
+		BuildEffect = {
+			{id =1001, value =Crypt.TE(40010)},
 		},
 	},
 	[40010] = {
@@ -130,6 +154,9 @@ return {
 		Skills = {
 			1000001,
 		},
+		BuildEffect = {
+			{id =1001, value =Crypt.TE(40020)},
+		},
 	},
 	[40020] = {
 		Name = "殿堂",
@@ -142,5 +169,6 @@ return {
 		Skills = {
 			1000001,
 		},
+		BuildEffect = Table.Empty,
 	},
 }

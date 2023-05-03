@@ -20,11 +20,6 @@ function Avatar:Decorate()
     self.Entity.transform.localScale      = Vector3.New(0.5, 0.5, 0.5)
     self.Entity.transform.localPosition   = Vector3.zero
 
-    --初始化血条
-    self.HPBar  = Class.new(Display.HPBar, self)
-    self.HPBar:Decorate()
-    self.HPBar:Init(self.Model:GetHP(), self.Model:GetHPMax())
-
     self.DecorateFlag   = true
 end
 
@@ -47,6 +42,13 @@ function Avatar:GetPivotPos(pivot)
 end
 
 function Avatar:FlushHP(value, max)
+    if self.HPBar == nil then
+        --初始化血条
+        self.HPBar  = Class.new(Display.HPBar, self)
+        self.HPBar:Decorate()
+        self.HPBar:Init(max, max)
+    end
+    
     self.HPBar:FlushHP(value, max)
 end
 

@@ -11,6 +11,12 @@ function HPBar:Decorate()
     self:Follow()
 end
 
+function HPBar:Show(flag)
+    if self.Item ~= nil then
+        self.Item.GO:SetActive(flag)
+    end    
+end
+
 function HPBar:Follow()
     local pos = self.Avatar:GetPivotPos(_C.AVATAR.PIVOT.HEAD)
     self.Item.GO.transform.localPosition  = pos * 100

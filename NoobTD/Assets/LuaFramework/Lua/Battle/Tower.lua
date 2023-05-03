@@ -5,8 +5,9 @@ local Tower = Class.define("Battle.Tower", Battle.Unit)
 function Tower:ctor(cfg, side)
     super(Battle.Tower, self, "ctor", cfg, side)
 
+    self.BuildEffects   = ParseEventEffect(cfg.BuildEffect)
     --防守位
-    self.Defender   = nil
+    self.Defender       = nil
 end
 
 function Tower:SetDefender(defender)
@@ -21,6 +22,9 @@ function Tower:InitBehaviour()
     self.Behaviour  = Class.new(Battle.TowerBehaviour, self)
 end
 
+function Tower:GetBuildEffects()
+    return self.BuildEffects
+end
 
 
 

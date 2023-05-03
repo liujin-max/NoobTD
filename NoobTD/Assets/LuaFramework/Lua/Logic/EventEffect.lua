@@ -28,6 +28,23 @@ EFFECT_LIST[1000] =
     end
 }
 
+--升级塔
+EFFECT_LIST[1001] =
+{
+    [_C.EVENT.TRIGGER.EXECUTE] = function(self, params)
+
+    end,
+
+    [_C.EVENT.TRIGGER.COST] = function(self)
+        local config = Table.Get(Table.TowerTable, self.Value)
+        return config.Cost
+    end,
+
+    [_C.EVENT.TRIGGER.DESCRIPTION] = function(self)
+        local config = Table.Get(Table.TowerTable, self.Value)
+        return config.Name
+    end
+}
 
 
 EFFECT_LIST[9999] =

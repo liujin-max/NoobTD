@@ -60,21 +60,21 @@ function BattleWindow.ShowBuildPivot(pos, defender)
     BattleWindow.PARAMS.BuildPivot:SetActive(true)
     BattleWindow.PARAMS.BuildPivot.transform.localPosition  = pos
 
+    if P.ScaleCoroutin ~= nil then
+        StopCoroutine(P.ScaleCoroutin)
+    end
     
+    if P.BuildItem == nil then
+        P.BuildItem = UI.Manager:LoadItem(_C.UI.ITEM.BUILDRING, BattleWindow.PARAMS.BuildPivot)
+    end
+
     local tower = defender:GetTower()
     if tower == nil then
-        if P.ScaleCoroutin ~= nil then
-            StopCoroutine(P.ScaleCoroutin)
-        end
-
-        if P.BuildItem == nil then
-            P.BuildItem = UI.Manager:LoadItem(_C.UI.ITEM.BUILDRING, BattleWindow.PARAMS.BuildPivot)
-            P.BuildItem:Init()
-        end
         P.BuildItem:ShowBuilding(defender)
         P.BuildItem:Show()
     else
-        BattleWindow.PARAMS.BuildPivot:SetActive(false)
+        P.BuildItem:ShowUpgrading(defender)
+        P.BuildItem:Show()
     end
 end
 
