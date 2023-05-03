@@ -12,7 +12,7 @@ function HPBar:Decorate()
 end
 
 function HPBar:Follow()
-    local pos = self.Avatar:GetPosition() + Vector3.New(0, 0.5, 0)
+    local pos = self.Avatar:GetPivotPos(_C.AVATAR.PIVOT.HEAD)
     self.Item.GO.transform.localPosition  = pos * 100
 end
 

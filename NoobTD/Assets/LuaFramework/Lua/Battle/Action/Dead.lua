@@ -14,7 +14,9 @@ function Dead:Begin()
     self.Timer  = Class.new(Logic.CDTimer, 1.0)
     --死亡动画
 
-
+    if self.Owner.Side == _C.SIDE.ATTACK and self.Owner:IsSummon() == false then
+        Battle.FIELD:UpdateMonsterNum(-1)
+    end
 end
 
 function Dead:Update(deltaTime)

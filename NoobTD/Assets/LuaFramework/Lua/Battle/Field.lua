@@ -79,6 +79,8 @@ function Field:ctor()
     --
     self.Hits       = Class.new(Array)
     self.Bullets    = Class.new(Array)
+
+    self.PauseFlag  = false
 end
 
 function Field:Start()
@@ -87,9 +89,25 @@ function Field:Start()
     self.Land:Decorate()
 end
 
+function Field:Resume()
+    self.PauseFlag  = false
+end
+
+function Field:Pause()
+    self.PauseFlag  = true
+end
+
+function Field:IsPause()
+    return self.PauseFlag
+end
+
 --沦陷了
 function Field:IsOccupied()
     return self.HP:GetCurrent() <= 0
+end
+
+function Field:GetHP()
+    return self.HP:GetCurrent()
 end
 
 function Field:Hurt(value)
@@ -98,6 +116,10 @@ end
 
 function Field:UpdateMonsterNum(value)
     self.MonsterNum = self.MonsterNum + value
+end
+
+function Field:GetMonsterCount()
+    return self.MonsterNum
 end
 
 function Field:CheckResult()
@@ -113,6 +135,10 @@ function Field:CheckResult()
 end
 
 function Field:Update(deltatime)
+    if self:IsPause() == true then
+        return
+    end
+
     if self.FSM ~= nil then
         self.FSM:Update(deltatime)
     end

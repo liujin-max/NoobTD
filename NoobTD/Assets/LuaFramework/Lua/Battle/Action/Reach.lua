@@ -14,6 +14,10 @@ function Reach:Begin()
 
     Battle.FIELD:Hurt(self.Owner.Demage or 0)
 
+    if self.Owner.Side == _C.SIDE.ATTACK and self.Owner:IsSummon() == false then
+        Battle.FIELD:UpdateMonsterNum(-1)
+    end
+    
     self.Owner.StateFlag._IsGC  = true
 end
 

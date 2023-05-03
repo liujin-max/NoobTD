@@ -326,6 +326,15 @@ function UIManager:ShowLayer(layer, flag)
     self.Layers[layer].Pivot.gameObject:SetActive(flag)
 end
 
+function UIManager:RegisterBtnScale(btn)
+    UISimpleEventListener.PGet(btn, btn).onDown_P = function()
+        btn.transform.localScale    = Vector3.New(0.9, 0.9, 0.9)
+    end 
+    
+    UISimpleEventListener.PGet(btn, btn).onUp_P = function()
+        btn.transform.localScale    = Vector3.one
+    end    
+end
 
 
 

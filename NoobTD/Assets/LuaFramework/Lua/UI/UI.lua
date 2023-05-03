@@ -23,6 +23,7 @@ UI.HPBar                        = require("UI/Item/HPBar")
 -- UI.MainWindow                   = require("UI/Window/MainWindow")
 UI.SystemPopupWindow            = require("UI/Window/SystemPopupWindow")
 UI.BattleWindow                 = require("UI/Window/BattleWindow")
+UI.PauseWindow                  = require("UI/Window/PauseWindow")
 
 
 

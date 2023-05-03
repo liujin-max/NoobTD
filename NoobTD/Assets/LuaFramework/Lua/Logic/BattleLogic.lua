@@ -83,10 +83,6 @@ end
 --单位死亡
 function BattleLogic.Dead(unit)
     unit:Dead()
-
-    if unit.Side == _C.SIDE.ATTACK and unit:IsSummon() == false then
-        Battle.FIELD:UpdateMonsterNum(-1)
-    end
 end
 
 --建造塔
@@ -98,6 +94,18 @@ function BattleLogic.BuildTower(id, defender)
     tower:InitBehaviour()
 
     Battle.FIELD.Positioner:PushTower(tower)
+end
+
+function BattleLogic.Pause()
+    Battle.FIELD:Pause()
+
+    UI.Manager:LoadUIWindow(_C.UI.WINDOW.PAUSE, UI.Manager.BORAD)
+end
+
+function BattleLogic.Resume()
+    Battle.FIELD:Resume()
+
+    UI.Manager:UnLoadWindow(_C.UI.WINDOW.PAUSE)
 end
 
 --@endregion

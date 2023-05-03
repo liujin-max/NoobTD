@@ -35,6 +35,16 @@ _C.SIDE.ATTACK          = 1     --进攻方
 _C.SIDE.DEFEND          = 2     --防守方
 
 
+--@region avatar
+_C.AVATAR               = {}
+_C.AVATAR.PIVOT         = {}
+_C.AVATAR.PIVOT.HEAD    = "Head"
+_C.AVATAR.PIVOT.BODY    = "Body"
+_C.AVATAR.PIVOT.FOOT    = "Foot"
+
+--@endregion
+
+
 
 
 --行为动作
@@ -99,6 +109,7 @@ _C.UI.ITEM.HPBAR            = "HPBar"
 _C.UI.WINDOW                = {}
 _C.UI.WINDOW.SYSTEMPOPUP    = "SystemPopupWindow"
 _C.UI.WINDOW.BATTLE         = "BattleWindow"
+_C.UI.WINDOW.PAUSE          = "PauseWindow"
 
 
 

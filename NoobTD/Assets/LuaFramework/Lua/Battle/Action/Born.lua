@@ -14,6 +14,8 @@ function Born:Begin()
     self.Owner.Avatar:Decorate()
 
     if self.Owner.Side == _C.SIDE.ATTACK then
+        self.Owner.Avatar:RandomOffset()    --坐标偏移
+
         local route = self.Owner:GetCurrentRoute()
         if route ~= nil then
             self.Owner.Avatar:SetPosition(route:CenterPos())

@@ -16,6 +16,9 @@ local function new_build_item(i)
 end
 
 function BattleWindow.Awake(items)
+    BattleWindow.PARAMS.BtnPause    = items["BtnPause"]
+
+
     BattleWindow.PARAMS.BuildPivot  = items["BuildPivot"]
     BattleWindow.PARAMS.HP          = items["HP"]
     BattleWindow.PARAMS.MonsterCount= items["MonsterCount"]
@@ -31,11 +34,29 @@ function BattleWindow.Awake(items)
     }
 
 
+    UI.Manager:RegisterBtnScale(BattleWindow.PARAMS.BtnPause)
+
+    UIEventListener.PGet(BattleWindow.PARAMS.BtnPause,  BattleWindow).onClick_P = function()
+        Logic.Battle.Pause()
+    end
+
     LuaEventManager.AddHandler(_E.BATTLE_DOWN,          BattleWindow.OnSceneDown,   BattleWindow,   BattleWindow)
     LuaEventManager.AddHandler(_E.U2U_DEFENDER_CLICK,   BattleWindow.OnDefendClick, BattleWindow,   BattleWindow)
+
+    UpdateManager.AddHandler(BattleWindow)
 end
 
 function BattleWindow.Init()
+    BattleWindow.UpdateInfo()
+end
+
+function BattleWindow.UpdateInfo()
+    BattleWindow.PARAMS.HP.text = Battle.FIELD:GetHP()
+    BattleWindow.PARAMS.MonsterCount.text = Battle.FIELD:GetMonsterCount()
+end
+
+function BattleWindow.Update()
+    BattleWindow.UpdateInfo()
 
 end
 
@@ -95,6 +116,8 @@ function BattleWindow.OnDestroy()
 
     LuaEventManager.DelHandler(_E.BATTLE_DOWN,          BattleWindow.OnSceneDown,   BattleWindow)
     LuaEventManager.DelHandler(_E.U2U_DEFENDER_CLICK,   BattleWindow.OnDefendClick, BattleWindow)
+
+    UpdateManager.DelHandler(BattleWindow)
 end
 
 
