@@ -60,8 +60,8 @@ end
 function Field:ctor()
     self.Config     = Table.Field[1001]
 
-    self.Coin       = 0 --金币
-    self.HP         = Class.new(Data.Pair, 5, 5)
+    self.Coin       = self.Config.Coin --金币
+    self.HP         = Class.new(Data.Pair, self.Config.HP, self.Config.HP)
     self.MonsterNum = 0
 
     self.Land       = Class.new(Battle.Land, self, self.Config)
@@ -99,6 +99,14 @@ end
 
 function Field:IsPause()
     return self.PauseFlag
+end
+
+function Field:GetCoin()
+    return self.Coin
+end
+
+function Field:UpdateCoin(value)
+    self.Coin   = self.Coin + value    
 end
 
 --沦陷了
@@ -230,7 +238,7 @@ end
 --@region 结算阶段
 function Field:RESULT_Start()
     print("RESULT_Start ： " .. self.FSM:GetCurrent().Params.Result)
-    
+
     if self.FSM:GetCurrent().Params.Result == _C.BATTLE.RESULT.WIN then
         UI.Manager:LoadUIWindow(_C.UI.WINDOW.VICTORY, UI.Manager.BORAD)
     else

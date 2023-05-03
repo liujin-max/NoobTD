@@ -21,6 +21,7 @@ function BattleWindow.Awake(items)
 
     BattleWindow.PARAMS.BuildPivot  = items["BuildPivot"]
     BattleWindow.PARAMS.HP          = items["HP"]
+    BattleWindow.PARAMS.Coin        = items["Coin"]
     BattleWindow.PARAMS.MonsterCount= items["MonsterCount"]
 
 
@@ -51,8 +52,9 @@ function BattleWindow.Init()
 end
 
 function BattleWindow.UpdateInfo()
-    BattleWindow.PARAMS.HP.text = Battle.FIELD:GetHP()
-    BattleWindow.PARAMS.MonsterCount.text = Battle.FIELD:GetMonsterCount()
+    BattleWindow.PARAMS.HP.text             = Battle.FIELD:GetHP()
+    BattleWindow.PARAMS.Coin.text           = Battle.FIELD:GetCoin()
+    BattleWindow.PARAMS.MonsterCount.text   = Battle.FIELD:GetMonsterCount()
 end
 
 function BattleWindow.Update()

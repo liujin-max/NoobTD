@@ -5,8 +5,9 @@ local Monster = Class.define("Battle.Monster", Battle.Unit)
 function Monster:ctor(cfg, side)
     super(Battle.Monster, self, "ctor", cfg, side)
 
-    --到达终点的伤害量
-    self.Demage     = 1
+
+    self.Demage     = 1     --到达终点的伤害量
+    self.Coin       = 5     --掉落金币
 
     self.SummonFlag = false
     
