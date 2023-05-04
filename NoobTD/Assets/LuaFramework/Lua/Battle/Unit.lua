@@ -2,14 +2,33 @@
 
 local Unit = Class.define("Battle.Unit")
 
+local function ParseSkill(self)
+    self.Skills     = Class.new(Array)
+    self.SkillDic   = {}
+
+    for i, id in ipairs(self.Table.Skills) do
+        local skill = Class.new(Battle.Skill, Table.Get(Table.SkillTable, id), self)
+        self.Skills:Add(skill)
+        self.SkillDic[id] = skill
+    end
+end
 
 function Unit:ctor(cfg, side)
+    self:ReBuild(cfg)
+
+    self.Side       = side
+
+    self.StateFlag  = Class.new(Battle.StateFlag, self)
+    self.Behaviour  = nil
+
+    self.Avatar     = Class.new(Display.Avatar, self)
+end
+
+function Unit:ReBuild(cfg)
     self.Table      = cfg
     self.ID         = cfg.ID
     self.Name       = cfg.Name
     self.Character  = cfg.Character
-    
-    self.Side       = side
 
     --@region 属性
     self.HP         = Class.new(Data.Pair, cfg.HP, cfg.HP)
@@ -18,24 +37,10 @@ function Unit:ctor(cfg, side)
     self.SPEED      = Class.new(Data.AttributeValue, cfg.Speed / 100.0)
     --@endregion
 
-    self.StateFlag  = Class.new(Battle.StateFlag, self)
-    self.Behaviour  = nil
 
-    self.Avatar     = Class.new(Display.Avatar, self)
+    self.Buffs      = {}
 
-
-    self.Skills     = Class.new(Array)
-    self.SkillDic   = {}
-
-    for i, id in ipairs(cfg.Skills) do
-        local skill = Class.new(Battle.Skill, Table.Get(Table.SkillTable, id), self)
-        self.Skills:Add(skill)
-        self.SkillDic[id] = skill
-    end
-end
-
---转换、升级
-function Unit:Transform()
+    ParseSkill(self)
     
 end
 
@@ -91,13 +96,17 @@ end
 
 --正在释放技能
 function Unit:IsCasting()
+    return self:GetCastingSkill() ~= nil
+end
+
+--获得正在释放的技能
+function Unit:GetCastingSkill()
     for i = 1, self.Skills:Count() do
         local sk = self.Skills:Get(i)
         if sk:IsCasting() == true then
-            return true
+            return sk
         end
     end
-    return false
 end
 
 --可以释放的技能
@@ -113,7 +122,6 @@ function Unit:GetPlayableSkills()
     return temp
 end
 
-
 function Unit:Update(deltatime)
     if self.Behaviour ~= nil then
         self.Behaviour:Update(deltatime)
@@ -126,6 +134,23 @@ function Unit:Update(deltatime)
     --
     self.Avatar:Update(deltatime)
 end
+
+-------------------- buff --------------------
+function Unit:AddBuff(id, caster)
+    
+end
+
+function Unit:RemoveBuff(id)
+    
+end
+
+function Unit:CleanBuff()
+    for id, buff in pairs(self.Buffs) do
+        self:RemoveBuff(id)
+    end
+    self.Buffs = {}
+end
+----------------------------------------------
 
 function Unit:Dispose()
     self.Behaviour  = nil

@@ -47,6 +47,11 @@ function Skill:Cast(targets)
     self.Show:Cast()
 end
 
+--打断
+function Skill:Interrupt()
+    self.Show:Interrupt()
+end
+
 function Skill:Over()
     self.Show:Over()
 end

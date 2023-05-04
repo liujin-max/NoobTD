@@ -23,6 +23,16 @@ function Avatar:Decorate()
     self.DecorateFlag   = true
 end
 
+function Avatar:Transform()
+    local pos   = self:GetPosition()
+
+    self:Dispose()
+
+    self:Decorate()
+    self:SetPosition(pos)
+
+end
+
 function Avatar:SetPosition(pos)
     self.Entity.transform.localPosition = pos + self.Offset
 end

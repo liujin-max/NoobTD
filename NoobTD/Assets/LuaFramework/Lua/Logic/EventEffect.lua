@@ -32,7 +32,19 @@ EFFECT_LIST[1000] =
 EFFECT_LIST[1001] =
 {
     [_C.EVENT.TRIGGER.EXECUTE] = function(self, params)
+        local denfender = params.Defender
 
+        if denfender == nil then
+            return
+        end
+
+        local tower = denfender:GetTower()
+
+        if tower == nil then
+            return
+        end
+
+        Logic.Battle.UpgradeTower(tower, self.Value)
     end,
 
     [_C.EVENT.TRIGGER.COST] = function(self)

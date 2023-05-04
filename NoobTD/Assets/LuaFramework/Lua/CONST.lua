@@ -129,9 +129,6 @@ _C.UI.WINDOW.LOSE           = "LoseWindow"
 
 
 
-
-_C.MESSAGE          = {}
-
 _C.EVENT                    = {}
 _C.EVENT.TRIGGER            = {}
 _C.EVENT.TRIGGER.CHECK      = "EVENT.TRIGGER.CHECK"
@@ -143,3 +140,9 @@ _C.EVENT.TRIGGER.DESCRIPTION= "EVENT.TRIGGER.DESCRIPTION"
 -----
 _C.PHASE                    = {}
 _C.PHASE.ONEXECUTE          = "PHASE.ONEXECUTE"         --执行
+
+
+
+
+_C.MESSAGE                  = {}
+_C.MESSAGE.COINERROR        = "金币不足"

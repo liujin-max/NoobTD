@@ -13,10 +13,15 @@ Table.MonsterTable              = require("Config/MonsterTable")
 Table.TowerTable                = require("Config/TowerTable")
 Table.SkillTable                = require("Config/SkillTable")
 Table.CharacterTable            = require("Config/CharacterTable")
+Table.BuffTable                 = require("Config/BuffTable")
 
 
 Table.BulletTable               = require("Config/Battle/BulletTable")
 Table.SkillShowTable            = require("Config/Battle/SkillShowTable")
+
+
+
+
 
 Table.Field = {}
 Table.Field[1001]               = require("Config/Battle/battle_field_1001")

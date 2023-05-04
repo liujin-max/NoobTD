@@ -41,6 +41,15 @@ function SkillShow:Cast()
     end
 end
 
+function SkillShow:Interrupt()
+    self.CastFlag = false
+
+    self.Tasks:Each(function(t)
+        t:Interrupt()
+    end)
+    self.Tasks:Clear()
+end
+
 function SkillShow:Over()
     self.CastFlag = false
 
