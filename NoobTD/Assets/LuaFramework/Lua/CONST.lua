@@ -73,7 +73,7 @@ _C.SKILL.PICK.ENEMY     = 2         --敌方
 
 --目标筛选器
 _C.SKILL.DETECT         = {}
-_C.SKILL.DETECT.NORMAL  = 101       --距离终点最近的人
+_C.SKILL.DETECT.NORMAL  = 100       --距离终点最近的人
 
 --表现
 _C.SKILL.SHOW           = {}
@@ -92,6 +92,16 @@ _C.HIT.TYPE.HEAL        = "HIT.TYPE.HEAL"
 _C.HIT.TYPE.ARMOR       = "HIT.TYPE.ARMOR"
 
 
+--@region Buff
+_C.BUFF                 = {}
+
+--buff叠加
+_C.BUFF.EXTEND          = {}
+_C.BUFF.EXTEND.ADD      = 1     --叠加
+_C.BUFF.EXTEND.RECOVER  = 2     --覆盖
+_C.BUFF.EXTEND.ONLY     = 3     --唯一
+
+--@endregion
 
 
 --@region 颜色
@@ -139,7 +149,9 @@ _C.EVENT.TRIGGER.DESCRIPTION= "EVENT.TRIGGER.DESCRIPTION"
 
 -----
 _C.PHASE                    = {}
-_C.PHASE.ONEXECUTE          = "PHASE.ONEXECUTE"         --执行
+_C.PHASE.DESCRIPTION        = "PHASE.DESCRIPTION"         --描述
+_C.PHASE.FILTER             = "PHASE.FILTER"
+_C.PHASE.FINISH             = "PHASE.FINISH"
 
 
 

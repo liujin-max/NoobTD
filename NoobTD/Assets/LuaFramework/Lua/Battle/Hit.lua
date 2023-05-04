@@ -13,6 +13,8 @@ function Hit:ctor(hit_type, caster, target, skill)
     self.CritFlag   = false
     --伤害倍率
     self.ATKINC     = Class.new(Data.AttributeValue, skill.ATKINC:ToNumber())
+
+    self.HitEffects = ParseEffect(skill.Table.HitEffects)
 end
 
 
@@ -23,6 +25,10 @@ end
 --触发
 function Hit:Trigger()
     Logic.HitSettle.Settle(self)
+
+    self.HitEffects:Each(function(e)
+        e:Finish(self)
+    end)
 end
 
 return Hit

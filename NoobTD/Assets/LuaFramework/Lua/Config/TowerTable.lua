@@ -51,7 +51,7 @@ return {
 		HP = 45,
 		Speed = 0,
 		Skills = {
-			1000001,
+			2000001,
 		},
 		BuildEffect = {
 			{id =1001, value =Crypt.TE(20010)},
@@ -66,7 +66,7 @@ return {
 		HP = 50,
 		Speed = 0,
 		Skills = {
-			1000001,
+			2000001,
 		},
 		BuildEffect = {
 			{id =1001, value =Crypt.TE(20020)},
@@ -81,7 +81,7 @@ return {
 		HP = 55,
 		Speed = 0,
 		Skills = {
-			1000001,
+			2000001,
 		},
 		BuildEffect = Table.Empty,
 	},

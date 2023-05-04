@@ -2,15 +2,19 @@ local Effect = Class.define("Logic.Effect")
 
 local EFFECT_LIST = {}
 
---
-EFFECT_LIST[1000]   = function()
-    
-end
+--添加buff：id
+EFFECT_LIST[1000]   = 
+{
+    [_C.PHASE.FINISH]   = function(self, hit)
+        local target    = hit.Target
+        target:AddBuff(self.Value, hit.Caster)
+    end
+}
 
 
 function Effect:ctor(id, value)
     self.ID         = id
-    self.Value      = Class.new(Data.AttributeValue,    value)
+    self.Value      = value
     self.Text       = Table.Get(Table.EffectListTable, self.ID)[2]
 
     self.Entity     = EFFECT_LIST [self.ID]
@@ -26,7 +30,11 @@ function Effect:Trigger(phase, params)
     end
 end
 
-
+function Effect:Finish(hit)
+    if self.Entity[_C.PHASE.FINISH] ~= nil then
+        self.Entity[_C.PHASE.FINISH](self, hit)
+    end    
+end
 
 
 function Effect:Description()

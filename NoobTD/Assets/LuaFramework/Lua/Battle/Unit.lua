@@ -39,6 +39,7 @@ function Unit:ReBuild(cfg)
 
 
     self.Buffs      = {}
+    self.BuffEntitys= {}
 
     ParseSkill(self)
     
@@ -127,6 +128,14 @@ function Unit:Update(deltatime)
         self.Behaviour:Update(deltatime)
     end
 
+    if self:IsDead() == true then
+        return
+    end
+
+    for id, buff in pairs(self.Buffs) do
+        buff:Update(deltatime)
+    end
+
     self.Skills:Each(function(sk)
         sk:Update(deltatime)        
     end)
@@ -137,11 +146,77 @@ end
 
 -------------------- buff --------------------
 function Unit:AddBuff(id, caster)
-    
+    if self:IsDead() == true then return end
+
+    local buff_table    = Table.Get(Table.BuffTable, id)
+    assert(buff_table, "BuffTable is nil : " .. tostring(id))
+
+    print("AddBuff 1")
+    --覆盖 已经有相同EntityID的buff存在时 就移除，然后添加新的
+    --叠加 就叠加咯
+    --唯一 已经有相同EntityID的buff存在时 就无视
+    if buff_table.Extend == _C.BUFF.EXTEND.ADD then  --叠加型
+        if self.BuffEntitys[buff_table.EntityID] == nil then
+            self.BuffEntitys[buff_table.EntityID]  = {}
+        end
+        print("AddBuff 2")
+        if self.BuffEntitys[buff_table.EntityID][id] == nil then
+            local buff      = Class.new(Battle.Buff, id, self, caster)
+            self.Buffs[id] = buff
+            self.BuffEntitys[buff_table.EntityID][id] = buff
+
+            buff:Prepare()
+        else
+            self.BuffEntitys[buff_table.EntityID][id]:AddCount(caster)
+            self.BuffEntitys[buff_table.EntityID][id]:Flush()
+        end
+
+    elseif buff_table.Extend == _C.BUFF.EXTEND.ONLY   then    --唯一
+        if self.BuffEntitys[buff_table.EntityID] == nil then
+            self.BuffEntitys[buff_table.EntityID]  = {}
+        end
+
+        if PairCount(self.BuffEntitys[buff_table.EntityID]) == 0 then
+            local buff      = Class.new(Battle.Buff, id, self, caster)
+            self.Buffs[id] = buff
+            self.BuffEntitys[buff_table.EntityID][id] = buff
+
+            buff:Prepare()
+        end
+
+    else    --覆盖
+        if self.BuffEntitys[buff_table.EntityID] ~= nil then
+            for buff_id, buff in pairs(self.BuffEntitys[buff_table.EntityID]) do
+                self:RemoveBuff(buff_id)
+            end
+        end
+
+        self.BuffEntitys[buff_table.EntityID]  = {}
+
+        local buff      = Class.new(Battle.Buff, id, self, caster)
+        self.Buffs[id] = buff
+        self.BuffEntitys[buff_table.EntityID][id] = buff
+        buff:Prepare()
+    end
+
 end
 
 function Unit:RemoveBuff(id)
-    
+    local buff = self.Buffs[id]
+
+    if buff == nil then
+        return
+    end
+
+    buff:Dispose()
+
+    if buff.Extend == _C.BUFF.EXTEND.ADD then    --叠加型
+        self.BuffEntitys[buff.EntityID][id] = nil
+    else
+        self.BuffEntitys[buff.EntityID] = nil
+    end
+
+    self.Buffs[id] = nil 
 end
 
 function Unit:CleanBuff()
@@ -149,6 +224,7 @@ function Unit:CleanBuff()
         self:RemoveBuff(id)
     end
     self.Buffs = {}
+    self.BuffEntitys   = {}
 end
 ----------------------------------------------
 
