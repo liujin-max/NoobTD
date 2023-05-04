@@ -151,7 +151,7 @@ function Unit:AddBuff(id, caster)
     local buff_table    = Table.Get(Table.BuffTable, id)
     assert(buff_table, "BuffTable is nil : " .. tostring(id))
 
-    print("AddBuff 1")
+
     --覆盖 已经有相同EntityID的buff存在时 就移除，然后添加新的
     --叠加 就叠加咯
     --唯一 已经有相同EntityID的buff存在时 就无视
@@ -159,7 +159,7 @@ function Unit:AddBuff(id, caster)
         if self.BuffEntitys[buff_table.EntityID] == nil then
             self.BuffEntitys[buff_table.EntityID]  = {}
         end
-        print("AddBuff 2")
+
         if self.BuffEntitys[buff_table.EntityID][id] == nil then
             local buff      = Class.new(Battle.Buff, id, self, caster)
             self.Buffs[id] = buff

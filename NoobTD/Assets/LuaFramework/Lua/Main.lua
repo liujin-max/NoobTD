@@ -29,6 +29,7 @@ function GameStart()
 
     Display.EffectManager.Awake()
 
+    UI.Manager:LoadUIWindow(_C.UI.WINDOW.SYSTEMPOPUP, UI.Manager.TOP)
     
     NoobTD.GameFacade.Instance.LevelManager:LoadLevelAsync("Battle", function()
         Battle.FIELD = Class.new(Battle.Field)
