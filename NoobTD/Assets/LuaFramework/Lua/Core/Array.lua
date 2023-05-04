@@ -135,7 +135,7 @@ function Array:SortBy(attribute, isdesc)
         else
             return a1[attribute] < a2[attribute]
         end
-     end)
+    end)
 end
 
 function Array:Sort(sort_func)

@@ -5,24 +5,31 @@ local TargetFilter    = {}
 
 local TARGETS   = {}
 
---距离终点最近的人
-TARGETS[_C.SKILL.DETECT.NORMAL] = function(skill, targets)
+--距离终点最近的n个人
+TARGETS[_C.SKILL.DETECT.NORMAL] = function(skill, targets, count)
     local RET       = Class.new(Array)
-    local distance  = 0
-    local target    = nil
+    local temp      = {}
 
     targets:Each(function(t)
         local node = t:GetCurrentRoute()
         if node ~= nil then
-            if node.Distance > distance then
-                distance    = node.Distance
-                target      = t
-            end
+            temp[#temp + 1] = {Distance = node.Distance, Target = t}
         end
     end)
 
-    if target ~= nil then
-        RET:Add(target)
+    if #temp > 0 then
+        table.sort(temp, function(a1, a2)
+            return a1.Distance > a2.Distance
+        end)
+
+        for i = 1, count do
+            local cfg = temp[i]
+            if cfg == nil then
+                break
+            end
+
+            RET:Add(cfg.Target)
+        end
     end
 
     return RET
@@ -51,7 +58,7 @@ function TargetFilter.Check(skill)
     end)
 
 
-    local finals = entity(skill, targets)
+    local finals = entity(skill, targets, 1)
 
     if finals:Count() == 0 then
         return false
