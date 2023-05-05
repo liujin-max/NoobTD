@@ -95,6 +95,9 @@ TextureImporter:
   - first:
       213: 6878231308100353766
     second: Universal_building_ring
+  - first:
+      213: -8923185760214031430
+    second: Universal_tip_bottom
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -200,7 +203,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 258
-        y: 1153
+        y: 1168
         width: 709
         height: 276
       alignment: 0
@@ -221,7 +224,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 613
-        y: 1873
+        y: 1815
         width: 46
         height: 68
       alignment: 0
@@ -238,32 +241,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Universal_arrow_up
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 2001
-        width: 46
-        height: 46
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1da4d878ee15c7a10800000000000000
-      internalID: 1908490427016497873
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Universal_arrow_yellow
       rect:
         serializedVersion: 2
         x: 899
-        y: 1431
+        y: 1446
         width: 56
         height: 166
       alignment: 0
@@ -284,7 +266,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 1479
+        y: 1494
         width: 301
         height: 118
       alignment: 0
@@ -301,53 +283,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Universal_btn_dice
-      rect:
-        serializedVersion: 2
-        x: 369
-        y: 693
-        width: 432
-        height: 458
-      alignment: 9
-      pivot: {x: 0.44212964, y: 0.5021834}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 88721106aef3213a0800000000000000
-      internalID: -6696219420079872120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Universal_btn_editor
-      rect:
-        serializedVersion: 2
-        x: 592
-        y: 2001
-        width: 50
-        height: 46
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d71d15d3a2f56dfc0800000000000000
-      internalID: -3470481827820351107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Universal_btn_yellow
       rect:
         serializedVersion: 2
         x: 304
-        y: 1479
+        y: 1494
         width: 301
         height: 118
       alignment: 0
@@ -367,8 +307,8 @@ TextureImporter:
       name: Universal_btn_yellow2
       rect:
         serializedVersion: 2
-        x: 616
-        y: 1613
+        x: 416
+        y: 1628
         width: 263
         height: 95
       alignment: 0
@@ -389,7 +329,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 1174
+        y: 1189
         width: 255
         height: 255
       alignment: 9
@@ -409,8 +349,8 @@ TextureImporter:
       name: Universal_button_close
       rect:
         serializedVersion: 2
-        x: 881
-        y: 1599
+        x: 681
+        y: 1614
         width: 98
         height: 109
       alignment: 0
@@ -431,7 +371,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 551
-        y: 1880
+        y: 1822
         width: 60
         height: 61
       alignment: 0
@@ -473,7 +413,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 749
-        y: 1449
+        y: 1464
         width: 148
         height: 148
       alignment: 0
@@ -494,7 +434,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 607
-        y: 1457
+        y: 1472
         width: 140
         height: 140
       alignment: 0
@@ -515,7 +455,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 1618
+        y: 1633
         width: 413
         height: 90
       alignment: 0
@@ -532,52 +472,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Universal_main_select_bottom
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 1800
-        width: 524
-        height: 71
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a084b039fdbdc8b00800000000000000
-      internalID: 832281784447879178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Universal_message_item
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 1615
-        width: 198
-        height: 93
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 188212bc1a1dd4c80800000000000000
-      internalID: -8336776842365032319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Universal_name_bg
       rect:
         serializedVersion: 2
-        x: 644
+        x: 544
         y: 2001
         width: 344
         height: 46
@@ -662,7 +560,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 785
+        y: 800
         width: 366
         height: 366
       alignment: 0
@@ -683,7 +581,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 1883
+        y: 1825
         width: 548
         height: 58
       alignment: 0
@@ -704,7 +602,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 1726
+        y: 1741
         width: 561
         height: 72
       alignment: 0
@@ -784,11 +682,32 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: Universal_tip_bottom
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1885
+        width: 671
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 300, y: 0, z: 300, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab36e9104d97a2480800000000000000
+      internalID: -8923185760214031430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: Universal_title_bg
       rect:
         serializedVersion: 2
         x: 564
-        y: 1710
+        y: 1725
         width: 404
         height: 88
       alignment: 0
