@@ -37,9 +37,16 @@ _C.SIDE.DEFEND          = 2     --防守方
 
 --@region avatar
 _C.AVATAR               = {}
+--朝向
+_C.AVATAR.FACE          = {}
+_C.AVATAR.FACE.LEFT     = "FACE.LEFT"
+_C.AVATAR.FACE.RIGHT    = "FACE.RIGHT"
+
+--挂点
 _C.AVATAR.PIVOT         = {}
 _C.AVATAR.PIVOT.HEAD    = "Head"
 _C.AVATAR.PIVOT.BODY    = "Body"
+_C.AVATAR.PIVOT.ATK     = "Attack"
 _C.AVATAR.PIVOT.FOOT    = "Foot"
 
 --@endregion

@@ -10,6 +10,10 @@ public class NoobTD_AvatarWrap
 		L.RegFunction("SetOrder", SetOrder);
 		L.RegFunction("__eq", op_Equality);
 		L.RegFunction("__tostring", ToLua.op_ToString);
+		L.RegVar("Head", get_Head, set_Head);
+		L.RegVar("Body", get_Body, set_Body);
+		L.RegVar("Attack", get_Attack, set_Attack);
+		L.RegVar("Foot", get_Foot, set_Foot);
 		L.EndClass();
 	}
 
@@ -45,6 +49,158 @@ public class NoobTD_AvatarWrap
 		catch (Exception e)
 		{
 			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_Head(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			NoobTD.Avatar obj = (NoobTD.Avatar)o;
+			UnityEngine.Transform ret = obj.Head;
+			ToLua.Push(L, ret);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o, "attempt to index Head on a nil value");
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_Body(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			NoobTD.Avatar obj = (NoobTD.Avatar)o;
+			UnityEngine.Transform ret = obj.Body;
+			ToLua.Push(L, ret);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o, "attempt to index Body on a nil value");
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_Attack(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			NoobTD.Avatar obj = (NoobTD.Avatar)o;
+			UnityEngine.Transform ret = obj.Attack;
+			ToLua.Push(L, ret);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o, "attempt to index Attack on a nil value");
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_Foot(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			NoobTD.Avatar obj = (NoobTD.Avatar)o;
+			UnityEngine.Transform ret = obj.Foot;
+			ToLua.Push(L, ret);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o, "attempt to index Foot on a nil value");
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int set_Head(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			NoobTD.Avatar obj = (NoobTD.Avatar)o;
+			UnityEngine.Transform arg0 = (UnityEngine.Transform)ToLua.CheckObject<UnityEngine.Transform>(L, 2);
+			obj.Head = arg0;
+			return 0;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o, "attempt to index Head on a nil value");
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int set_Body(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			NoobTD.Avatar obj = (NoobTD.Avatar)o;
+			UnityEngine.Transform arg0 = (UnityEngine.Transform)ToLua.CheckObject<UnityEngine.Transform>(L, 2);
+			obj.Body = arg0;
+			return 0;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o, "attempt to index Body on a nil value");
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int set_Attack(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			NoobTD.Avatar obj = (NoobTD.Avatar)o;
+			UnityEngine.Transform arg0 = (UnityEngine.Transform)ToLua.CheckObject<UnityEngine.Transform>(L, 2);
+			obj.Attack = arg0;
+			return 0;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o, "attempt to index Attack on a nil value");
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int set_Foot(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			NoobTD.Avatar obj = (NoobTD.Avatar)o;
+			UnityEngine.Transform arg0 = (UnityEngine.Transform)ToLua.CheckObject<UnityEngine.Transform>(L, 2);
+			obj.Foot = arg0;
+			return 0;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o, "attempt to index Foot on a nil value");
 		}
 	}
 }

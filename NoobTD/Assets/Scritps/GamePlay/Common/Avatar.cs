@@ -9,6 +9,11 @@ namespace NoobTD
     {
         private SpriteRenderer sprite_render;
 
+        public Transform Head;
+        public Transform Body;
+        public Transform Attack;
+        public Transform Foot;
+
 
         private void Awake()
         {
@@ -20,6 +25,7 @@ namespace NoobTD
         {
             
         }
+
 
         public void SetOrder(int value)
         {

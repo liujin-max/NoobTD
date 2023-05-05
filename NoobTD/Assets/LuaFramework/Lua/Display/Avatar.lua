@@ -20,6 +20,8 @@ function Avatar:Decorate()
     self.Entity.transform.localScale      = Vector3.one
     self.Entity.transform.localPosition   = Vector3.zero
 
+    self.Comp   = self.Entity:GetComponent("Avatar")
+
     self.DecorateFlag   = true
 end
 
@@ -41,12 +43,14 @@ function Avatar:GetPosition()
     return self.Entity.transform.localPosition - self.Offset
 end
 
-function Avatar:GetPivotPos(pivot)
-    local base  = self:GetPosition()
+function Avatar:GetPivot(pivot_name)
+    if self.Comp == nil then return end
 
-    if pivot == _C.AVATAR.PIVOT.HEAD then
-        base    = base + self.Offset + Vector3.New(0, 0.5, 0)
-    end
+    return self.Comp[pivot_name]
+end
+
+function Avatar:GetPivotPos(pivot_name)
+    local base  = self:GetPosition() + self.Offset + self:GetPivot(pivot_name).transform.localPosition
 
     return base
 end

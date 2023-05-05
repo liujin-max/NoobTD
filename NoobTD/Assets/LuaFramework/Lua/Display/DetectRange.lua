@@ -17,8 +17,8 @@ function DetectRange:Show(flag, range, pos)
         if self.Entity == nil then
             self:Decorate()
         end
-        -- local range = self.Avatar.Model:GetAtkRange()
-        local base  = 366 / 2
+
+        local base  = 277 / 2
         local scale = range / base
 
         self.Entity.transform.localScale    = Vector3.New(scale, scale, scale)
