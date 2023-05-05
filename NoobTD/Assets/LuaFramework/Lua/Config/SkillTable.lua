@@ -19,6 +19,6 @@ return {
 			{id =1000, value =Crypt.TE(1000)},
 		},
 		Condition = Table.Empty,
-		Range = 400,
+		Range = 300,
 	},
 }

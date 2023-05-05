@@ -8,6 +8,7 @@ Display.Effect          = require("Display/Effect")
 
 Display.Avatar          = require("Display/Avatar")
 Display.HPBar           = require("Display/HPBar")
+Display.DetectRange     = require("Display/DetectRange")
 
 
 Display.Land            = require("Display/Land")

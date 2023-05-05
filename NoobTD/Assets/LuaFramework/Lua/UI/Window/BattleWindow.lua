@@ -55,6 +55,8 @@ end
 --1.点击空白的防守位，弹出建造选项
 --2.点击有塔的防守位，弹出塔的选项
 function BattleWindow.ShowBuildPivot(pos, defender)
+    Battle.FIELD.Handler:Cancel()
+
     pos = pos * 100
 
     BattleWindow.PARAMS.BuildPivot:SetActive(true)
@@ -75,10 +77,14 @@ function BattleWindow.ShowBuildPivot(pos, defender)
     else
         P.BuildItem:ShowUpgrading(defender)
         P.BuildItem:Show()
+
+        Battle.FIELD.Handler:ShowRange(true , tower.ID, tower.Avatar:GetPosition())
     end
 end
 
 function BattleWindow.HideBuildPivot()
+    Battle.FIELD.Handler:Cancel()
+
     if P.BuildItem ~= nil then
         P.BuildItem:Hide()
 

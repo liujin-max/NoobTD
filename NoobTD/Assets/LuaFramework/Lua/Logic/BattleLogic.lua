@@ -93,50 +93,6 @@ function BattleLogic.GetTowerCost(id)
     return cost
 end
 
---建造塔
-function BattleLogic.BuildTower(id, defender)
-    local tower   = Class.new(Battle.Tower, Table.Get(Table.TowerTable, id), _C.SIDE.DEFEND)
-    tower:SetDefender(defender)
-    defender:SetTower(tower)
-    
-    tower:InitBehaviour()
-
-    Battle.FIELD.Positioner:PushTower(tower)
-end
-
---升级塔
---升级
-function BattleLogic.UpgradeTower(tower, next_id)
-    local cost      = Logic.Battle.GetTowerCost(next_id)
-
-    if Battle.FIELD:GetCoin() < cost then
-        Controller.System.FlyTip(_C.MESSAGE.COINERROR)
-        return
-    end
-
-    Battle.FIELD:UpdateCoin(-cost)
-
-    Logic.Battle.Transform(tower, next_id)
-end
-
---转换、变身
-function BattleLogic.Transform(unit, id)
-    local config    = Table.Get(Table.TowerTable, id)
-
-    local playing_skill = unit:GetCastingSkill()
-    if playing_skill ~= nil then
-        playing_skill:Interrupt()
-    end
-
-    unit:CleanBuff()
-
-    unit:Rebuild(config)
-
-    unit.Avatar:Transform()
-
-    -- self:Ready()
-end
-
 
 --
 function BattleLogic.Pause()

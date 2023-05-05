@@ -1,8 +1,6 @@
 Battle  = {}
 
 
-Battle.Field            = require("Battle/Field") 
-Battle.Field            = require("Battle/Field") 
 
 Battle.Field            = require("Battle/Field") 
 Battle.Land             = require("Battle/Land") 
@@ -13,6 +11,7 @@ Battle.Spawn            = require("Battle/Spawn")
 Battle.Exit             = require("Battle/Exit") 
 Battle.Defender         = require("Battle/Defender") 
 
+Battle.FormatHandler    = require("Battle/FormatHandler") 
 Battle.Positioner       = require("Battle/Positioner") 
 Battle.Unit             = require("Battle/Unit") 
 Battle.Tower            = require("Battle/Tower") 

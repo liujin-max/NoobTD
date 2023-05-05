@@ -43,10 +43,13 @@ function BuildRingItem:Awake(items)
     self.Ring       = items["Ring"]
 
     self.Items      = Class.new(Array)
+    self.S_ITEM     = nil
 end
 
 --展示建造单元
 function BuildRingItem:ShowBuilding(defender)
+    self.S_ITEM     = nil
+
     self.Items:Each(function(item)
         item.GO:SetActive(false)
     end)
@@ -57,22 +60,35 @@ function BuildRingItem:ShowBuilding(defender)
 
         local item  = get_item(self, i)
         item.GO.transform.localPosition = pos
-        item:Init(effect)
+        item:Init(effect, defender)
 
 
         UIEventListener.PGet(item.GO,  item).onClick_P = function()
-            item:Execute(defender)
+            if self.S_ITEM  == item then
+                self.S_ITEM:Execute()
+            else
+                if self.S_ITEM ~= nil then
+                   self.S_ITEM:Select(false) 
+                end
+
+                self.S_ITEM = item
+                self.S_ITEM:Select(true)
+                self.S_ITEM:Preload()
+            end
         end
     end
 end
 
 --展示升级单元
 function BuildRingItem:ShowUpgrading(defender)
+    self.S_ITEM     = nil
+
     self.Items:Each(function(item)
         item.GO:SetActive(false)
     end)
 
     local tower     = defender:GetTower()
+
     local effects   = tower:GetBuildEffects()
     local pos_temp  = Positions[effects:Count()]
     for i = 1, effects:Count() do
@@ -81,10 +97,20 @@ function BuildRingItem:ShowUpgrading(defender)
 
         local item  = get_item(self, i)
         item.GO.transform.localPosition = pos
-        item:Init(e)
+        item:Init(e, defender)
 
         UIEventListener.PGet(item.GO,  item).onClick_P = function()
-            item:Execute(defender)
+            if self.S_ITEM  == item then
+                self.S_ITEM:Execute()
+            else
+                if self.S_ITEM ~= nil then
+                   self.S_ITEM:Select(false) 
+                end
+
+                self.S_ITEM = item
+                self.S_ITEM:Select(true)
+                self.S_ITEM:Preload()
+            end
         end
     end
 

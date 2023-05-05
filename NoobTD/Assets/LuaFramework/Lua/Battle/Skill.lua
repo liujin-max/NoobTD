@@ -24,7 +24,7 @@ function Skill:ctor(config, caster)
     self.Show       = Class.new(Display.SkillShow, self)
 end
 
-function Skill:GetRadius()
+function Skill:GetRange()
     return self.RANGE:ToNumber()
 end
 

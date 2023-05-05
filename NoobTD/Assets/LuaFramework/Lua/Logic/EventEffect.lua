@@ -14,7 +14,17 @@ EFFECT_LIST[1000] =
             return
         end
 
-        Logic.Battle.BuildTower(self.Value, denfender)
+        Battle.FIELD.Handler:Build(self.Value, denfender)
+    end,
+
+    [_C.EVENT.TRIGGER.PRELOAD] = function(self, params)
+        local denfender = params.Defender
+
+        if denfender == nil then
+            return
+        end
+
+        Battle.FIELD.Handler:Preload(self.Value, denfender)
     end,
 
     [_C.EVENT.TRIGGER.COST] = function(self)
@@ -44,7 +54,17 @@ EFFECT_LIST[1001] =
             return
         end
 
-        Logic.Battle.UpgradeTower(tower, self.Value)
+        Battle.FIELD.Handler:Upgrade(tower, self.Value)
+    end,
+
+    [_C.EVENT.TRIGGER.PRELOAD] = function(self, params)
+        local denfender = params.Defender
+
+        if denfender == nil then
+            return
+        end
+
+        Battle.FIELD.Handler:Preload(self.Value, denfender)
     end,
 
     [_C.EVENT.TRIGGER.COST] = function(self)
@@ -97,7 +117,6 @@ function EventEffect:Execute(params)
     if self.Entity[_C.EVENT.TRIGGER.EXECUTE] ~= nil then
         self.Entity[_C.EVENT.TRIGGER.EXECUTE](self, params)
     end
-    self.Executed   = true
 end
 
 function EventEffect:GetCost()
@@ -105,6 +124,13 @@ function EventEffect:GetCost()
         return self.Entity[_C.EVENT.TRIGGER.COST](self)
     end
     return 0
+end
+
+
+function EventEffect:Preload(params)
+    if self.Entity[_C.EVENT.TRIGGER.PRELOAD] ~= nil then
+        self.Entity[_C.EVENT.TRIGGER.PRELOAD](self, params)
+    end
 end
 
 function EventEffect:Description()

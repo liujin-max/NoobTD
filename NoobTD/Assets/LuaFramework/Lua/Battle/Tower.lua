@@ -10,6 +10,12 @@ function Tower:ctor(cfg, side)
     self.Defender       = nil
 end
 
+function Tower:ReBuild(cfg)
+    super(Battle.Tower, self, "ReBuild", cfg)
+    
+    self.BuildEffects   = ParseEventEffect(cfg.BuildEffect)
+end
+
 function Tower:SetDefender(defender)
     self.Defender   = defender
 end

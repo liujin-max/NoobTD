@@ -66,6 +66,7 @@ function Field:ctor()
 
     self.Land       = Class.new(Battle.Land, self, self.Config)
     self.Positioner = Class.new(Battle.Positioner, self)
+    self.Handler    = Class.new(Battle.FormatHandler, self)
 
     --怪物波数
     self.Waves      = Class.new(Array)
@@ -177,7 +178,7 @@ function Field:PREPARE_Start()
     UI.BattleWindow.Init()
 
     --加载一个塔
-    Logic.Battle.BuildTower(10000, self.Land:GetDefenders():First())
+    self.Handler:Build(10000, self.Land:GetDefenders():First())
     --
     self.FSM:Transist(STATE.PLAY)
 end
@@ -260,6 +261,8 @@ end
 
 function Field:Dispose()
     self.Land:Dispose()
+    self.Positioner:Dispose()
+    self.Handler:Dispose()
 
     UI.Manager:UnLoadWindow(_C.UI.WINDOW.BATTLE)
     

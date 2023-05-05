@@ -44,7 +44,7 @@ function TargetFilter.Check(skill)
     end
 
     local o_pos     = skill.Owner.Avatar:GetPosition()
-    local radius    = skill:GetRadius() / 100.0
+    local radius    = skill:GetRange() / 100.0
     local targets   = Class.new(Array)
 
     local enemys    = Battle.FIELD.Positioner:GetUnits(skill.Owner.Side, skill.PickID)

@@ -95,6 +95,21 @@ function Unit:IsGC()
     return self.StateFlag._IsGC == true
 end
 
+--
+function Unit:GetDefaultSkill()
+    return self.Skills:First()
+end
+--普攻的攻击范围
+function Unit:GetAtkRange()
+    local skill = self:GetDefaultSkill()
+
+    if skill == nil then
+        return 0
+    end
+
+    return skill:GetRange()
+end
+
 --正在释放技能
 function Unit:IsCasting()
     return self:GetCastingSkill() ~= nil
