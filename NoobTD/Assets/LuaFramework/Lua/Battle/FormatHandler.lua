@@ -63,6 +63,17 @@ end
 
 --建造塔
 function FormatHandler:Build(id, defender)
+    if defender:GetTower() ~= nil then return end
+    
+    local cost      = Logic.Battle.GetTowerCost(id)
+
+    if Battle.FIELD:GetCoin() < cost then
+        Controller.System.FlyTip(_C.MESSAGE.COINERROR)
+        return
+    end
+
+    Battle.FIELD:UpdateCoin(-cost)
+
     local tower   = Class.new(Battle.Tower, Table.Get(Table.TowerTable, id), _C.SIDE.DEFEND)
     tower:SetDefender(defender)
     defender:SetTower(tower)
