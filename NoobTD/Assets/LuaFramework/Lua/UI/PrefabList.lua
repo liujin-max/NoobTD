@@ -6,6 +6,7 @@ PrefabList[_C.UI.ITEM.SYSTEMPOPUP]      = { Path = "Prefab/UI/Item/SystemPopupIt
 PrefabList[_C.UI.ITEM.BUILD]            = { Path = "Prefab/UI/Item/BuildItem"}
 PrefabList[_C.UI.ITEM.HPBAR]            = { Path = "Prefab/UI/Item/HPBar"}
 PrefabList[_C.UI.ITEM.BUILDRING]        = { Path = "Prefab/UI/Item/BuildRingItem"}
+PrefabList[_C.UI.ITEM.WAVETAG]          = { Path = "Prefab/UI/Item/WaveTagItem"}
 
 
 

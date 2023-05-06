@@ -15,6 +15,7 @@ UI.SystemPopupItem              = require("UI/Item/SystemPopupItem")
 UI.BuildItem                    = require("UI/Item/BuildItem")
 UI.HPBar                        = require("UI/Item/HPBar")
 UI.BuildRingItem                = require("UI/Item/BuildRingItem")
+UI.WaveTagItem                  = require("UI/Item/WaveTagItem")
 
 
 

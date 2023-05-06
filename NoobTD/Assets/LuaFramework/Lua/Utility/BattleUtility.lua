@@ -22,16 +22,6 @@ function BattleUtility.TurnTo(effect, direction)
     local entity    = effect.Entity
     
     entity.transform.right = direction
-
-    -- --2D
-    -- local pre_scale = entity.transform.localScale
-    -- if direction.x < 0 then
-    --     entity.transform.right      = Vector3.New(-direction.x, -direction.y, direction.z)
-    --     entity.transform.localScale = Vector3.New(-math.abs(pre_scale.x), pre_scale.y, pre_scale.z)
-    -- else
-    --     entity.transform.right      = direction
-    --     entity.transform.localScale = Vector3.New(math.abs(pre_scale.x), pre_scale.y, pre_scale.z)
-    -- end
 end
 
 function BattleUtility.Rotate(rotate, effect, o_pos, t_pos)
@@ -48,7 +38,7 @@ end
 function BattleUtility.parabola_middle_point(o_pos, t_pos, middle_height)
     local rate      = middle_height or 0.5
     local distance  = Utility.Battle.Distance(o_pos, t_pos)
-    local height    = distance * rate
+    local height    = math.max(2, distance * rate)
 
     if t_pos.y > o_pos.y then
         return Vector3.New((o_pos.x + t_pos.x) / 2,  t_pos.y + height, 0)

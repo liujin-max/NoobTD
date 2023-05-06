@@ -342,12 +342,14 @@ MonoBehaviour:
   - {fileID: 6696515391522394998}
   - {fileID: 566809772279028163}
   - {fileID: 2390376474012133746}
+  - {fileID: 8542692160020970435}
   TypeList:
   - GameObject
   - TextMeshProUGUI
   - TextMeshProUGUI
   - GameObject
   - TextMeshProUGUI
+  - GameObject
   ScriptPath: UI/Window/BattleWindow.lua
   ScriptName: BattleWindow
 --- !u!114 &5336404150578866025
@@ -373,7 +375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 920051281110188203}
   m_Layer: 0
-  m_Name: BuildPivot
+  m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -847,7 +849,7 @@ GameObject:
   - component: {fileID: 2466589815993162252}
   - component: {fileID: 7883025977610570579}
   m_Layer: 0
-  m_Name: MonsterCount
+  m_Name: WaveCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -981,7 +983,7 @@ GameObject:
   - component: {fileID: 6375711778309702021}
   - component: {fileID: 3766186496132889615}
   m_Layer: 0
-  m_Name: MonsterPivot
+  m_Name: WavePivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1149,6 +1151,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920051281110188203}
+  - {fileID: 4704590659833570097}
   m_Father: {fileID: 6628354358158384476}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1156,4 +1159,39 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &8542692160020970435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4704590659833570097}
+  m_Layer: 0
+  m_Name: BuildPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4704590659833570097
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8542692160020970435}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2681088142908479168}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}

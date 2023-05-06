@@ -6,6 +6,8 @@ local RouteLine = Class.define("Battle.RouteLine")
 function RouteLine:ctor(land, line_cfg)
     self.Land   = land
 
+    self.TagPos = Vector3.New(line_cfg.TagPos[1], line_cfg.TagPos[2], line_cfg.TagPos[3])
+
     --路线节点
     local last_grid  = nil
     self.Routes = Class.new(Array)

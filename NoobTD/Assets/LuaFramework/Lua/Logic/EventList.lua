@@ -30,3 +30,6 @@ _E.U2U_DEFENDER_CLICK       = "U2U_DEFENDER_CLICK"          --
 
 
 _E.BATTLE_HIDERING          = "BATTLE_HIDERING"             --隐藏建造单元
+_E.BATTLE_WP_START          = "BATTLE_WP_START"             --显示wave标识
+_E.BATTLE_WP_TOUCH          = "BATTLE_WP_TOUCH"             --点击Wave标识
+_E.BATTLE_WP_COUNTDOWN      = "BATTLE_WP_COUNTDOWN"         --wave计时结束

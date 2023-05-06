@@ -123,6 +123,17 @@ _C.BUFF.EXTEND.ONLY     = 3     --唯一
 --@endregion
 
 
+_C.WAVE                 = {}
+_C.WAVE.STATE           = {}
+_C.WAVE.STATE.SILENCE   = 1     --静默
+_C.WAVE.STATE.COUNTDOWN = 2     --倒计时
+_C.WAVE.STATE.SPAWN     = 3     --产出怪物
+_C.WAVE.STATE.FINISH    = 4     --结束
+
+
+
+
+
 --@region 颜色
 _C.COLOR                = {}
 _C.COLOR.RED            = "<#F10000>"
@@ -138,6 +149,7 @@ _C.UI.ITEM.SYSTEMPOPUP      = "SystemPopupItem"
 _C.UI.ITEM.BUILD            = "BuildItem"
 _C.UI.ITEM.HPBAR            = "HPBar"
 _C.UI.ITEM.BUILDRING        = "BuildRingItem"
+_C.UI.ITEM.WAVETAG          = "WaveTagItem"
 
 
 

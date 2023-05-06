@@ -69,7 +69,7 @@ function Field:ctor()
     self.Handler    = Class.new(Battle.FormatHandler, self)
 
     --怪物波数
-    self.WaveOrder  = 1
+    self.WaveOrder  = 0
     self.Waves      = Class.new(Array)
     for i,v in ipairs(self.Config.Waves) do
         local wave  = Class.new(Battle.Wave, v, i)
@@ -82,7 +82,11 @@ function Field:ctor()
     self.Hits       = Class.new(Array)
     self.Bullets    = Class.new(Array)
 
+
     self.PauseFlag  = false
+
+
+    LuaEventManager.AddHandler(_E.BATTLE_WP_TOUCH,      self.OnWaveTouch,   self,   self)
 end
 
 function Field:Start()
@@ -101,6 +105,10 @@ end
 
 function Field:IsPause()
     return self.PauseFlag
+end
+
+function Field:IsStart()
+    return self.FSM:GetCurrent().Tag == STATE.PLAY
 end
 
 function Field:GetCoin()
@@ -128,8 +136,12 @@ function Field:GetWaveCount()
     return self.Waves:Count()
 end
 
-function Field:CurrentWaveOrder()
-    return self.WaveOrder
+function Field:CurrentWave()
+    return self.Waves:Get(self.WaveOrder)
+end
+
+function Field:NextWave()
+    return self.Waves:Get(self.WaveOrder + 1)
 end
 
 function Field:UpdateMonsterNum(value)
@@ -185,7 +197,9 @@ function Field:PREPARE_Start()
     --加载一个塔
     self.Handler:Build(10000, self.Land:GetDefenders():First())
     --
-    self.FSM:Transist(STATE.PLAY)
+
+    --第一波开始计时
+    self:NextWave():StartCountDown()
 end
 
 function Field:PREPARE_Update()
@@ -214,17 +228,25 @@ function Field:PLAY_Update()
         self.Positioner:Update(deltatime)
     end
 
-    --波数
-    local w = self.Waves:Get(self.WaveOrder)
+    --当前波
+    local w = self:CurrentWave()
     if w ~= nil then
         w:Update(deltatime)
+    end
 
-        if w:IsStart() == true then
+    --下一波
+    local n_w = self:NextWave()
+    if n_w ~= nil then
+        if n_w:IsSilence() == true then
             if w:MonsterCount() == 0 then
-                self.WaveOrder  = self.WaveOrder + 1
+                n_w:StartCountDown()
             end
         end
+
+        n_w:Update(deltatime)
     end
+
+
 
     --结算Hit
     self.Hits:Each(function(h)
@@ -269,9 +291,23 @@ end
 --@endregion
 
 
+---------------------------------------------------------------------------------------------
+--点击Wave标识（Wave开始出怪）
+function Field:OnWaveTouch(event, wave)
+    if wave:GetOrder() == 1 then
+        self.FSM:Transist(STATE.PLAY)
+    end
+
+    self.WaveOrder  = self.WaveOrder + 1
+
+    wave:StartSpawn()
+end
 
 
 function Field:Dispose()
+    LuaEventManager.DelHandler(_E.BATTLE_WP_TOUCH,      self.OnWaveTouch,   self)
+
+
     self.Land:Dispose()
     self.Positioner:Dispose()
     self.Handler:Dispose()
