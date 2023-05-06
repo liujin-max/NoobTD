@@ -5,9 +5,10 @@ local FormatHandler = Class.define("Battle.FormatHandler")
 function FormatHandler:ctor(field)
     self.Field      = field
 
+    self.DetectRange= nil
+    
     self.Model      = nil
 
-    self.DetectRange= nil
 end
 
 --展示范围
@@ -43,6 +44,8 @@ function FormatHandler:Preload(id, defender)
     local tower   = Class.new(Battle.Tower, Table.Get(Table.TowerTable, id), _C.SIDE.DEFEND)
     tower.Avatar:Decorate()
     tower.Avatar:SetPosition(defender:CenterPos())
+    tower.Avatar:TurnAlpha(0.5)
+
 
     self:ShowRange(true , id, tower.Avatar:GetPosition())
 
@@ -113,7 +116,6 @@ function FormatHandler:Transform(unit, id)
 
     unit.Avatar:Transform()
 end
-
 
 
 function FormatHandler:Update(deltatime)

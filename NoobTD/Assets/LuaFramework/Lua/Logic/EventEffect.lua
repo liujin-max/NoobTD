@@ -64,7 +64,7 @@ EFFECT_LIST[1001] =
             return
         end
 
-        Battle.FIELD.Handler:Preload(self.Value, denfender)
+        Battle.FIELD.Handler:ShowRange(true, self.Value, denfender:CenterPos())
     end,
 
     [_C.EVENT.TRIGGER.COST] = function(self)

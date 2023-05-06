@@ -93,7 +93,6 @@ function BattleLogic.GetTowerCost(id)
     return cost
 end
 
-
 --
 function BattleLogic.Pause()
     Battle.FIELD:Pause()

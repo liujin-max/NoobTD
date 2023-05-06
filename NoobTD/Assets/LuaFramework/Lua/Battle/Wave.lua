@@ -1,9 +1,7 @@
 --一波怪物
 --负责出怪逻辑
---出怪应该是个怎样的逻辑呢？ 还没想好
---根据时间点出怪
---还是类似kindomrush那样
---先做个时间出怪吧
+--手动出怪
+--1波结束后，下一波进入倒计时，在出口显示怪物标记
 
 local Wave = Class.define("Battle.Wave")
 
@@ -11,12 +9,24 @@ local Wave = Class.define("Battle.Wave")
 function Wave:ctor(cfg, order)
     self.Order  = order
 
-    self.Timer  = Class.new(Logic.CDTimer, cfg.wait)
+    self.Timer  = Class.new(Logic.CDTimer, cfg.wait / 100.0)
 
     self.Exorcists  = Class.new(Array)
     for i,v in ipairs(cfg.list) do
         self.Exorcists:Add({Timer = Class.new(Logic.CDTimer, v.time), ID = v.id})
     end
+
+    self.StartFlag  = false
+end
+
+--可以手动Start
+--或者Timer计时到了，自动Start
+function Wave:Start()
+    self.StartFlag  = true
+end
+
+function Wave:IsStart()
+    return self.StartFlag
 end
 
 --怪物数量
@@ -36,9 +46,7 @@ function Wave:Spawn(cfg)
 end
 
 function Wave:Update(deltatime)
-    self.Timer:Update(deltatime)
-
-    if self.Timer:IsFinished() == true then
+    if self:IsStart() == true then
         for i = self.Exorcists:Count(), 1, -1 do
             local cfg = self.Exorcists:Get(i)
             cfg.Timer:Update(deltatime)
@@ -49,7 +57,13 @@ function Wave:Update(deltatime)
                 self.Exorcists:Remove(cfg)
             end
         end
+    else
+        self.Timer:Update(deltatime)
+        if self.Timer:IsFinished() == true then
+            self:Start()
+        end
     end
+
 end
 
 

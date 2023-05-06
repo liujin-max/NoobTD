@@ -58,7 +58,7 @@ return {
 		},
 
 		{
-			wait    = 15,
+			wait    = 500,
 			list    =
 			{
 				{time = 0.0, id = 910000}, {time = 1.0, id = 910000},{time = 2.0, id = 910000},{time = 3.0, id = 910000},

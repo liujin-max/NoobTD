@@ -43,6 +43,10 @@ function Avatar:GetPosition()
     return self.Entity.transform.localPosition - self.Offset
 end
 
+function Avatar:TurnAlpha(value)
+    
+end
+
 function Avatar:GetPivot(pivot_name)
     if self.Comp == nil then return end
 

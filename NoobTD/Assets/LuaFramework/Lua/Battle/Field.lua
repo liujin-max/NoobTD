@@ -69,6 +69,7 @@ function Field:ctor()
     self.Handler    = Class.new(Battle.FormatHandler, self)
 
     --怪物波数
+    self.WaveOrder  = 1
     self.Waves      = Class.new(Array)
     for i,v in ipairs(self.Config.Waves) do
         local wave  = Class.new(Battle.Wave, v, i)
@@ -123,12 +124,16 @@ function Field:Hurt(value)
     self.HP._Current = math.max(0, self.HP._Current - value)
 end
 
-function Field:UpdateMonsterNum(value)
-    self.MonsterNum = self.MonsterNum + value
+function Field:GetWaveCount()
+    return self.Waves:Count()
 end
 
-function Field:GetMonsterCount()
-    return self.MonsterNum
+function Field:CurrentWaveOrder()
+    return self.WaveOrder
+end
+
+function Field:UpdateMonsterNum(value)
+    self.MonsterNum = self.MonsterNum + value
 end
 
 function Field:CheckResult()
@@ -210,9 +215,16 @@ function Field:PLAY_Update()
     end
 
     --波数
-    self.Waves:Each(function(w)
+    local w = self.Waves:Get(self.WaveOrder)
+    if w ~= nil then
         w:Update(deltatime)
-    end)
+
+        if w:IsStart() == true then
+            if w:MonsterCount() == 0 then
+                self.WaveOrder  = self.WaveOrder + 1
+            end
+        end
+    end
 
     --结算Hit
     self.Hits:Each(function(h)
