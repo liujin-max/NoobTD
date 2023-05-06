@@ -267,6 +267,8 @@ function Field:Dispose()
     UI.Manager:UnLoadWindow(_C.UI.WINDOW.BATTLE)
     
     Battle.FIELD    = nil
+
+    Utility.GC()
 end
 
 return Field

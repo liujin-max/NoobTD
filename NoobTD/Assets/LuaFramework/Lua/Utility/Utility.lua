@@ -7,6 +7,12 @@ Utility.GetEmptyTable = function()
     return {}
 end
 
+
+Utility.GC = function()
+    collectgarbage("collect")
+    AssetManager:Recycle()
+end
+
 function clone( object )
     local lookup_table = {}
     local function copyObj( object )
