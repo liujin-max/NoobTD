@@ -3,24 +3,6 @@
 
 local BattleLogic    = {}
 
---@region 功能性接口
-
-
-
-
-
-
-
-
-
-
-
-
-
---@endregion
-
-
------------------------------------
 --@region 游戏逻辑
 --单位是否有效
 function BattleLogic.IsAvailable(unit)
