@@ -47,6 +47,12 @@ function Avatar:TurnAlpha(value)
     
 end
 
+function Avatar:Face()
+    if self.Comp == nil then return end
+
+    self.Comp:Face(self.Model:GetFace() == _C.AVATAR.FACE.RIGHT and true or false)
+end
+
 function Avatar:GetPivot(pivot_name)
     if self.Comp == nil then return end
 
@@ -54,9 +60,11 @@ function Avatar:GetPivot(pivot_name)
 end
 
 function Avatar:GetPivotPos(pivot_name)
-    local base  = self:GetPosition() + self.Offset + self:GetPivot(pivot_name).transform.localPosition
+    local pivot = self:GetPivot(pivot_name)
 
-    return base
+    if pivot == nil then return Vector3.zero end
+
+    return Battle.FIELD.Land.Avatar.Root.transform:InverseTransformPoint(pivot.transform.position)
 end
 
 function Avatar:FlushHP(value, max)

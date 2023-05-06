@@ -5,13 +5,13 @@ local ParabolaTrace = Class.define("Display.ParabolaTrace", Display.Trace)
 
 
 
-function ParabolaTrace:ctor(effect, speed, o_pos, t_pos, rotate)
-    super(Display.ParabolaTrace, self, "ctor", effect, speed, o_pos, t_pos)
+function ParabolaTrace:ctor(effect, rotate, speed, o_pos, t_pos, height)
+    super(Display.ParabolaTrace, self, "ctor", effect, rotate, speed, o_pos, t_pos)
 
     self.Type   = _C.TRACE.PARABOLA
 
 
-    self.MidPos         = Utility.Battle.parabola_middle_point(self.StartPos, self.EndPos, 1)
+    self.MidPos         = Utility.Battle.parabola_middle_point(self.StartPos, self.EndPos, height)
 
     local distance      = Utility.Battle.Distance(self.StartPos, self.EndPos)
 
@@ -19,7 +19,7 @@ function ParabolaTrace:ctor(effect, speed, o_pos, t_pos, rotate)
     self.ContinueTime   = (Utility.Battle.Distance(self.StartPos, self.MidPos) + Utility.Battle.Distance(self.MidPos, self.EndPos)) / self.Speed
 end
 
-function Trace:GO()
+function ParabolaTrace:GO()
     self._Activated = true
 
     self.Effect:SetPos(self.StartPos)

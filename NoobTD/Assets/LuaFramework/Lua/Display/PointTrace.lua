@@ -1,10 +1,10 @@
 --运动轨迹
 --点对点
 
-local PointTrace = Class.define("Display.PointTrace")
+local PointTrace = Class.define("Display.PointTrace", Display.Trace)
 
-function PointTrace:ctor(effect, speed, o_pos, t_pos, rotate)
-    super(Display.PointTrace, self, "ctor", effect, speed, o_pos, t_pos)
+function PointTrace:ctor(effect, rotate, speed, o_pos, t_pos)
+    super(Display.PointTrace, self, "ctor", effect, rotate, speed, o_pos, t_pos)
 
     self.Type   = _C.TRACE.POINT
 

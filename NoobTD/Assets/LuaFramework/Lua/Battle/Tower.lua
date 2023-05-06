@@ -32,6 +32,9 @@ function Tower:GetBuildEffects()
     return self.BuildEffects
 end
 
+--塔无法转向
+function Tower:FaceTo(face)    
 
+end
 
 return Tower

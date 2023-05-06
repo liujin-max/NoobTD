@@ -45,6 +45,12 @@ function Skill:Cast(targets)
     self.Timer:Reset()
 
     self.Show:Cast()
+
+    --朝向目标
+    local t = targets:First()
+    if t ~= nil then
+        Logic.Battle.FaceTarget(self.Owner, t)
+    end
 end
 
 --打断

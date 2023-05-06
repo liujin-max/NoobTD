@@ -17,6 +17,7 @@ function Unit:ctor(cfg, side)
     self:ReBuild(cfg)
 
     self.Side       = side
+    self.Face       = _C.AVATAR.FACE.RIGHT  --默认朝右
 
     self.StateFlag  = Class.new(Battle.StateFlag, self)
     self.Behaviour  = nil
@@ -81,6 +82,16 @@ function Unit:UpdateHP(value)
     self.HP._Current    = math.min(self.HP._Total, self.HP._Current)
 
     self.Avatar:FlushHP(self.HP._Current, self.HP._Total)
+end
+
+function Unit:FaceTo(face)    
+    self.Face   = face
+
+    self.Avatar:Face()
+end
+
+function Unit:GetFace()
+    return self.Face
 end
 
 function Unit:IsDead() 

@@ -9,14 +9,14 @@ function Bullet:ctor(bullet_id, hit)
 end
 
 function Bullet:Activate()
-    local pos       = self.Hit.Caster.Avatar:GetPosition()
-    local to        = self.Hit.Target.Avatar:GetPosition()
+    local pos       = self.Hit.Caster.Avatar:GetPivotPos(_C.AVATAR.PIVOT.ATK)
+    local to        = self.Hit.Target.Avatar:GetPivotPos(_C.AVATAR.PIVOT.BODY)
     self.Effect     = Display.EffectManager.Add(self.Data.effect, pos)
 
     if self.Data.trace == _C.TRACE.PARABOLA then
-        self.Trace  = Class.new(Display.ParabolaTrace, self.Effect, self.Data.speed, pos, to, self.Data.rotate)
+        self.Trace  = Class.new(Display.ParabolaTrace, self.Effect, self.Data.rotate, self.Data.speed, pos, to, self.Data.height)
     else
-        self.Trace  = Class.new(Display.PointTrace, self.Effect, self.Data.speed, pos, to, self.Data.rotate)
+        self.Trace  = Class.new(Display.PointTrace, self.Effect, self.Data.rotate ,self.Data.speed, pos, to)
     end
 
     self.Trace:GO() 
@@ -24,7 +24,7 @@ end
 
 function Bullet:Update(deltaTime)
     if Logic.Battle.IsAvailable(self.Hit.Target) == true then
-        self.Trace:SetEndPos(self.Hit.Target.Avatar:GetPosition())
+        self.Trace:SetEndPos(self.Hit.Target.Avatar:GetPivotPos(_C.AVATAR.PIVOT.BODY))
     end
 
     self.Trace:Update(deltaTime)

@@ -4,13 +4,13 @@ local Trace = Class.define("Display.Trace")
 
 
 
-function Trace:ctor(effect, speed, o_pos, t_pos, rotate)
+function Trace:ctor(effect, rotate, speed, o_pos, t_pos)
     self.Effect     = effect
 
+    self.Rotate     = rotate
+    self.Speed      = speed
     self.StartPos   = o_pos
     self.EndPos     = t_pos
-    self.Speed      = speed
-    self.Rotate     = rotate
 
 
     self._IsArrived = false

@@ -8,7 +8,7 @@ end
 
 --范围检测
 function BattleUtility.RadiusCheck(pos1, pos2, radius)
-    local dis = BattleLogic.Distance(pos1, pos2)
+    local dis = Utility.Battle.Distance(pos1, pos2)
     return dis <= radius
 end
 
@@ -21,25 +21,24 @@ end
 function BattleUtility.TurnTo(effect, direction)
     local entity    = effect.Entity
     
-    --2D
-    local pre_scale = entity.transform.localScale
-    if direction.x < 0 then
-        entity.transform.right      = Vector3.New(-direction.x, -direction.y, direction.z)
-        entity.transform.localScale = Vector3.New(-math.abs(pre_scale.x), pre_scale.y, pre_scale.z)
-    else
-        entity.transform.right      = direction
-        entity.transform.localScale = Vector3.New(math.abs(pre_scale.x), pre_scale.y, pre_scale.z)
-    end
+    entity.transform.right = direction
+
+    -- --2D
+    -- local pre_scale = entity.transform.localScale
+    -- if direction.x < 0 then
+    --     entity.transform.right      = Vector3.New(-direction.x, -direction.y, direction.z)
+    --     entity.transform.localScale = Vector3.New(-math.abs(pre_scale.x), pre_scale.y, pre_scale.z)
+    -- else
+    --     entity.transform.right      = direction
+    --     entity.transform.localScale = Vector3.New(math.abs(pre_scale.x), pre_scale.y, pre_scale.z)
+    -- end
 end
 
 function BattleUtility.Rotate(rotate, effect, o_pos, t_pos)
-    
-    if rotate == _C.ROTATE.BULLET.RESET then
+    if rotate == _C.ROTATE.BULLET.ZERO then
         effect:SetEulerAngles(Vector3.zero)
-
     elseif rotate == _C.ROTATE.BULLET.TURNTO then
         Utility.Battle.TurnTo(effect,  t_pos - o_pos)
-
     else
         effect:SetEulerAngles(Vector3.zero)
     end    
@@ -51,7 +50,11 @@ function BattleUtility.parabola_middle_point(o_pos, t_pos, middle_height)
     local distance  = Utility.Battle.Distance(o_pos, t_pos)
     local height    = distance * rate
 
-    return Vector3.New((o_pos.x + t_pos.x) / 2,  t_pos.y + height, 0)
+    if t_pos.y > o_pos.y then
+        return Vector3.New((o_pos.x + t_pos.x) / 2,  t_pos.y + height, 0)
+    end
+
+    return Vector3.New((o_pos.x + t_pos.x) / 2,  o_pos.y + height, 0)
 end
 
 --二阶贝塞尔曲线

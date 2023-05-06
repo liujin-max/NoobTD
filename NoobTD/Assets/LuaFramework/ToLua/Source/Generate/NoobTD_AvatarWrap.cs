@@ -8,6 +8,7 @@ public class NoobTD_AvatarWrap
 	{
 		L.BeginClass(typeof(NoobTD.Avatar), typeof(UnityEngine.MonoBehaviour));
 		L.RegFunction("SetOrder", SetOrder);
+		L.RegFunction("Face", Face);
 		L.RegFunction("__eq", op_Equality);
 		L.RegFunction("__tostring", ToLua.op_ToString);
 		L.RegVar("Head", get_Head, set_Head);
@@ -26,6 +27,23 @@ public class NoobTD_AvatarWrap
 			NoobTD.Avatar obj = (NoobTD.Avatar)ToLua.CheckObject<NoobTD.Avatar>(L, 1);
 			int arg0 = (int)LuaDLL.luaL_checknumber(L, 2);
 			obj.SetOrder(arg0);
+			return 0;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int Face(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 2);
+			NoobTD.Avatar obj = (NoobTD.Avatar)ToLua.CheckObject<NoobTD.Avatar>(L, 1);
+			bool arg0 = LuaDLL.luaL_checkboolean(L, 2);
+			obj.Face(arg0);
 			return 0;
 		}
 		catch (Exception e)

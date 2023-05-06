@@ -9,7 +9,6 @@ end
 function BulletComp:Start()
     super(Display.BulletComp, self, "Start")
 
-
     local targets = self.Skill.Targets
 
     targets:Each(function(target)
