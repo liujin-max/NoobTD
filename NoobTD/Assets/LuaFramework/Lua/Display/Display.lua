@@ -20,6 +20,8 @@ Display.Defender        = require("Display/Defender")
 
 
 Display.Trace           = require("Display/Trace")
+Display.PointTrace      = require("Display/PointTrace")
+Display.ParabolaTrace   = require("Display/ParabolaTrace")
 
 
 

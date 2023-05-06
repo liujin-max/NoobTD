@@ -90,6 +90,18 @@ _C.SKILL.SHOW.BULLET    = "SHOW.BULLET"
 --@endregion    
 
 
+--运动轨迹
+_C.TRACE                = {}
+_C.TRACE.POINT          = 1     --点对点
+_C.TRACE.PARABOLA       = 2     --抛物线
+
+--旋转朝向
+_C.ROTATE               = {}
+_C.ROTATE.BULLET        = {}
+_C.ROTATE.BULLET.ZERO   = "ROTATE.BULLET.ZERO"      --无旋转
+_C.ROTATE.BULLET.TURNTO = "ROTATE.BULLET.TURNTO"    --朝向目标
+
+
 
 _C.HIT                  = {}
 --打击类型

@@ -39,10 +39,6 @@ Battle.Born             = require("Battle/Action/Born")
 Battle.Reach            = require("Battle/Action/Reach") 
 
 
-Battle.Trace            = require("Battle/Trace")
-Battle.StraightTrace    = require("Battle/StraightTrace")
-Battle.RoundTrace       = require("Battle/RoundTrace")
-
 
 Battle.Hit              = require("Battle/Hit") 
 

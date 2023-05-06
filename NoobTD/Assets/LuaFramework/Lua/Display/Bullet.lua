@@ -13,13 +13,18 @@ function Bullet:Activate()
     local to        = self.Hit.Target.Avatar:GetPosition()
     self.Effect     = Display.EffectManager.Add(self.Data.effect, pos)
 
-    self.Trace      = Class.new(Display.Trace, self.Effect, pos, to, self.Data.speed)
-    self.Trace:GO()
+    if self.Data.trace == _C.TRACE.PARABOLA then
+        self.Trace  = Class.new(Display.ParabolaTrace, self.Effect, self.Data.speed, pos, to, self.Data.rotate)
+    else
+        self.Trace  = Class.new(Display.PointTrace, self.Effect, self.Data.speed, pos, to, self.Data.rotate)
+    end
+
+    self.Trace:GO() 
 end
 
 function Bullet:Update(deltaTime)
     if Logic.Battle.IsAvailable(self.Hit.Target) == true then
-        self.Trace:SetToPos(self.Hit.Target.Avatar:GetPosition())
+        self.Trace:SetEndPos(self.Hit.Target.Avatar:GetPosition())
     end
 
     self.Trace:Update(deltaTime)

@@ -390,32 +390,6 @@ function byte2bin(n)
     return table.concat(t), t
 end
 
-function angle_360(from_, to_)
-    --两点的x、y值
-    local x = from_.x - to_.x
-    local y = from_.y - to_.y
-
-    --斜边长度
-    local hypotenuse = math.sqrt(math.pow(x,2) + math.pow(y,2))
-
-    --求出弧度
-    local cos = x / hypotenuse
-    local radian = Mathf.Acos(cos);
-
-    --用弧度算出角度    
-    local angle = 180 / (math.pi / radian);
-  
-    if y < 0 then
-        angle = -angle
-    
-    elseif (y == 0) and (x < 0) then
-        angle = 180
-
-    end
-
-    return angle
-end
-
 --点pf到线段(p1,p2)的距离
 function GetPointDistanceLine(pf, p1, p2)
     if p1 == nil or p2 == nil then
@@ -437,19 +411,6 @@ function GetPointDistanceLine(pf, p1, p2)
     return true, math.sqrt((pf.x - px) * (pf.x - px) + (py - pf.y) * (py - pf.y)), Vector3.New(px, py, 0)
 end
 
---center：中心点 
---angle：角度 
---radius：半径
---以center为中心，angle角度、radius半径外的点
-function angle_radius_point(center, angle, radius)
-    local radian    = angle * math.pi / 180
-    local x_margin  = math.sin(radian) * radius
-    local y_margin  = math.cos(radian) * radius
-
-    local point     = Vector3.New(center.x + x_margin, center.y + y_margin, 0)
-    return point
-end
-
 function IsPointInvalid(point)
     return point.x == -1000 and point.y == -1000
 end
@@ -461,12 +422,4 @@ function CheckCollide(p_pos, last_pos, p_start, p_end)
     end
 
     return false
-    -- local vec1      = p_pos - p_start
-    -- local normal    = Vector2.Normalize(p_end - p_start)
-
-    -- local dot = vec1.x * normal.x + vec1.y * normal.y
-    -- local p_cross = dot * normal + p_start
-
-    -- local distance = Vector2.Distance(p_pos, p_cross)
-    -- return distance < radius 
 end

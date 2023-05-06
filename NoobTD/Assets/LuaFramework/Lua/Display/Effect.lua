@@ -20,6 +20,10 @@ function Effect:GetPos()
     return self.Entity.transform.localPosition
 end
 
+function Effect:SetEulerAngles(vec)
+    self.Entity.transform.localEulerAngles  = vec
+end
+
 function Effect:Dispose()
     destroy(self.Entity)
 end

@@ -1,7 +1,8 @@
 Utility = {}
 
-Utility.Random    = require("Utility.RandomUtility")
-Utility.Transform = require("Utility.TransformUtility")
+Utility.Random      = require("Utility.RandomUtility")
+Utility.Transform   = require("Utility.TransformUtility")
+Utility.Battle      = require("Utility.BattleUtility")
 
 Utility.GetEmptyTable = function()
     return {}

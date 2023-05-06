@@ -14,7 +14,7 @@ function RouteLine:ctor(land, line_cfg)
         self.Routes:Add(grid)
 
         if last_grid ~= nil then
-            grid.Distance   = last_grid.Distance + Logic.Battle.Distance(last_grid:CenterPos(), grid:CenterPos())
+            grid.Distance   = last_grid.Distance + Utility.Battle.Distance(last_grid:CenterPos(), grid:CenterPos())
         end
 
         last_grid = grid

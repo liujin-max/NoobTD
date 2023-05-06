@@ -26,11 +26,11 @@ function Walk:Update(deltaTime)
 
     local next_pos  = next_node:CenterPos()
     local o_pos     = self.Owner.Avatar:GetPosition()
-    local dir       = Vector3.Normalize(next_pos - o_pos) * self.Owner:GetSPEED() * deltaTime
+    local dir       = Utility.Battle.Normalize(next_pos - o_pos) * self.Owner:GetSPEED() * deltaTime
     local to_pos    = o_pos + dir
     self.Owner.Avatar:SetPosition(to_pos)
 
-    if Logic.Battle.Distance(next_pos , to_pos) <= 0.1 then
+    if Utility.Battle.Distance(next_pos , to_pos) <= 0.1 then
         self.Owner.RouteIndex = self.Owner.RouteIndex + 1
 
         local line  = self.Owner:GetRouteLine()
