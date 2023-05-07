@@ -154,6 +154,9 @@ function Unit:Update(deltatime)
         self.Behaviour:Update(deltatime)
     end
 
+
+    self.Avatar:Update(deltatime)
+
     if self:IsDead() == true then
         return
     end
@@ -166,8 +169,6 @@ function Unit:Update(deltatime)
         sk:Update(deltatime)        
     end)
 
-    --
-    self.Avatar:Update(deltatime)
 end
 
 -------------------- buff --------------------

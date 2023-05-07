@@ -18,7 +18,7 @@ function DetectRange:Show(flag, range, pos)
             self:Decorate()
         end
 
-        local base  = 277 / 2
+        local base  = 200 / 2
         local scale = range / base
 
         self.Entity.transform.localScale    = Vector3.New(scale, scale, scale)

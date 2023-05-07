@@ -19,11 +19,11 @@ return {
 		ID = 10010,
 		Character = 10010010,
 		Cost = 110,
-		Atk = 6,
+		Atk = 8,
 		HP = 70,
 		Speed = 0,
 		Skills = {
-			1000002,
+			1001001,
 		},
 		BuildEffect = {
 			{id =1001, value =Crypt.TE(10020)},
@@ -34,11 +34,26 @@ return {
 		ID = 10020,
 		Character = 10010020,
 		Cost = 160,
-		Atk = 8,
+		Atk = 12,
 		HP = 80,
 		Speed = 0,
 		Skills = {
-			1000003,
+			1002001,
+		},
+		BuildEffect = {
+			{id =1001, value =Crypt.TE(10100)},
+		},
+	},
+	[10100] = {
+		Name = "狙击塔",
+		ID = 10100,
+		Character = 10010100,
+		Cost = 250,
+		Atk = 45,
+		HP = 100,
+		Speed = 0,
+		Skills = {
+			1010001,
 		},
 		BuildEffect = Table.Empty,
 	},

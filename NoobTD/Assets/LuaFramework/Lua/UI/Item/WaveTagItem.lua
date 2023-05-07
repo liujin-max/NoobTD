@@ -7,6 +7,7 @@ function WaveTagItem:Awake(items)
 
     UIEventListener.PGet(self.GO,   self).onClick_P = function()
         LuaEventManager.SendEvent(_E.BATTLE_WP_TOUCH, nil, self.Wave)
+        LuaEventManager.SendEvent(_E.BATTLE_HIDERING, nil)
     end
 end
 

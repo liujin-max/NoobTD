@@ -9,9 +9,9 @@ return {
 		Condition = Table.Empty,
 		Range = 250,
 	},
-	[1000002] = {
+	[1001001] = {
 		Name = "高级平射",
-		ID = 1000002,
+		ID = 1001001,
 		DisplayName = "gaojipingshe",
 		CD = 1000,
 		AtkInc = 100,
@@ -19,15 +19,25 @@ return {
 		Condition = Table.Empty,
 		Range = 275,
 	},
-	[1000003] = {
+	[1002001] = {
 		Name = "多重射击",
-		ID = 1000003,
+		ID = 1002001,
 		DisplayName = "duochongsheji",
 		CD = 1000,
 		AtkInc = 100,
 		HitEffects = Table.Empty,
 		Condition = Table.Empty,
 		Range = 300,
+	},
+	[1010001] = {
+		Name = "狙击",
+		ID = 1010001,
+		DisplayName = "juji",
+		CD = 1800,
+		AtkInc = 100,
+		HitEffects = Table.Empty,
+		Condition = Table.Empty,
+		Range = 450,
 	},
 	[2000001] = {
 		Name = "寒冰弹",

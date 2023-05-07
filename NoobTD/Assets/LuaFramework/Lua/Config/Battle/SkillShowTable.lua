@@ -24,6 +24,13 @@ ENUM["duochongsheji"] =
     {time = 0.4, type = _C.SKILL.SHOW.BULLET, id = 10001}
 }
 
+--狙击
+ENUM["juji"] =
+{
+    {time = 0.2, type = _C.SKILL.SHOW.BULLET, id = 10101},
+}
+
+
 --寒冰弹
 ENUM["hanbingdan"] =
 {
