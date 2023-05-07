@@ -7,7 +7,7 @@ function Land:ctor(land)
 end
 
 function Land:Decorate()
-    self.Entity     = AssetManager:LoadSync("Prefab/Battle/Battle_Field_1")
+    self.Entity     = AssetManager:LoadSync("Prefab/Battle/Battle_Map_1001")
     self.Entity.transform:SetParent(self.Root.transform)
     self.Entity.transform.localScale      = Vector3.one
     self.Entity.transform.localPosition   = Vector3.zero
