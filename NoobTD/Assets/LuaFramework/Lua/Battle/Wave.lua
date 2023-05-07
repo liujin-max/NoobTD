@@ -49,7 +49,7 @@ function Wave:ctor(cfg, order)
 
     self.Exorcists  = Class.new(Array)
     for i,v in ipairs(cfg.list) do
-        self.Exorcists:Add({Timer = Class.new(Logic.CDTimer, v.time), ID = v.id})
+        self.Exorcists:Add({Timer = Class.new(Logic.CDTimer, v.time), ID = v.id, Line = v.line or 1})
     end
 
     InitFSM(self)
@@ -85,7 +85,7 @@ end
 --怪物诞生
 function Wave:Spawn(cfg)
     local monster   = Class.new(Battle.Monster, Table.Get(Table.MonsterTable, cfg.ID), _C.SIDE.ATTACK)
-    local line      = Battle.FIELD.Land:GetLines():First()
+    local line      = Battle.FIELD.Land:GetLines():Get(cfg.Line)
     monster:SetRouteLine(line)
     monster:SetRouteIndex(1)
     monster:InitBehaviour()

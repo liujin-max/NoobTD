@@ -7,7 +7,7 @@ return {
 		AtkInc = 100,
 		HitEffects = Table.Empty,
 		Condition = Table.Empty,
-		Range = 200,
+		Range = 250,
 	},
 	[2000001] = {
 		Name = "寒冰弹",
@@ -19,6 +19,6 @@ return {
 			{id =1000, value =Crypt.TE(1000)},
 		},
 		Condition = Table.Empty,
-		Range = 250,
+		Range = 300,
 	},
 }
