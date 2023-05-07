@@ -5,7 +5,7 @@ return {
 		Character = 100910000,
 		Atk = 3,
 		HP = 25,
-		Speed = 100,
+		Speed = 70,
 		Skills = Table.Empty,
 	},
 }

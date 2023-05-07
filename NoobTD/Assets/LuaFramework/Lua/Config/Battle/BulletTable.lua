@@ -8,7 +8,7 @@ local ENUM  = {}
 ENUM[10001] =
 {
     id      = 10001,
-    speed   = 8,
+    speed   = 10,
     trace   = _C.TRACE.PARABOLA,
     rotate  = _C.ROTATE.BULLET.TURNTO,
     effect  = "Prefab/Effects/Bullet/fx_bullet_10000",

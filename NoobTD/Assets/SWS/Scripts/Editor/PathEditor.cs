@@ -320,7 +320,7 @@ namespace SWS
                 for (int i = 0; i < pathPoints.Length; i++)
                 {
                     Vector3 pos = pathPoints[i] + offset;
-                    string str = "{" + string.Format("{0:F2}", pos.x) + "," + string.Format("{0:F2}", pos.y) + "," + string.Format("{0:F2}", pos.z) + "}";
+                    string str = "{" + string.Format("{0:F2}", pos.x) + "," + string.Format("{0:F2}", pos.y) +"}";
                     if (i == 0) 
                     {
                         log = str;
