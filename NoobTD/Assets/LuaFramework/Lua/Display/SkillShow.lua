@@ -31,7 +31,7 @@ end
 function SkillShow:Cast()
     self.CastFlag   = true
     self.Tasks:Clear()
-
+    self.Timer:Reset()
 
     for i, d in ipairs(self.Data) do
         assert(MATCH[d.type], "MATCH is nil : " .. tostring(d.type))
@@ -52,6 +52,7 @@ end
 
 function SkillShow:Over()
     self.CastFlag = false
+
 
 end
 

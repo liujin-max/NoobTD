@@ -7,12 +7,12 @@ return {
 	[10010010] = {
 		Name = "射手塔",
 		ID = 10010010,
-		Res = "Prefab/Character/10000",
+		Res = "Prefab/Character/10010",
 	},
 	[10010020] = {
 		Name = "斥候塔",
 		ID = 10010020,
-		Res = "Prefab/Character/10000",
+		Res = "Prefab/Character/10020",
 	},
 	[10020000] = {
 		Name = "法师塔",

@@ -23,7 +23,7 @@ return {
 		HP = 70,
 		Speed = 0,
 		Skills = {
-			1000001,
+			1000002,
 		},
 		BuildEffect = {
 			{id =1001, value =Crypt.TE(10020)},
@@ -38,7 +38,7 @@ return {
 		HP = 80,
 		Speed = 0,
 		Skills = {
-			1000001,
+			1000003,
 		},
 		BuildEffect = Table.Empty,
 	},

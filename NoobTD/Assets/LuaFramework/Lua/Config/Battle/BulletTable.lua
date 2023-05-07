@@ -14,7 +14,7 @@ ENUM[10001] =
     effect  = "Prefab/Effects/Bullet/fx_bullet_10000",
     -- hit     = ""
 
-    height  = 1,
+    height  = 0.5,
 }
 
 
