@@ -43,9 +43,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: UI
-    uniqueID: 797160667
+  - name: BackGround
+    uniqueID: 3922184841
+    locked: 0
+  - name: Avatar
+    uniqueID: 3824244897
     locked: 0
   - name: Effect
-    uniqueID: 3922184841
+    uniqueID: 488426975
     locked: 0
