@@ -10,6 +10,8 @@ local ASSUMPTION_MAX_TIME = 10
 local MATCH = {}
 
 MATCH[_C.SKILL.SHOW.BULLET] = Display.BulletComp
+MATCH[_C.SKILL.SHOW.HIT]    = Display.HitComp
+
 
 
 function SkillShow:ctor(skill)

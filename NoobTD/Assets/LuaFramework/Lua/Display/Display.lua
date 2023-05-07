@@ -27,7 +27,7 @@ Display.ParabolaTrace   = require("Display/ParabolaTrace")
 
 Display.ShowComp        = require("Display/Comp/ShowComp")
 Display.BulletComp      = require("Display/Comp/BulletComp")
-
+Display.HitComp         = require("Display/Comp/HitComp")
 
 
 

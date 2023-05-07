@@ -39,6 +39,18 @@ return {
 		Condition = Table.Empty,
 		Range = 450,
 	},
+	[1010002] = {
+		Name = "标记",
+		ID = 1010002,
+		DisplayName = "biaoji",
+		CD = 12000,
+		AtkInc = 0,
+		HitEffects = {
+			{id =1000, value =Crypt.TE(1010)},
+		},
+		Condition = Table.Empty,
+		Range = 450,
+	},
 	[2000001] = {
 		Name = "寒冰弹",
 		ID = 2000001,

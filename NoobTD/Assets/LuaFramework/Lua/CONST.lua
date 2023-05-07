@@ -85,6 +85,7 @@ _C.SKILL.DETECT.NORMAL  = 100       --距离终点最近的人
 --表现
 _C.SKILL.SHOW           = {}
 _C.SKILL.SHOW.BULLET    = "SHOW.BULLET"
+_C.SKILL.SHOW.HIT       = "SHOW.HIT"
 
 
 --@endregion    

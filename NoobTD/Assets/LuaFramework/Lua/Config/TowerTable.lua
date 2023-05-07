@@ -54,6 +54,7 @@ return {
 		Speed = 0,
 		Skills = {
 			1010001,
+			1010002,
 		},
 		BuildEffect = Table.Empty,
 	},

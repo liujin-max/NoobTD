@@ -30,6 +30,12 @@ ENUM["juji"] =
     {time = 0.2, type = _C.SKILL.SHOW.BULLET, id = 10101},
 }
 
+--标记
+ENUM["biaoji"] =
+{
+    {time = 0.2, type = _C.SKILL.SHOW.HIT},
+}
+
 
 --寒冰弹
 ENUM["hanbingdan"] =

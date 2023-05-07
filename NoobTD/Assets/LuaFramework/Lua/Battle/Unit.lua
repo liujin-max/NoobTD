@@ -36,6 +36,9 @@ function Unit:ReBuild(cfg)
     self.ARMOR      = Class.new(Data.Pair, 0, 0)
     self.ATK        = Class.new(Data.AttributeValue, cfg.Atk)
     self.SPEED      = Class.new(Data.AttributeValue, cfg.Speed / 100.0)
+
+    --受到的伤害减免或者加成比例
+    self.DEFRATE    = Class.new(Data.AttributeValue, 1)
     --@endregion
 
 

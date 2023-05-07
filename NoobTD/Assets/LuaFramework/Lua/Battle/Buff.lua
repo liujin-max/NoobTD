@@ -33,6 +33,30 @@ ENUM[1000] =
     end
 }
 
+--标记
+--受到的伤害提高#%
+ENUM[1010] = 
+{
+    PREPARE = function(self)
+        -- self.Show:Equip()
+
+        self.Owner.DEFRATE:PutAUL(self, self.Values[1] / 1000.0)
+
+    end,
+
+    UPDATE = function(self, deltaTime)
+        self.Timer:Update(deltaTime)
+        if self.Timer:IsFinished() == true then
+            self.Owner:RemoveBuff(self.ID)
+        end
+
+    end,
+
+    DISPOSE = function(self)
+
+        self.Owner.DEFRATE:Pop(self)
+    end
+}
 
 ENUM[9999]  =
 {

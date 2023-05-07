@@ -11,8 +11,12 @@ ENUM[_C.HIT.TYPE.ATK]   = function(hit)
     local target    = hit.Target
 
     local value     = Logic.HitSettle.GetDemage(hit)
-    local armor     = target:GetARMOR()
 
+    value           = value * (hit.Target.DEFRATE:ToNumber())
+
+    value           = math.floor(value)
+
+    local armor     = target:GetARMOR()
     if armor > 0 then   --有护甲
         if value > armor then
             target:UpdateARMOR(-armor)
@@ -79,6 +83,9 @@ end
 --伤害
 function HitSettle.GetDemage(hit)
     local base  = hit.Caster:GetATK() * hit.ATKINC:ToNumber() / 100.0
+
+    --浮动
+    base        = base * Utility.Random.Range(80, 120) / 100.0
 
     if hit.CritFlag == true then    --暴击了
         base    = base * 1.5
