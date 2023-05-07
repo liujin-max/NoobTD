@@ -86,9 +86,6 @@ function RouteLine:ctor(land, line_cfg)
         exit_order = #line_cfg.Route
     end
 
-    -- print("测试输出 起点：" .. spawn_order)
-    -- print("测试输出 终点：" .. exit_order)
-    -- print("测试输出 总节点：" .. #line_cfg.Route)
     --路线节点
     local last_grid  = nil
     self.Routes = Class.new(Array)
