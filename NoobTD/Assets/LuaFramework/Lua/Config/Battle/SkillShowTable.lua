@@ -37,6 +37,7 @@ ENUM["hanbingdan"] =
 
 
 
+
 function SkillShowTable.Get(display_name)
     return ENUM[display_name]
 end
