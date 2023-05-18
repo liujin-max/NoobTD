@@ -81,6 +81,11 @@ _C.SKILL.PICK.ENEMY     = 2         --敌方
 --目标筛选器
 _C.SKILL.DETECT         = {}
 _C.SKILL.DETECT.NORMAL  = 100       --距离终点最近的人
+_C.SKILL.DETECT.RAND    = 101       --随机
+_C.SKILL.DETECT.UNSLOW  = 102       --未被减速的人
+
+
+
 
 --表现
 _C.SKILL.SHOW           = {}

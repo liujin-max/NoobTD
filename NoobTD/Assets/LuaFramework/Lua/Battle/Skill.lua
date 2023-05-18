@@ -15,7 +15,10 @@ function Skill:ctor(config, caster)
     self.RANGE      = Class.new(Data.AttributeValue, config.Range)   --攻击范围
 
     --目标筛选类型
-    self.DetectID   = _C.SKILL.DETECT.NORMAL
+    local detect_dic= split(config.Harted, ":")
+    self.DetectID   = tonumber(detect_dic[1])
+    self.DetectCount= tonumber(detect_dic[2] or 1)
+    
     self.PickID     = _C.SKILL.PICK.ENEMY
 
     self.Targets    = Class.new(Array)

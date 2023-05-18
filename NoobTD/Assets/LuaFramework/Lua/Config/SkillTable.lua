@@ -8,6 +8,7 @@ return {
 		HitEffects = Table.Empty,
 		Condition = Table.Empty,
 		Range = 250,
+		Harted = "100:1",
 	},
 	[1001001] = {
 		Name = "高级平射",
@@ -18,6 +19,7 @@ return {
 		HitEffects = Table.Empty,
 		Condition = Table.Empty,
 		Range = 275,
+		Harted = "100:1",
 	},
 	[1002001] = {
 		Name = "多重射击",
@@ -28,6 +30,7 @@ return {
 		HitEffects = Table.Empty,
 		Condition = Table.Empty,
 		Range = 300,
+		Harted = "100:1",
 	},
 	[1010001] = {
 		Name = "狙击",
@@ -38,6 +41,7 @@ return {
 		HitEffects = Table.Empty,
 		Condition = Table.Empty,
 		Range = 450,
+		Harted = "100:1",
 	},
 	[1010002] = {
 		Name = "标记",
@@ -50,6 +54,7 @@ return {
 		},
 		Condition = Table.Empty,
 		Range = 450,
+		Harted = "101:1",
 	},
 	[2000001] = {
 		Name = "寒冰弹",
@@ -62,5 +67,6 @@ return {
 		},
 		Condition = Table.Empty,
 		Range = 300,
+		Harted = "102:1",
 	},
 }

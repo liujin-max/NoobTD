@@ -261,6 +261,18 @@ function Unit:RemoveBuff(id)
     self.Buffs[id] = nil 
 end
 
+function Unit:HasBuffByEntityID(entity_id)
+    if self.BuffEntitys[entity_id] == nil then
+        return false
+    end
+
+    if #self.BuffEntitys[entity_id] == 0 then
+        return false
+    end
+
+    return true
+end
+
 function Unit:CleanBuff()
     for id, buff in pairs(self.Buffs) do
         self:RemoveBuff(id)
