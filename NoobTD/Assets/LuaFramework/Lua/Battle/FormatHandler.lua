@@ -43,11 +43,11 @@ function FormatHandler:Preload(id, defender)
 
     local tower   = Class.new(Battle.Tower, Table.Get(Table.TowerTable, id), _C.SIDE.DEFEND)
     tower.Avatar:Decorate()
-    tower.Avatar:SetPosition(defender:CenterPos())
     tower.Avatar:TurnAlpha(0.5)
 
+    tower:SetPos(defender:CenterPos())
 
-    self:ShowRange(true , id, tower.Avatar:GetPosition())
+    self:ShowRange(true , id, tower:GetPos())
 
     self.Model  = tower
 end

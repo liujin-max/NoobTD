@@ -25,10 +25,10 @@ function Walk:Update(deltaTime)
     end
 
     local next_pos  = next_node:CenterPos()
-    local o_pos     = self.Owner.Avatar:GetPosition()
+    local o_pos     = self.Owner:GetPos()
     local dir       = Utility.Battle.Normalize(next_pos - o_pos) * self.Owner:GetSPEED() * deltaTime
     local to_pos    = o_pos + dir
-    self.Owner.Avatar:SetPosition(to_pos)
+    self.Owner:SetPos(to_pos)
 
     if Utility.Battle.Distance(next_pos , to_pos) <= 0.1 then
         self.Owner.RouteIndex = self.Owner.RouteIndex + 1

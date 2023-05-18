@@ -100,7 +100,7 @@ function BattleWindow.ShowBuildPivot(pos, defender)
         P.BuildItem:ShowUpgrading(defender)
         P.BuildItem:Show()
 
-        Battle.FIELD.Handler:ShowRange(true , tower.ID, tower.Avatar:GetPosition())
+        Battle.FIELD.Handler:ShowRange(true , tower.ID, tower:GetPos())
     end
 end
 

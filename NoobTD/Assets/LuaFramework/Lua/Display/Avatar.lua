@@ -13,34 +13,37 @@ function Avatar:RandomOffset()
 end
 
 function Avatar:Decorate()
+    self.DecorateFlag   = true
+
     --初始化骨骼
     local cfg   = Table.Get(Table.CharacterTable, self.Model.Character)
     self.Entity = AssetManager:LoadSync(cfg.Res)
     self.Entity.transform:SetParent(Battle.FIELD.Land.Avatar.Root.transform)
     self.Entity.transform.localScale      = Vector3.one
-    self.Entity.transform.localPosition   = Vector3.zero
+    
+    self:SetPosition(self.Model:GetPos())
 
     self.Comp   = self.Entity:GetComponent("Avatar")
+end
 
-    self.DecorateFlag   = true
+function Avatar:IsDecorate()
+    return self.DecorateFlag
 end
 
 function Avatar:Transform()
-    local pos   = self:GetPosition()
+    local pos   = self.Model:GetPos()
 
     self:Dispose()
 
     self:Decorate()
-    self:SetPosition(pos)
 
+    self:SetPosition(pos)
 end
 
 function Avatar:SetPosition(pos)
-    self.Entity.transform.localPosition = pos + self.Offset
-end
+    if self:IsDecorate() == false then return end
 
-function Avatar:GetPosition()
-    return self.Entity.transform.localPosition - self.Offset
+    self.Entity.transform.localPosition = pos + self.Offset
 end
 
 function Avatar:TurnAlpha(value)

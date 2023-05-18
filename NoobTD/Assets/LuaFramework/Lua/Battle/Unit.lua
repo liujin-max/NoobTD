@@ -23,6 +23,8 @@ function Unit:ctor(cfg, side)
     self.Behaviour  = nil
 
     self.Avatar     = Class.new(Display.Avatar, self)
+
+    self.Pos        = Vector3.zero  --坐标
 end
 
 function Unit:ReBuild(cfg)
@@ -95,6 +97,16 @@ end
 
 function Unit:GetFace()
     return self.Face
+end
+
+function Unit:SetPos(pos)
+    self.Pos    = pos
+    
+    self.Avatar:SetPosition(pos)
+end
+
+function Unit:GetPos()
+    return self.Pos 
 end
 
 function Unit:IsDead() 

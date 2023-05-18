@@ -50,8 +50,8 @@ end
 
 --朝向目标
 function BattleLogic.FaceTarget(caster, target)
-    local o_pos = caster.Avatar:GetPosition()
-    local t_pos = target.Avatar:GetPosition()
+    local o_pos = caster:GetPos()
+    local t_pos = target:GetPos()
 
     if t_pos.x > o_pos.x then
         caster:FaceTo(_C.AVATAR.FACE.RIGHT)

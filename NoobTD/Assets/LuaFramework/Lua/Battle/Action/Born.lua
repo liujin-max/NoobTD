@@ -18,13 +18,13 @@ function Born:Begin()
 
         local route = self.Owner:GetCurrentRoute()
         if route ~= nil then
-            self.Owner.Avatar:SetPosition(route:CenterPos())
+            self.Owner:SetPos(route:CenterPos())
         end
 
     elseif self.Owner.Side == _C.SIDE.DEFEND then
         local defender = self.Owner:GetDefender()
         if defender ~= nil then
-            self.Owner.Avatar:SetPosition(defender:CenterPos())
+            self.Owner:SetPos(defender:CenterPos())
         end
     end
 

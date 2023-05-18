@@ -43,15 +43,15 @@ function TargetFilter.Check(skill)
         return
     end
 
-    local o_pos     = skill.Owner.Avatar:GetPosition()
+    local o_pos     = skill.Owner:GetPos()
     local radius    = skill:GetRange() / 100.0
     local targets   = Class.new(Array)
 
     local enemys    = Battle.FIELD.Positioner:GetUnits(skill.Owner.Side, skill.PickID)
     enemys:Each(function(e)
         if Logic.Battle.IsAvailable(e) == true then
-            local dis = Utility.Battle.Distance(o_pos, e.Avatar:GetPosition())
-            if Utility.Battle.RadiusCheck(o_pos, e.Avatar:GetPosition(), radius) == true then
+            local dis = Utility.Battle.Distance(o_pos, e:GetPos())
+            if Utility.Battle.RadiusCheck(o_pos, e:GetPos(), radius) == true then
                 targets:Add(e)
             end
         end        
