@@ -1,5 +1,5 @@
 git密码：
-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
+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
 
 TexturePackerGUI许可证：
 TP-39WW-KX8C-CAT1-CVBL
