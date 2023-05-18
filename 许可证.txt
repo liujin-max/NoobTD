@@ -5,6 +5,3 @@ TexturePackerGUI许可证：
 TP-39WW-KX8C-CAT1-CVBL
 
 
-
-开发补充：
-1.把人物的坐标信息记录在数据类里，而不是表现类

@@ -100,9 +100,10 @@ function TargetFilter.Check(skill)
             local dis = Utility.Battle.Distance(o_pos, e:GetPos())
             if Utility.Battle.RadiusCheck(o_pos, e:GetPos(), radius) == true then
                 targets:Add(e)
+            end
 
-            local dis = Utility.Battle.Distance(o_pos, e.Avatar:GetPosition())
-            if Utility.Battle.RadiusCheck(o_pos, e.Avatar:GetPosition(), radius) == true then
+            local dis = Utility.Battle.Distance(o_pos, e:GetPos())
+            if Utility.Battle.RadiusCheck(o_pos, e:GetPos(), radius) == true then
                 local node = e:GetCurrentRoute()
                 temp:Add({Distance = node ~= nil and node.Distance or 0, Target = e})
 
