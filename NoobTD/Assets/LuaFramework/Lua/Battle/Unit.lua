@@ -121,6 +121,13 @@ function Unit:IsGC()
     return self.StateFlag._IsGC == true
 end
 
+--创建完成时调用
+function Unit:Ready()
+    self.Skills:Each(function(sk)
+        sk:ResetCD()
+    end)
+end
+
 --
 function Unit:GetDefaultSkill()
     return self.Skills:First()
@@ -139,6 +146,16 @@ end
 --正在释放技能
 function Unit:IsCasting()
     return self:GetCastingSkill() ~= nil
+end
+
+--
+function Unit:GetSkillByClass(class)
+    for i = 1, self.Skills:Count() do
+        local sk = self.Skills:Get(i)
+        if sk.Class == class then
+            return sk
+        end
+    end
 end
 
 --获得正在释放的技能
@@ -266,7 +283,7 @@ function Unit:HasBuffByEntityID(entity_id)
         return false
     end
 
-    if #self.BuffEntitys[entity_id] == 0 then
+    if PairCount(self.BuffEntitys[entity_id]) == 0 then
         return false
     end
 

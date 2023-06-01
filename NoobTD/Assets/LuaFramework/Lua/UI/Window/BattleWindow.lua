@@ -92,14 +92,11 @@ function BattleWindow.ShowBuildPivot(pos, defender)
         P.BuildItem = UI.Manager:LoadItem(_C.UI.ITEM.BUILDRING, BattleWindow.PARAMS.BuildPivot)
     end
 
-    local tower = defender:GetTower()
-    if tower == nil then
-        P.BuildItem:ShowBuilding(defender)
-        P.BuildItem:Show()
-    else
-        P.BuildItem:ShowUpgrading(defender)
-        P.BuildItem:Show()
+    P.BuildItem:ShowBuilding(defender)
+    P.BuildItem:Show()
 
+    local tower = defender:GetTower()
+    if tower ~= nil then
         Battle.FIELD.Handler:ShowRange(true , tower.ID, tower:GetPos())
     end
 end

@@ -7,18 +7,18 @@ local BuildEffects  =
     Class.new(Logic.EventEffect, 1000, 10000),
     Class.new(Logic.EventEffect, 1000, 20000),
     Class.new(Logic.EventEffect, 1000, 30000),
-    Class.new(Logic.EventEffect, 1000, 40000)
+    -- Class.new(Logic.EventEffect, 1000, 40000)
 }
 
 local Positions     =
 {
-    { Vector3.New(  0, 90, 0) },
-    { Vector3.New(-90, 90, 0), Vector3.New( 90, 90, 0) },
-    { Vector3.New(  0, 90, 0), Vector3.New(-90,  0, 0), Vector3.New( 90,  0, 0) },
-    { Vector3.New(-90, 90, 0), Vector3.New( 90, 90, 0), Vector3.New(-90, -90, 0), Vector3.New( 90, -90, 0) }
+    { Vector3.New(  0, 100, 0) },
+    { Vector3.New(-100, 100, 0), Vector3.New( 100, 100, 0) },
+    { Vector3.New(  0, 100, 0), Vector3.New(-100,  0, 0), Vector3.New( 100,  0, 0) },
+    { Vector3.New(-100, 100, 0), Vector3.New( 100, 100, 0), Vector3.New(-100, -100, 0), Vector3.New( 100, -100, 0) }
 }
 
-local SellPos   = Vector3.New(  0, -90, 0)
+local SellPos   = Vector3.New(  0, -100, 0)
 
 local function get_item(self, i)
     local item  = self.Items:Get(i)
@@ -54,8 +54,19 @@ function BuildRingItem:ShowBuilding(defender)
         item.GO:SetActive(false)
     end)
 
-    local pos_temp= Positions[#BuildEffects]
-    for i, effect in ipairs(BuildEffects) do
+    local effects   = Class.new(Array)
+
+    local tower     = defender:GetTower()
+    if tower ~= nil then
+        effects     = tower:GetBuildEffects()
+    else
+        for i,e in ipairs(BuildEffects) do
+            effects:Add(e)
+        end
+    end
+
+    local pos_temp= Positions[effects:Count()]
+    effects:Each(function(effect, i)
         local pos = pos_temp[i]
 
         local item  = get_item(self, i)
@@ -76,45 +87,11 @@ function BuildRingItem:ShowBuilding(defender)
                 self.S_ITEM:Preload()
             end
         end
-    end
-end
-
---展示升级单元
-function BuildRingItem:ShowUpgrading(defender)
-    self.S_ITEM     = nil
-
-    self.Items:Each(function(item)
-        item.GO:SetActive(false)
     end)
 
-    local tower     = defender:GetTower()
-
-    local effects   = tower:GetBuildEffects()
-    local pos_temp  = Positions[effects:Count()]
-    for i = 1, effects:Count() do
-        local e     = effects:Get(i)
-        local pos   = pos_temp[i]
-
-        local item  = get_item(self, i)
-        item.GO.transform.localPosition = pos
-        item:Init(e, defender)
-
-        UIEventListener.PGet(item.GO,  item).onClick_P = function()
-            if self.S_ITEM  == item then
-                self.S_ITEM:Execute()
-            else
-                if self.S_ITEM ~= nil then
-                   self.S_ITEM:Select(false) 
-                end
-
-                self.S_ITEM = item
-                self.S_ITEM:Select(true)
-                self.S_ITEM:Preload()
-            end
-        end
-    end
-
 end
+
+
 
 function BuildRingItem:OnDestroy()
 

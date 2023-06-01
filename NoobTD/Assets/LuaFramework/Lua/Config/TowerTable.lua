@@ -10,6 +10,7 @@ return {
 		Skills = {
 			1000001,
 		},
+		SkillPool = Table.Empty,
 		BuildEffect = {
 			{id =1001, value =Crypt.TE(10010)},
 		},
@@ -25,6 +26,7 @@ return {
 		Skills = {
 			1001001,
 		},
+		SkillPool = Table.Empty,
 		BuildEffect = {
 			{id =1001, value =Crypt.TE(10020)},
 		},
@@ -40,23 +42,47 @@ return {
 		Skills = {
 			1002001,
 		},
+		SkillPool = Table.Empty,
 		BuildEffect = {
 			{id =1001, value =Crypt.TE(10100)},
+			{id =1001, value =Crypt.TE(10110)},
 		},
 	},
 	[10100] = {
 		Name = "狙击塔",
 		ID = 10100,
 		Character = 10010100,
-		Cost = 250,
+		Cost = 260,
 		Atk = 45,
 		HP = 100,
 		Speed = 0,
 		Skills = {
 			1010001,
-			1010002,
+		},
+		SkillPool = {
+			1010011,
 		},
 		BuildEffect = Table.Empty,
+	},
+	[10110] = {
+		Name = "毒箭塔",
+		ID = 10110,
+		Character = 10010110,
+		Cost = 245,
+		Atk = 25,
+		HP = 100,
+		Speed = 0,
+		Skills = {
+			1011001,
+		},
+		SkillPool = {
+			1011011,
+			1011012,
+		},
+		BuildEffect = {
+			{id =1002, value =Crypt.TE(1010001)},
+			{id =1002, value =Crypt.TE(1010011)},
+		},
 	},
 	[20000] = {
 		Name = "法师塔",
@@ -69,6 +95,7 @@ return {
 		Skills = {
 			2000001,
 		},
+		SkillPool = Table.Empty,
 		BuildEffect = {
 			{id =1001, value =Crypt.TE(20010)},
 		},
@@ -84,6 +111,7 @@ return {
 		Skills = {
 			2000001,
 		},
+		SkillPool = Table.Empty,
 		BuildEffect = {
 			{id =1001, value =Crypt.TE(20020)},
 		},
@@ -99,6 +127,7 @@ return {
 		Skills = {
 			2000001,
 		},
+		SkillPool = Table.Empty,
 		BuildEffect = Table.Empty,
 	},
 	[30000] = {
@@ -112,6 +141,7 @@ return {
 		Skills = {
 			1000001,
 		},
+		SkillPool = Table.Empty,
 		BuildEffect = {
 			{id =1001, value =Crypt.TE(30010)},
 		},
@@ -127,6 +157,7 @@ return {
 		Skills = {
 			1000001,
 		},
+		SkillPool = Table.Empty,
 		BuildEffect = {
 			{id =1001, value =Crypt.TE(30020)},
 		},
@@ -142,6 +173,7 @@ return {
 		Skills = {
 			1000001,
 		},
+		SkillPool = Table.Empty,
 		BuildEffect = Table.Empty,
 	},
 	[40000] = {
@@ -155,6 +187,7 @@ return {
 		Skills = {
 			1000001,
 		},
+		SkillPool = Table.Empty,
 		BuildEffect = {
 			{id =1001, value =Crypt.TE(40010)},
 		},
@@ -170,6 +203,7 @@ return {
 		Skills = {
 			1000001,
 		},
+		SkillPool = Table.Empty,
 		BuildEffect = {
 			{id =1001, value =Crypt.TE(40020)},
 		},
@@ -185,6 +219,7 @@ return {
 		Skills = {
 			1000001,
 		},
+		SkillPool = Table.Empty,
 		BuildEffect = Table.Empty,
 	},
 }

@@ -28,8 +28,7 @@ function Born:Begin()
         end
     end
 
-
-
+    self.Owner:Ready()
 
     self.Owner.StateFlag._IsBorn = true
 end

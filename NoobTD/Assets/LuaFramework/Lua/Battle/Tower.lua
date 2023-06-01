@@ -6,6 +6,7 @@ function Tower:ctor(cfg, side)
     super(Battle.Tower, self, "ctor", cfg, side)
 
     self.BuildEffects   = ParseEventEffect(cfg.BuildEffect)
+
     --防守位
     self.Defender       = nil
 end

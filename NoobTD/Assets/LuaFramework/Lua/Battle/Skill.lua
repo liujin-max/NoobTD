@@ -1,4 +1,5 @@
 --技能
+--可升级
 local Skill = Class.define("Battle.Skill")
 
 
@@ -8,9 +9,11 @@ function Skill:ctor(config, caster)
     self.Table      = config
     self.ID         = config.ID
     self.Name       = config.Name
+    self.Class      = config.Class
+    self.Level      = config.Level
     self.DisplayID  = config.DisplayName
 
-    self.Timer      = Class.new(Logic.CDTimer, config.CD / 1000.0)   --冷却时间
+    self.Timer      = Class.new(Logic.CDTimer, 99999)   --冷却时间
     self.ATKINC     = Class.new(Data.AttributeValue, config.AtkInc)   --伤害倍率
     self.RANGE      = Class.new(Data.AttributeValue, config.Range)   --攻击范围
 
@@ -37,6 +40,13 @@ end
 
 function Skill:IsCasting()
     return self.Show:IsCasting()
+end
+
+--重置CD
+--CD在一个区间内随机
+function Skill:ResetCD()
+    local value     = Utility.Random.Range(self.Table.CD[1], self.Table.CD[2] or self.Table.CD[1])
+    self.Timer:Reset(value)
 end
 
 function Skill:Check()

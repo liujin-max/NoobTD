@@ -49,6 +49,7 @@ TARGETS[_C.SKILL.DETECT.UNSLOW] = function(skill, targets, count)
         if t == nil then
             break
         end
+
         RET:Add(t)
     end
 
@@ -59,6 +60,7 @@ TARGETS[_C.SKILL.DETECT.UNSLOW] = function(skill, targets, count)
             if t == nil then
                 break
             end
+
             RET:Add(t)
         end
     end
@@ -106,7 +108,6 @@ function TargetFilter.Check(skill)
             if Utility.Battle.RadiusCheck(o_pos, e:GetPos(), radius) == true then
                 local node = e:GetCurrentRoute()
                 temp:Add({Distance = node ~= nil and node.Distance or 0, Target = e})
-
             end
         end        
     end)

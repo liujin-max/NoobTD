@@ -1,4 +1,5 @@
 --事件效果器
+--用于防守位的建造、升级、技能升级等
 
 local EventEffect = Class.define("Logic.EventEffect")
 
@@ -79,6 +80,32 @@ EFFECT_LIST[1001] =
 }
 
 
+--学习技能
+--将Class#技能提升至下一级（未学习则学习，已学习则将当前等级提升至下一级）
+EFFECT_LIST[1002] =
+{
+    GET_SKILL   = function(self)
+        
+    end,
+
+    [_C.EVENT.TRIGGER.EXECUTE] = function(self, params)
+
+    end,
+
+    [_C.EVENT.TRIGGER.COST] = function(self)
+        local config = Table.Get(Table.TowerTable, self.Value)
+        return config.Cost
+    end,
+
+    [_C.EVENT.TRIGGER.DESCRIPTION] = function(self)
+        local config = Table.Get(Table.TowerTable, self.Value)
+        return config.Name
+    end
+}
+
+
+
+
 EFFECT_LIST[9999] =
 {
     [_C.EVENT.TRIGGER.EXECUTE] = function(self)
@@ -95,7 +122,6 @@ function EventEffect:ctor(id, value)
 
 
     self.Params     = {}
-
 
 
     self.Entity     = EFFECT_LIST [self.ID]
