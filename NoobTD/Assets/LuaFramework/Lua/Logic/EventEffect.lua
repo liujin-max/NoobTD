@@ -105,16 +105,6 @@ EFFECT_LIST[1002] =
 
 
 
-
-EFFECT_LIST[9999] =
-{
-    [_C.EVENT.TRIGGER.EXECUTE] = function(self)
-        Controller.System.FlyTip("未实现的事件效果器： " .. self.ID)
-    end
-}
-
-
-
 function EventEffect:ctor(id, value)
     self.ID         = id
     self.Value      = value
@@ -124,11 +114,8 @@ function EventEffect:ctor(id, value)
     self.Params     = {}
 
 
-    self.Entity     = EFFECT_LIST [self.ID]
-    if self.Entity == nil then
-        self.Entity = EFFECT_LIST[9999999]
-    end
-    
+    self.Entity     = EFFECT_LIST [self.ID] or {}
+
 end
 
 function EventEffect:IsExecutable()

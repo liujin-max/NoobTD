@@ -2,14 +2,17 @@
 
 local Unit = Class.define("Battle.Unit")
 
-local function ParseSkill(self)
-    self.Skills     = Class.new(Array)
-    self.SkillDic   = {}
 
-    for i, id in ipairs(self.Table.Skills) do
-        local skill = Class.new(Battle.Skill, Table.Get(Table.SkillTable, id), self)
-        self.Skills:Add(skill)
-        self.SkillDic[id] = skill
+--技能结构
+--每个单位有N个SkillClass，每个SkillClass代表一系技能，里面包含N个技能，每个技能的Class是相同的
+--技能可以升级，每个SkillClass当前可执行的技能，取决于SkillClass的等级
+--升级技能，即为提升SkillClass的等级
+local function ParseSkill(self)
+    self.SkillClass = Class.new(Array)
+
+    for i, id in ipairs(self.Table.SkillClass) do
+        local class = Class.new(Battle.SkillClass, Table.Get(Table.SkillClassTable, id), self)
+        self.SkillClass:Add(class)
     end
 end
 
@@ -123,15 +126,16 @@ end
 
 --创建完成时调用
 function Unit:Ready()
-    self.Skills:Each(function(sk)
-        sk:ResetCD()
+    self.SkillClass:Each(function(class)
+        class:ResetCD()
     end)
 end
 
 --
 function Unit:GetDefaultSkill()
-    return self.Skills:First()
+    return self.SkillClass:First():GetSkill()
 end
+
 --普攻的攻击范围
 function Unit:GetAtkRange()
     local skill = self:GetDefaultSkill()
@@ -148,22 +152,12 @@ function Unit:IsCasting()
     return self:GetCastingSkill() ~= nil
 end
 
---
-function Unit:GetSkillByClass(class)
-    for i = 1, self.Skills:Count() do
-        local sk = self.Skills:Get(i)
-        if sk.Class == class then
-            return sk
-        end
-    end
-end
-
 --获得正在释放的技能
 function Unit:GetCastingSkill()
-    for i = 1, self.Skills:Count() do
-        local sk = self.Skills:Get(i)
-        if sk:IsCasting() == true then
-            return sk
+    for i = 1, self.SkillClass:Count() do
+        local class = self.SkillClass:Get(i)
+        if class:IsCasting() == true then
+            return class:GetSkill()
         end
     end
 end
@@ -172,9 +166,9 @@ end
 function Unit:GetPlayableSkills()
     local temp = Class.new(Array)
 
-    self.Skills:Each(function(sk)
-        if sk:IsReady() == true then
-            temp:Add(sk)
+    self.SkillClass:Each(function(class)
+        if class:IsReady() == true then
+            temp:Add(class:GetSkill())
         end      
     end)
 
@@ -197,8 +191,8 @@ function Unit:Update(deltatime)
         buff:Update(deltatime)
     end
 
-    self.Skills:Each(function(sk)
-        sk:Update(deltatime)        
+    self.SkillClass:Each(function(class)
+        class:Update(deltatime)        
     end)
 
 end

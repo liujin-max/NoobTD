@@ -11,6 +11,7 @@ Table.EffectListTable           = require("Config/EffectListTable")
 
 Table.MonsterTable              = require("Config/MonsterTable")
 Table.TowerTable                = require("Config/TowerTable")
+Table.SkillClassTable           = require("Config/SkillClassTable")
 Table.SkillTable                = require("Config/SkillTable")
 Table.CharacterTable            = require("Config/CharacterTable")
 Table.BuffTable                 = require("Config/BuffTable")

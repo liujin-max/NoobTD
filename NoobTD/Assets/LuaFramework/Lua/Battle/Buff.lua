@@ -63,7 +63,9 @@ ENUM[9999]  =
 
 }
 
-function Buff:ctor(id, owner, caster)
+
+--count => 层数
+function Buff:ctor(id, owner, caster, count)
     self.Owner      = owner
     self.Caster     = caster
 
@@ -80,7 +82,7 @@ function Buff:ctor(id, owner, caster)
     self.Values     = {}
     self.Values[1]  = self.Table.Value1
 
-    self.Count      = 1     --层数
+    self.Count      = count or 1     --层数
 end
 
 function Buff:AddCount()
