@@ -60,6 +60,15 @@ function BattleLogic.FaceTarget(caster, target)
     end
 end
 
+--出售
+function BattleLogic.SellTower(tower)
+    if tower == nil then return end
+    
+    local price = 50
+    Battle.FIELD:UpdateCoin(price)
+
+    Battle.FIELD.Handler:Remove(tower)
+end
 
 
 

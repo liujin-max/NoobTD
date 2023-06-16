@@ -15,6 +15,12 @@ function Positioner:PushTower(t)
     self.Towers:Add(t)
 end
 
+function Positioner:RemoveTower(t)
+    t:Dispose()
+
+    self.Towers:Remove(t)
+end
+
 function Positioner:PushMonster(m)
     self.Monsters:Add(m)
 end

@@ -117,6 +117,17 @@ function FormatHandler:Transform(unit, id)
     unit.Avatar:Transform()
 end
 
+--移除塔
+function FormatHandler:Remove(tower)
+    local defender = tower:GetDefender()
+    if defender ~= nil then
+        defender:SetTower(nil)
+        tower:SetDefender(nil)
+    end
+
+    self.Field.Positioner:RemoveTower(tower)
+end
+
 
 function FormatHandler:Update(deltatime)
 

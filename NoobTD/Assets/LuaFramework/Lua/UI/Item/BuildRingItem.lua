@@ -44,10 +44,19 @@ function BuildRingItem:Awake(items)
 
     self.Items      = Class.new(Array)
     self.S_ITEM     = nil
+
+
+    UIEventListener.PGet(self.BtnSell,  self).onClick_P = function()
+        if self.Defender == nil then return end
+        
+        Logic.Battle.SellTower(self.Defender:GetTower())
+    end
 end
 
 --展示建造单元
 function BuildRingItem:ShowBuilding(defender)
+    self.Defender   = defender
+
     self.S_ITEM     = nil
 
     self.Items:Each(function(item)
